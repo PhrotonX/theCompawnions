@@ -9,14 +9,14 @@
     padding: 24px;
     margin: 0px;
     width: 100%;
-    box-shadow: var(--shadow-level-3);
+    box-shadow: var(--box-shadow-level-2);
     transition: 300ms;
     border: none;
     border-radius: 360px;
     background-color: #aaaaaa;
 }
 .fab button:hover{
-    box-shadow: var(--shadow-level-4);
+    box-shadow: var(--box-shadow-level-3);
     transform: translateY(-5px);
     background-color: #BCBCBC;
 }
