@@ -1,0 +1,28 @@
+.fab{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 24px;
+    z-index: 1000;
+}
+.fab button{
+    padding: 24px;
+    margin: 0px;
+    width: 100%;
+    box-shadow: var(--shadow-level-3);
+    transition: 300ms;
+    border: none;
+    border-radius: 360px;
+    background-color: #aaaaaa;
+}
+.fab button:hover{
+    box-shadow: var(--shadow-level-4);
+    transform: translateY(-5px);
+    background-color: #BCBCBC;
+}
+.fab button:active{
+    box-shadow: none;
+    filter: brightness(50%);
+    background-color: #777777;
+    transform: translateY(1px);
+}
