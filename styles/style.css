@@ -1,6 +1,7 @@
 @import url('constants.css');
 
 @import url('nav.css');
+@import url('footer.css');
 
 body{
     margin: 0px;
