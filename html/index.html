@@ -3,25 +3,15 @@
     <head>
         <title>The ComPawnions</title>
         <link rel="stylesheet" type="text/css" href="../styles/style.css">
+        <script src="../scripts/script.js"></script>
     </head>
     <body>
-        <div id="toolbar">
-            <header>
-                <h1>Sample</h1>
-            </header>
-            <nav>
-                <menu>
-                    <li><button><p>Home</p></button></li>
-                    <li><button><p>Home</p></button></li>
-                    <li><button><p>Home</p></button></li>
-                    <li><button><p>Home</p></button></li>
-                    <li><button><p>Home</p></button></li>
-                </menu>        
-            </nav>
-            <div class="fab">
-                <button>+</button>
-            </div>
-        </div>
+        <!-- This website requires to be run on XAMPP or other servers in order to work. -->
+        <script>
+            loadPagePart('toolbar.html', 'toolbar');
+            loadPagePart('footer.html', 'toolbar-bottom');
+        </script>
+        <div id="toolbar"></div>
 
         <div id="content">
             <div class="card">
@@ -67,9 +57,6 @@
             <p>This is a sample text</p>
         </div>
 
-        <footer>
-            <p>This is a sample footer</p>
-            <p>Copyright @ 2025</p>
-        </footer>
+        <div id="toolbar-bottom"></div>
     </body>
 </html>
