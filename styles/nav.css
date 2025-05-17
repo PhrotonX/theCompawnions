@@ -34,6 +34,10 @@
     
 }
 
+#toolbar p{
+    font-size: medium;
+}
+
 #toolbar h1{
     padding: 6px 16px;
 }
