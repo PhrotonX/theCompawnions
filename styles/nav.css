@@ -5,10 +5,15 @@
     box-shadow: var(--box-shadow-level-2);
     width: 100%;
     display: flex;
-    background-color: #708090;
+    background-color: var(--secondary-color);
 }
 
-#toolbar menu{
+#toolbar nav{
+    position: absolute;
+    right:0;
+}
+
+#toolbar nav menu{
     /* display: flex; */
     list-style-type: none;
     margin-block-start: 0;
@@ -18,17 +23,28 @@
     flex-direction: row;
     margin: 0px;
     padding-left: 0%;
-    float: right;
+    
+    /* float: right; */
 }
 
 #toolbar p, #toolbar h1{
-    margin-block-start: 0;
+    color: var(--primary-text-color);
+    margin-block-start:0;
     margin-block-end: 0;
+    
+}
+
+#toolbar p{
+    font-size: medium;
+}
+
+#toolbar h1{
+    padding: 6px 16px;
 }
 
 #toolbar button{
     padding: 14px 16px;
-    background-color: #708090;
+    background-color: var(--secondary-color);
     border: none;
 }
 
