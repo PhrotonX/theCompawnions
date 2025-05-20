@@ -3,7 +3,7 @@
     border: none;
     border-radius: 2px;
     box-shadow: var(--box-shadow-level-1);
-    display: flex;
+    /* display: flex; */
     text-decoration: none;
     color: black;                
     justify-content: center;
