@@ -4,6 +4,7 @@
         <title>The ComPawnions</title>
         <link rel="stylesheet" type="text/css" href="../styles/style.css">
         <link rel="stylesheet" type="text/css" href="../styles/gallery.css">
+        <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_back,arrow_forward" /> -->
         <script src="../scripts/script.js"></script>
         <script src="../scripts/gallery.js"></script>
     </head>
@@ -50,6 +51,19 @@
                         </td>
                     </tr>
                 </table>
+                <span class="page-buttons">
+                    <button class="clickable" onclick="gallery.prevPage()">
+                        <span class="material-symbols-outlined">
+                            arrow_back
+                        </span>
+                    </button>
+                    <p id="gallery-page-info"></p>
+                    <button class="clickable" onclick="gallery.nextPage()">
+                        <span class="material-symbols-outlined">
+                            arrow_forward
+                        </span>
+                    </button>
+                </span>
                 
                 
             </div>

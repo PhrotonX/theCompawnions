@@ -119,6 +119,96 @@
             },
             "gender": "male",
             "age": 72
+        },
+        {
+            "breed": "Beagle 10",
+            "type": "Dog",
+            "image": {
+                "src": "../images/gallery/sample.png",
+                "alt": "This is an image of a Beagle."
+            },
+            "gender": "female",
+            "age": 77
+        },
+        {
+            "breed": "Beagle 11",
+            "type": "Dog",
+            "image": {
+                "src": "../images/gallery/sample.png",
+                "alt": "This is an image of a Beagle."
+            },
+            "gender": "male",
+            "age": 72
+        },
+        {
+            "breed": "Beagle 12",
+            "type": "Dog",
+            "image": {
+                "src": "../images/gallery/sample.png",
+                "alt": "This is an image of a Beagle."
+            },
+            "gender": "male",
+            "age": 72
+        },
+        {
+            "breed": "Beagle 10",
+            "type": "Dog",
+            "image": {
+                "src": "../images/gallery/sample.png",
+                "alt": "This is an image of a Beagle."
+            },
+            "gender": "female",
+            "age": 77
+        },
+        {
+            "breed": "Beagle 11",
+            "type": "Dog",
+            "image": {
+                "src": "../images/gallery/sample.png",
+                "alt": "This is an image of a Beagle."
+            },
+            "gender": "male",
+            "age": 72
+        },
+        {
+            "breed": "Beagle 12",
+            "type": "Dog",
+            "image": {
+                "src": "../images/gallery/sample.png",
+                "alt": "This is an image of a Beagle."
+            },
+            "gender": "male",
+            "age": 72
+        },
+        {
+            "breed": "Beagle 10",
+            "type": "Dog",
+            "image": {
+                "src": "../images/gallery/sample.png",
+                "alt": "This is an image of a Beagle."
+            },
+            "gender": "female",
+            "age": 77
+        },
+        {
+            "breed": "Beagle 11",
+            "type": "Dog",
+            "image": {
+                "src": "../images/gallery/sample.png",
+                "alt": "This is an image of a Beagle."
+            },
+            "gender": "male",
+            "age": 72
+        },
+        {
+            "breed": "Beaglgregergerghe 12",
+            "type": "Dog",
+            "image": {
+                "src": "../images/gallery/sample.png",
+                "alt": "This is an image of a Beagle."
+            },
+            "gender": "male",
+            "age": 72
         }
     ]
     
