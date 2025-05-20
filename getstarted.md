@@ -1,4 +1,7 @@
 # Get Started
+
+Make sure that node.js is installed.
+
 ## Install the server
 - On Windows, run the install-server.bat file or run the command ```npm install -g http-server```
 
