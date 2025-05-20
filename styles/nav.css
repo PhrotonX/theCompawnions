@@ -18,9 +18,8 @@
     list-style-type: none;
     margin-block-start: 0;
     margin-block-end: 0;
-
-    display: flex;  
-    flex-direction: row;
+    /* display: flex;  */
+    /* flex-direction: row; */
     margin: 0px;
     padding-left: 0%;
     
@@ -54,4 +53,28 @@
 
 #toolbar button:active{
     filter: brightness(75%);
+}
+
+menu li{
+    display: inline;
+    position: relative;
+}
+
+menu li menu{
+    display: none;
+    position: absolute;
+    z-index: 1000;
+    left: 0;
+    box-shadow: var(--box-shadow-level-2);
+}
+
+menu li:hover menu{
+    display: flex;
+    flex-direction: column;
+}
+menu li:hover menu li button{
+    width: 100%;
+}
+menu li:hover menu li p{
+    text-align: left;
 }
