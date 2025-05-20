@@ -2,17 +2,21 @@ class Gallery{
     constructor(){
         this.beginRange = 0;
         this.endRange = 15;
+        this.count = 0;
+        this.rangeSize = 16;
     }
 
     async onLoadElements(){
         var response = await fetch('../data/information.json');
         var json = await response.json();
 
-        const count = Object.keys(json.item).length;
+        this.count = Object.keys(json.item).length;
 
         const table = document.getElementById('gallery-table');
+
+        table.innerHTML = "";
         
-        console.log("Count: " + count);
+        console.log("Count: " + this.count);
 
         var currentTr = null;
         // Fill the table from HTML with contents.
@@ -59,6 +63,31 @@ class Gallery{
             if((i % 4) == 0){
                 table.appendChild(currentTr);
             }
+        }
+
+        //var countInfo = document.getElementById("gallery-page-info");
+        //countInfo.innerHTML = "Showing 16 out of " + this.count + " items";
+
+        
+
+
+    }
+
+    nextPage(){
+        if(this.beginRange + this.rangeSize <= this.count){
+            this.beginRange += this.rangeSize;
+            this.endRange += this.rangeSize;
+
+            this.onLoadElements();
+        }
+    }
+
+    prevPage(){
+        if(this.beginRange - this.rangeSize >= 0){
+            this.beginRange -= this.rangeSize;
+            this.endRange -= this.rangeSize;
+
+            this.onLoadElements();
         }
     }
 }
