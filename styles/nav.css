@@ -2,10 +2,10 @@
     position: sticky;
     top: 0;
     left: 0;
-    box-shadow: var(--box-shadow-level-2);
+    box-shadow: var(--box-shadow-level-4);
     width: 100%;
     display: flex;
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
 }
 
 #toolbar nav{
@@ -43,7 +43,7 @@
 
 #toolbar button{
     padding: 14px 16px;
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
     border: none;
 }
 
