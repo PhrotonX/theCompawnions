@@ -1,6 +1,7 @@
 class Gallery{
     constructor(){
-
+        this.beginRange = 0;
+        this.endRange = 15;
     }
 
     async onLoadElements(){
@@ -15,16 +16,21 @@ class Gallery{
 
         var currentTr = null;
         // Fill the table from HTML with contents.
-        for(let i = 0; i < count; i++){
-            // If the current item is in the 0 or third 
-            if((i % 3) == 0){
+        for(let i = this.beginRange; i <= this.endRange; i++){
+            // Validate to check if the next item is not null.
+            if(json.item[i] == null){
+                return;
+            }
+
+            // If the current item is in 0 or fifth index then make a new table row.
+            if((i % 4) == 0){
                 currentTr = document.createElement("tr");
             }
             
             var currentTd = document.createElement("td");
 
             var currentDiv = document.createElement("div");
-            currentDiv.setAttribute("class", "gallery-item");
+            currentDiv.setAttribute("class", "gallery-item clickable");
 
             // Set the image.
             var img = document.createElement("img");
@@ -49,8 +55,8 @@ class Gallery{
             // Append the items into the table row.
             currentTr.appendChild(currentTd);
 
-            // If the current item is in the first third column, then append the row into the table.
-            if((i % 3) == 0){
+            // If the current item is in the fifth column, then append the row into the table.
+            if((i % 4) == 0){
                 table.appendChild(currentTr);
             }
         }
