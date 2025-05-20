@@ -36,3 +36,7 @@ function onMenuToggle(menuItemId, style){
         menuToggled = false;
     }
 }
+
+function nav(url){
+    window.location.href = url;
+}
