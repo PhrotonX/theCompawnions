@@ -1,0 +1,35 @@
+span.labelled-input{
+    display: flex;
+    border-radius: var(--border-radius-xxl);
+}
+
+span.labelled-input label{
+    margin-left: 5px;
+    width: 100%;
+}
+
+span.labelled-input:hover{
+    background-color: var(--primary-color);
+}
+span.labelled-input:active{
+    background-color: var(--tertiary-color);
+}
+
+
+.page-form{
+    width: 100%;
+}
+
+.page-form input{
+    border-color: var(--primary-color);
+    border-radius: var(--border-radius-xxl);
+    padding: 8px;
+}
+
+.page-form input[type='text']{
+    width: 90%;
+}
+
+.page-form input:hover{
+    background-color: var(--primary-color);
+}

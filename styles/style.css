@@ -1,11 +1,13 @@
 @import url('constants.css');
 
+@import url('font.css');
 @import url('nav.css');
 @import url('fab.css');
 @import url('button.css');
 @import url('content.css');
 @import url('card.css');
 @import url('footer.css');
+@import url('form.css');
 
 body{
     margin: 0px;
