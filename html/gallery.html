@@ -44,9 +44,44 @@
                         </td>
                         <td id="search-column">
                             <div class="card">
-                                <p><b>Filter</b></p>
-                                <p><b>Gender</b></p>
-                                <p><b>Breed</b></p>
+                                <form action="gallery.html" method="get" class="page-form">
+                                    <label for="gallery-search"><p>Search</p></label>
+                                    <input
+                                        type="text"
+                                        name="gallery-search"
+                                        id="gallery-search"
+                                        placeholder="Type here to search">
+                                    <br>
+                                    <span class="labelled-input">
+                                        <input
+                                            type="radio"
+                                            name="gallery-filter"
+                                            id="gallery-search-any"
+                                            value="Breed">
+                                        <label for="gallery-search-any"><p>Any</p></label>
+                                    </span>
+                                    <span class="labelled-input">
+                                        <input
+                                            type="radio"
+                                            name="gallery-filter"
+                                            id="gallery-search-breed"
+                                            value="Breed">
+                                        <label for="gallery-search-breed"><p>Breed</p></label>
+                                    </span>
+                                    <span class="labelled-input">
+                                        <input
+                                            type="radio"
+                                            name="gallery-filter"
+                                            id="gallery-search-gender"
+                                            value="Gender">
+                                        <br>
+                                        <label><p>Gender</p></label>
+                                    </span>
+
+                                    
+                                    
+
+                                </form>
                             </div>
                         </td>
                     </tr>

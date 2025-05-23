@@ -1,0 +1,21 @@
+span.labelled-input{
+    display: flex;
+}
+
+span.labelled-input p{
+    margin-left: 5px;
+}
+
+.page-form{
+    width: 100%;
+}
+
+.page-form input{
+    border-color: var(--primary-color);
+    border-radius: var(--border-radius-xxl);
+    padding: 8px;
+}
+
+.page-form input[type='text']{
+    width: 90%;
+}
