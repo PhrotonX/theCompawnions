@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>General Information - The ComPawnions</title>
+        <link rel="stylesheet" type="text/css" href="../styles/style.css">
+        <script src="../scripts/script.js"></script>
+    </head>
+    <body>
+        <!-- This website requires to be run on XAMPP or other servers in order to work. -->
+        <script>
+            loadPagePart('toolbar.html', 'toolbar');
+            loadPagePart('footer.html', 'toolbar-bottom');
+        </script>
+        <div id="toolbar"></div>
+
+        <div id="content">
+            <div class="heading">
+                <h1>General Information</h1>
+            </div>
+            <div class=card>
+                <div class="card-row">
+                    <div
+                        class="secondary-card clickable center"
+                        onclick="nav('general-information-cats.html')">
+                        <img
+                            class="img-m"
+                            src="../images/pawsAndKnow/breeds/CAT/persian.jpg"
+                            alt="Persian Cat">
+                        <p>Cats</p>
+                    </div>
+                    <div
+                        class="secondary-card clickable center"
+                        onclick="nav('general-information-dogs.html')">
+                        <img
+                            class="img-m"
+                            src="../images/pawsAndKnow/general_information/imgDogGenInfoOverview.jpg"
+                            alt="Dog">
+                        <p>Dogs</p>
+                    </div>
+                </div>
+                
+            </div>
+            
+
+        </div>
+
+        <div id="toolbar-bottom"></div>
+    </body>
+</html>
