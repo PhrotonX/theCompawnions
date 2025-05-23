@@ -6,7 +6,7 @@ class Gallery{
         this.rangeSize = 16;
     }
 
-    async onLoadElements(){
+    async onLoadElements(query){
         var response = await fetch('../data/information.json');
         var json = await response.json();
 
@@ -24,6 +24,19 @@ class Gallery{
             // Validate to check if the next item is not null.
             if(json.item[i] == null){
                 return;
+            }
+
+            if(query != null){
+                // Filters the resulting JSON file based on query parameter.
+                if(query.match(json.item[i].breed) == false){
+                    break;
+                }
+                if(query.match(json.item[i].gender) == false){
+                    break;
+                }
+                if(query.match(json.item[i].age) == false){
+                    break;
+                }
             }
 
             // If the current item is in 0 or fifth index then make a new table row.
@@ -67,10 +80,6 @@ class Gallery{
 
         //var countInfo = document.getElementById("gallery-page-info");
         //countInfo.innerHTML = "Showing 16 out of " + this.count + " items";
-
-        
-
-
     }
 
     nextPage(){
@@ -78,7 +87,7 @@ class Gallery{
             this.beginRange += this.rangeSize;
             this.endRange += this.rangeSize;
 
-            this.onLoadElements();
+            this.onLoadElements(null);
         }
     }
 
@@ -87,7 +96,7 @@ class Gallery{
             this.beginRange -= this.rangeSize;
             this.endRange -= this.rangeSize;
 
-            this.onLoadElements();
+            this.onLoadElements(null);
         }
     }
 }
@@ -96,5 +105,5 @@ var gallery = null;
 
 document.addEventListener("DOMContentLoaded", function(){
     gallery = new Gallery();
-    gallery.onLoadElements();
+    gallery.onLoadElements(null);
 });
