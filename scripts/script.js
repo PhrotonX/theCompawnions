@@ -1,16 +1,23 @@
 var menuToggled = false;
 
 // Loads page parts. Requires servers such as XAMPP in order to work.
-function loadPagePart(filepath, containerId){
+async function loadPagePart(filepath, containerId){
+    var result = false;
+
     fetch(filepath)
         .then(response => response.text())
         .then(html => {
             const element = document.getElementById(containerId);
             element.innerHTML = html;
+            result = true;
         })
         .catch(error => {
             console.log('Failed loading element:', error.message);
+
+            result = false;
         });
+
+    return result;
 }
 
 // Obtains URL parameters. FOr example, www.url.com?query=Sample has query parameter with value "Sample".
