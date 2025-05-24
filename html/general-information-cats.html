@@ -4,13 +4,20 @@
         <title>General Information - The ComPawnions</title>
         <link rel="stylesheet" type="text/css" href="../styles/style.css">
         <script src="../scripts/script.js"></script>
-    </head>
-    <body>
-        <!-- This website requires to be run on XAMPP or other servers in order to work. -->
+        <script src="../scripts/dialog.js"></script>
         <script>
             loadPagePart('toolbar.html', 'toolbar');
             loadPagePart('footer.html', 'toolbar-bottom');
+            loadPagePart('image-dialog.html', 'dialog-box');
         </script>
+        <style>
+            #behavior-image-div{
+                width: 500vw;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- This website requires to be run on XAMPP or other servers in order to work. -->
         <div id="toolbar"></div>
 
         <article>
@@ -24,7 +31,7 @@
                     </div>
                     <div id="section-overview-content">
                         <div class="card-row">
-                            <div class="secondary-card clickable">
+                            <div class="secondary-card clickable image-dialog-opener">
                                 <img
                                     class="img-l"
                                     src="../images/pawsAndKnow/breeds/CAT/persian.jpg"
@@ -105,7 +112,7 @@
                                     </p>
                                 </section>
                             </div>
-                            <div class="secondary-card clickable">
+                            <div class="secondary-card clickable image-dialog-opener">
                                 <img
                                     class="img-m"
                                     src="../images/pawsAndKnow/general_information/imgCatGenInfoOverview.jpg"
@@ -113,7 +120,7 @@
                             </div>
                         </div>
                         <div class="card-row">
-                            <div class="secondary-card clickable">
+                            <div class="secondary-card clickable image-dialog-opener">
                                 <img
                                     class="img-m"
                                     src="../images/pawsAndKnow/general_information/imgCatGenInfoOverview.jpg"
@@ -175,31 +182,31 @@
                             </div>
 
                             <div class="card-row">
-                                <div class="secondary-card center clickable">
+                                <div class="secondary-card center clickable image-dialog-opener">
                                     <img
                                         src="../images/pawsAndKnow/general_information/imgCatGenInfoAbyssinian.jpg"
                                         alt="An image of Abyssinian Cat">
                                     <p>Abyssinian</p>
                                 </div>
-                                <div class="secondary-card center clickable">
+                                <div class="secondary-card center clickable image-dialog-opener">
                                     <img
                                         src="../images/pawsAndKnow/general_information/imgCatGenInfoBengal.jpg"
                                         alt="An image of Bengal Cat">
                                     <p>Bengal</p>
                                 </div>
-                                <div class="secondary-card center clickable">
+                                <div class="secondary-card center clickable image-dialog-opener">
                                     <img
                                         src="../images/pawsAndKnow/general_information/imgCatGenInfoBritShortHair.jpg"
                                         alt="An image of British Shorthair Cat">
                                     <p>British Shorthair</p>
                                 </div>
-                                <div class="secondary-card center clickable">
+                                <div class="secondary-card center clickable image-dialog-opener">
                                     <img
                                         src="../images/pawsAndKnow/general_information/imgCatGenInfoMaineCoon.jpg"
                                         alt="An image of Maine Coon Cat">
                                     <p>Maine Coon</p>
                                 </div>
-                                <div class="secondary-card center clickable">
+                                <div class="secondary-card center clickable image-dialog-opener">
                                     <img
                                         src="../images/pawsAndKnow/general_information/imgCatGenInfoNorwegianForest.jpg"
                                         alt="An image of Norwegian Forest Cat">
@@ -207,31 +214,31 @@
                                 </div>
                             </div>
                             <div class="card-row">
-                                <div class="secondary-card center clickable">
+                                <div class="secondary-card center clickable image-dialog-opener">
                                     <img
                                         src="../images/pawsAndKnow/general_information/imgCatGenInfoPersian.jpg"
                                         alt="An image of Persian Cat">
                                     <p>Persian</p>
                                 </div>
-                                <div class="secondary-card center clickable">
+                                <div class="secondary-card center clickable image-dialog-opener">
                                     <img
                                         src="../images/pawsAndKnow/general_information/imgCatGenInfoRagdoll.jpg"
                                         alt="An image of Ragdoll Cat">
                                     <p>Ragdoll</p>
                                 </div>
-                                <div class="secondary-card center clickable">
+                                <div class="secondary-card center clickable image-dialog-opener">
                                     <img
                                         src="../images/pawsAndKnow/general_information/imgCatGenInfoScottishfold.jpg"
                                         alt="An image of Scottishfold Cat">
                                     <p>Scottishfold</p>
                                 </div>
-                                <div class="secondary-card center clickable">
+                                <div class="secondary-card center clickable image-dialog-opener">
                                     <img
                                         src="../images/pawsAndKnow/general_information/imgCatGenInfoSiamese.jpg"
                                         alt="An image of Siamese Cat">
                                     <p>Siamese</p>
                                 </div>
-                                <div class="secondary-card center clickable">
+                                <div class="secondary-card center clickable image-dialog-opener">
                                     <img
                                         src="../images/pawsAndKnow/general_information/imgCatGenInfoSphynx.jpg"
                                         alt="An image of Sphynx Cat">
@@ -248,7 +255,7 @@
                         <h2>Scientific Classification (Taxonomy)</h2>
                     </div>
                     <div id="section-taxonomy-content">
-                        <div class="image-card">
+                        <div class="image-card image-dialog-opener">
                             <img
                                 src="../images/pawsAndKnow/general_information/imgCatGenInfoTaxonomy.png"
                                 alt="An image displaying the taxonomy of a cat."
@@ -355,20 +362,21 @@
                             </p>
                         </div>
                     </div>
+
+                    <div class="image-card img-l bottom-img image-dialog-opener">
+                        <img
+                            src="../images/pawsAndKnow/general_information/imgCatGenInfoCatsCompanion.jpg"
+                            alt="A picture of a cat hold by an old woman."
+                        >
+                    </div>
                 </section>
-
-                
-                
-
             </div>
             
-            <div class="image-card img-l bottom-img">
-                <img
-                    src="../images/pawsAndKnow/general_information/imgCatGenInfoCatsCompanion.jpg"
-                    alt="A picture of a cat under section Cats as Companion"
-                >
-            </div>
+            
         </article>
+
+        <div id="modal"></div>
+        <div id="dialog-box"></div>
         
         <div id="toolbar-bottom"></div>
     </body>

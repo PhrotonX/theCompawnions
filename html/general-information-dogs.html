@@ -6,14 +6,20 @@
         <link rel="stylesheet" type="text/css" href="../styles/style.css">
         <script src="../scripts/script.js"></script>
         <script src="../scripts/dialog.js"></script>
-    </head>
-    <body>
-        <!-- This website requires to be run on XAMPP or other servers in order to work. -->
+
+        <!-- This website requires to be run on http-server, XAMPP, or other servers in order to work. -->
         <script>
             loadPagePart('toolbar.html', 'toolbar');
             loadPagePart('footer.html', 'toolbar-bottom');
             loadPagePart('image-dialog.html', 'dialog-box');
         </script>
+        <style>
+            #behavior-image-div{
+                width: 500vw;
+            }
+        </style>
+    </head>
+    <body>
         <div id="toolbar"></div>
 
         <main>
@@ -93,7 +99,10 @@
                                 </div>
                             </div>
                             <div class="card-row">
-                                <div class="secondary-card clickable image-dialog-opener">
+                                <div 
+                                    class="secondary-card clickable image-dialog-opener"
+                                    id="behavior-image-div"
+                                    >
                                     <img
                                         class="img-m"
                                         src="../images/pawsAndKnow/general_information/imgDogGenInfoOverview.jpg"
@@ -355,15 +364,17 @@
                                 </p>
                             </div>
                         </div>
+                        
+                        <div class="image-card img-l bottom-img clickable image-dialog-opener">
+                            <img
+                                src="../images/pawsAndKnow/general_information/imgDogGenInfoCompanion.jpg"
+                                alt="A picture of a child hugging a dog."
+                            >
+                        </div>
                     </section>
                 </div>
                 
-                <div class="image-card img-l bottom-img clickable image-dialog-opener">
-                    <img
-                        src="../images/pawsAndKnow/general_information/imgDogGenInfoCompanion.jpg"
-                        alt="A picture of a child hugging a dog."
-                    >
-                </div>
+                
             </article>
         </main>
 
