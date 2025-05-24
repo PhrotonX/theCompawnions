@@ -19,7 +19,7 @@ class Dialog{
 
         this.modal = document.getElementById("modal");
 
-        console.log(this.modal);
+        // console.log(this.modal);
 
         this.closeBtn = document.getElementById(this.dialogId + "-close");
 
@@ -56,8 +56,8 @@ class ImageDialog extends Dialog{
     openDialog(div){
         super.openDialog();
 
-        console.log(this.dialog);
-        console.log(this.dialogId + '-img');
+        // console.log(this.dialog);
+        // console.log(this.dialogId + '-img');
         const dialogImg = this.dialog.querySelector("#" + this.dialogId + '-img');
         const dialogParagraph = this.dialog.querySelector("#" + this.dialogId + '-alt');
 
@@ -79,6 +79,6 @@ document.addEventListener("DOMContentLoaded", function(){
         clickable.onclick = () => {
             imgDialog.openDialog(clickable);
         };
-        console.log(clickable.querySelector('img').getAttribute('alt'));
+        // console.log(clickable.querySelector('img').getAttribute('alt'));
     }
 });
