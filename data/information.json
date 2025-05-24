@@ -1,0 +1,215 @@
+{
+    "item": [
+        {
+            "breed": "Beagle 1",
+            "type": "Dog",
+            "image": {
+                "src": "../images/gallery/sample.png",
+                "alt": "This is an image of a Beagle."
+            },
+            "gender": "male",
+            "age": 72
+        },
+        {
+            "breed": "Beagle 2",
+            "type": "Dog",
+            "image": {
+                "src": "../images/gallery/sample.png",
+                "alt": "This is an image of a Beagle."
+            },
+            "gender": "male",
+            "age": 72
+        },
+        {
+            "breed": "Beagle 3",
+            "type": "Dog",
+            "image": {
+                "src": "../images/gallery/sample.png",
+                "alt": "This is an image of a Beagle."
+            },
+            "gender": "male",
+            "age": 72
+        },
+        {
+            "breed": "Beagle 4",
+            "type": "Dog",
+            "image": {
+                "src": "../images/gallery/sample.png",
+                "alt": "This is an image of a Beagle."
+            },
+            "gender": "male",
+            "age": 72
+        },
+        {
+            "breed": "Beagle 5",
+            "type": "Dog",
+            "image": {
+                "src": "../images/gallery/sample.png",
+                "alt": "This is an image of a Beagle."
+            },
+            "gender": "male",
+            "age": 72
+        },
+        {
+            "breed": "Beagle 6",
+            "type": "Dog",
+            "image": {
+                "src": "../images/gallery/sample.png",
+                "alt": "This is an image of a Beagle."
+            },
+            "gender": "male",
+            "age": 72
+        },
+        {
+            "breed": "Beagle 7",
+            "type": "Dog",
+            "image": {
+                "src": "../images/gallery/sample.png",
+                "alt": "This is an image of a Beagle."
+            },
+            "gender": "female",
+            "age": 77
+        },
+        {
+            "breed": "Beagle 8",
+            "type": "Dog",
+            "image": {
+                "src": "../images/gallery/sample.png",
+                "alt": "This is an image of a Beagle."
+            },
+            "gender": "male",
+            "age": 72
+        },
+        {
+            "breed": "Beagle 9",
+            "type": "Dog",
+            "image": {
+                "src": "../images/gallery/sample.png",
+                "alt": "This is an image of a Beagle."
+            },
+            "gender": "male",
+            "age": 72
+        },
+        {
+            "breed": "Beagle 10",
+            "type": "Dog",
+            "image": {
+                "src": "../images/gallery/sample.png",
+                "alt": "This is an image of a Beagle."
+            },
+            "gender": "female",
+            "age": 77
+        },
+        {
+            "breed": "Beagle 11",
+            "type": "Dog",
+            "image": {
+                "src": "../images/gallery/sample.png",
+                "alt": "This is an image of a Beagle."
+            },
+            "gender": "male",
+            "age": 72
+        },
+        {
+            "breed": "Beagle 12",
+            "type": "Dog",
+            "image": {
+                "src": "../images/gallery/sample.png",
+                "alt": "This is an image of a Beagle."
+            },
+            "gender": "male",
+            "age": 72
+        },
+        {
+            "breed": "Beagle 10",
+            "type": "Dog",
+            "image": {
+                "src": "../images/gallery/sample.png",
+                "alt": "This is an image of a Beagle."
+            },
+            "gender": "female",
+            "age": 77
+        },
+        {
+            "breed": "Beagle 11",
+            "type": "Dog",
+            "image": {
+                "src": "../images/gallery/sample.png",
+                "alt": "This is an image of a Beagle."
+            },
+            "gender": "male",
+            "age": 72
+        },
+        {
+            "breed": "Beagle 12",
+            "type": "Dog",
+            "image": {
+                "src": "../images/gallery/sample.png",
+                "alt": "This is an image of a Beagle."
+            },
+            "gender": "male",
+            "age": 72
+        },
+        {
+            "breed": "Beagle 10",
+            "type": "Dog",
+            "image": {
+                "src": "../images/gallery/sample.png",
+                "alt": "This is an image of a Beagle."
+            },
+            "gender": "female",
+            "age": 77
+        },
+        {
+            "breed": "Beagle 11",
+            "type": "Dog",
+            "image": {
+                "src": "../images/gallery/sample.png",
+                "alt": "This is an image of a Beagle."
+            },
+            "gender": "male",
+            "age": 72
+        },
+        {
+            "breed": "Beagle 12",
+            "type": "Dog",
+            "image": {
+                "src": "../images/gallery/sample.png",
+                "alt": "This is an image of a Beagle."
+            },
+            "gender": "male",
+            "age": 72
+        },
+        {
+            "breed": "Beagle 10",
+            "type": "Dog",
+            "image": {
+                "src": "../images/gallery/sample.png",
+                "alt": "This is an image of a Beagle."
+            },
+            "gender": "female",
+            "age": 77
+        },
+        {
+            "breed": "Beagle 11",
+            "type": "Dog",
+            "image": {
+                "src": "../images/gallery/sample.png",
+                "alt": "This is an image of a Beagle."
+            },
+            "gender": "male",
+            "age": 72
+        },
+        {
+            "breed": "Beaglgregergerghe 12",
+            "type": "Dog",
+            "image": {
+                "src": "../images/gallery/sample.png",
+                "alt": "This is an image of a Beagle."
+            },
+            "gender": "male",
+            "age": 72
+        }
+    ]
+    
+}

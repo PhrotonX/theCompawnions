@@ -1,0 +1,7 @@
+# Shared workspace settings
+.vscode/*
+!.vscode/settings.json
+!.vscode/launch.json
+
+# Some node.js files
+node_modules/
