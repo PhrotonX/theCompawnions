@@ -10,6 +10,7 @@ buttons.
         src="../images/pawsAndKnow/general_information/imgDogGenInfoYorkie.jpg"
         alt="Text here..."
     >
+    <!-- <p>A picture of Yorkie</p>-->
     <!-- other items here... (not recommended) -->
 </element>
 ```
