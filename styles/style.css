@@ -10,6 +10,7 @@
 @import url('form.css');
 @import url('image.css');
 @import url('dialog.css');
+@import url('tooltip.css');
 
 body{
     margin: 0px;

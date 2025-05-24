@@ -1,0 +1,31 @@
+.tooltip{
+    position: fixed;
+    background-color: var(--background-color);
+    /* background-color: var(--primary-color); */
+    /* background-color: var(--secondary-color); */
+    /* background-color: var(--tertiary-color); */
+    /* background-color: var(--quaternary-color); */
+
+    transition: 300ms;
+}
+
+.tooltip p{
+    /* color: white; */
+}
+
+a:hover dialog{
+    display: block;
+    position: fixed;
+
+    animation-name: fade-effect;
+    animation-duration: 300ms;
+    animation-timing-function: ease;
+}
+
+@keyframes fade-effect {
+    from{
+        opacity: 0;
+    }to{
+        opacity: 1;
+    }
+}
