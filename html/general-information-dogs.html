@@ -5,12 +5,14 @@
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="../styles/style.css">
         <script src="../scripts/script.js"></script>
+        <script src="../scripts/dialog.js"></script>
     </head>
     <body>
         <!-- This website requires to be run on XAMPP or other servers in order to work. -->
         <script>
             loadPagePart('toolbar.html', 'toolbar');
             loadPagePart('footer.html', 'toolbar-bottom');
+            loadPagePart('image-dialog.html', 'dialog-box');
         </script>
         <div id="toolbar"></div>
 
@@ -26,7 +28,9 @@
                         </div>
                         <div id="section-overview-content">
                             <div class="card-row">
-                                <div class="secondary-card clickable">
+                                <div 
+                                    class="secondary-card clickable image-dialog-opener"
+                                    >
                                     <img
                                         class="img-m"
                                         src="../images/pawsAndKnow/general_information/imgDogGenInfoOverview.jpg"
@@ -81,7 +85,7 @@
                                         </p>
                                     </section>
                                 </div>
-                                <div class="secondary-card clickable">
+                                <div class="secondary-card clickable image-dialog-opener">
                                     <img
                                         class="img-m"
                                         src="../images/pawsAndKnow/general_information/imgDogGenInfoOverview.jpg"
@@ -89,7 +93,7 @@
                                 </div>
                             </div>
                             <div class="card-row">
-                                <div class="secondary-card clickable">
+                                <div class="secondary-card clickable image-dialog-opener">
                                     <img
                                         class="img-m"
                                         src="../images/pawsAndKnow/general_information/imgDogGenInfoOverview.jpg"
@@ -137,7 +141,7 @@
                                     <h3>Common Breeds</h3>
                                 </div>
                                 <div class="card-row">
-                                    <figure class="secondary-card center clickable">
+                                    <figure class="secondary-card center clickable image-dialog-opener">
                                         <img
                                             src="../images/pawsAndKnow/general_information/imgDogGenInfoBeagle.jpg"
                                             alt="An image of a Beagle Dog">
@@ -145,7 +149,7 @@
                                             <p>Beagle</p>
                                         </figcaption>
                                     </figure>
-                                    <figure class="secondary-card center clickable">
+                                    <figure class="secondary-card center clickable image-dialog-opener">
                                         <img
                                             src="../images/pawsAndKnow/general_information/imgDogGenInfoBichonFrise.jpg"
                                             alt="An image of Bichon Frise Dog">
@@ -153,7 +157,7 @@
                                             <p>Bichon Frise</p>
                                         </figcaption>
                                     </figure>
-                                    <figure class="secondary-card center clickable">
+                                    <figure class="secondary-card center clickable image-dialog-opener">
                                         <img
                                             src="../images/pawsAndKnow/general_information/imgDogGenInfoDachshund.jpg"
                                             alt="An image of Dachshund Dog">
@@ -161,7 +165,7 @@
                                             <p>Dachshund</p>
                                         </figcaption>
                                     </figure>
-                                    <figure class="secondary-card center clickable">
+                                    <figure class="secondary-card center clickable image-dialog-opener">
                                         <img
                                             src="../images/pawsAndKnow/general_information/imgDogGenInfoFrenchBulldog.jpg"
                                             alt="An image of French Bulldog">
@@ -169,7 +173,7 @@
                                         <p>French Bulldog</p> 
                                         </figcaption>
                                     </figure>
-                                    <figure class="secondary-card center clickable">
+                                    <figure class="secondary-card center clickable image-dialog-opener">
                                         <img
                                             src="../images/pawsAndKnow/general_information/imgDogGenInfoGermanShepherd.jpg"
                                             alt="An image of German Shepherd Dog">
@@ -179,7 +183,7 @@
                                     </figure>
                                 </div>
                                 <div class="card-row">
-                                    <figure class="secondary-card center clickable">
+                                    <figure class="secondary-card center clickable image-dialog-opener">
                                         <img
                                             src="../images/pawsAndKnow/general_information/imgDogGenInfoGoldenRetriever.jpg"
                                             alt="An image of Golden Retriever Dog">
@@ -187,7 +191,7 @@
                                             <p>Golden Retriever</p>
                                         </figcaption>
                                     </figure>
-                                    <figure class="secondary-card center clickable">
+                                    <figure class="secondary-card center clickable image-dialog-opener">
                                         <img
                                             src="../images/pawsAndKnow/general_information/imgDogGenInfoLabradorRetriever.jpg"
                                             alt="An image of Labrador Retriever Dog">
@@ -195,7 +199,7 @@
                                             <p>Labrador Retriever</p>
                                         </figcaption>
                                     </figure>
-                                    <figure class="secondary-card center clickable">
+                                    <figure class="secondary-card center clickable image-dialog-opener">
                                         <img
                                             src="../images/pawsAndKnow/general_information/imgDogGenInfoPoodle.jpg"
                                             alt="An image of Poodle Dog">
@@ -203,7 +207,7 @@
                                             <p>Poodle</p>
                                         </figcaption>
                                     </figure>
-                                    <figure class="secondary-card center clickable">
+                                    <figure class="secondary-card center clickable image-dialog-opener">
                                         <img
                                             src="../images/pawsAndKnow/general_information/imgDogGenInfoRottweiler.jpg"
                                             alt="An image of Rottweiler Dog">
@@ -211,7 +215,7 @@
                                             <p>Rottweiler</p>
                                         </figcaption>
                                     </figure>
-                                    <figure class="secondary-card center clickable">
+                                    <figure class="secondary-card center clickable image-dialog-opener">
                                         <img
                                             src="../images/pawsAndKnow/general_information/imgDogGenInfoYorkie.jpg"
                                             alt="An image of Yorkie Dog">
@@ -354,15 +358,17 @@
                     </section>
                 </div>
                 
-                <div class="image-card img-l bottom-img">
+                <div class="image-card img-l bottom-img clickable image-dialog-opener">
                     <img
                         src="../images/pawsAndKnow/general_information/imgDogGenInfoCompanion.jpg"
-                        alt="A picture of a dog under section Dogs as a companion"
+                        alt="A picture of a child hugging a dog."
                     >
                 </div>
             </article>
         </main>
-        
+
+        <div id="modal"></div>
+        <div id="dialog-box"></div>
 
         <div id="toolbar-bottom"></div>
     </body>

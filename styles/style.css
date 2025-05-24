@@ -9,6 +9,7 @@
 @import url('footer.css');
 @import url('form.css');
 @import url('image.css');
+@import url('dialog.css');
 
 body{
     margin: 0px;
