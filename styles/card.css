@@ -35,16 +35,6 @@
     width: 100%;
 }
 
-.img-s{
-    width: 15vw;
-}
-.img-m{
-    width: 20vw;
-}
-.img-l{
-    width: 25vw;
-}
-
 .card-row{
     display: flex;
     flex-direction: row;
