@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Title - The ComPawnions</title>
+        <link rel="stylesheet" type="text/css" href="../styles/style.css">
+        <script src="../scripts/script.js"></script>
+        <!-- Uncomment this to include dialog boxes on the webpage if available. -->
+        <!-- <script src="../scripts/dialog.js"></script> -->
+
+        <!-- This website requires to be run on http-server, XAMPP, or other servers in order to work. -->
+        <script>
+            loadPagePart('toolbar.html', 'toolbar');
+            loadPagePart('footer.html', 'toolbar-bottom');
+
+            // Uncomment this to include dialog boxes on the webpage if available.
+            // loadPagePart('image-dialog.html', 'dialog-box');
+        </script>
+            <style>
+            #Treats-and-Food-title {
+                width: 100%;
+                text-align: center;
+                font-size: 300%;
+                color: #ffffff;
+                text-shadow: 3px 3px 5px rgba(43, 43, 43, 0.856);
+                font-family: Arial, Helvetica, sans-serif;
+                background-image: url(https://image.chewy.com/catalog/general/images/moe/0672e8b5-413b-7c88-8000-b7b2821c7b72._SY280_.jpeg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                border-radius: 20px;
+                overflow: hidden;
+            }
+
+            #foodList {
+                display: flex;
+                flex-wrap: wrap;
+                padding-left: 2%;
+                gap: 15px;
+                margin-top: 20px;
+            }
+
+            .food-card {
+                width: 300px;
+                height: 320px;
+                border: 1px solid #cccc;
+                border-radius: 20px;
+                overflow: hidden;
+                text-align: center;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                cursor: pointer;
+                transition: transform 0.2s;
+                background-color: #eff2c7;
+                background-size: cover;
+                background-position: center;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            .food-card:hover {
+                transform: scale(1.05);
+            }
+
+            .food-card img {
+                width: 100%;
+                height: 90%;
+                object-fit: cover;
+                margin-top: 5px;
+            }
+
+            .food-card-name {
+                padding: 0px;
+                font-weight: bold;
+            }
+
+            #pet-dropdown {
+                position: relative;
+                display: inline-block;
+                width: 200px;
+                margin-bottom: 10px;
+                font-family: sans-serif;
+            }
+
+            #pet-dropdown .custom-select {
+                background-color: #eff2c7;
+                padding: 10px;
+                border-radius: 10px;
+                cursor: pointer;
+                border: none;
+            }
+
+            #pet-dropdown .custom-options {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: #eff2c7;
+                border-radius: 0 0 10px 10px;
+                box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+                z-index: 10;
+                overflow: hidden;
+            }
+
+            #pet-dropdown .custom-option {
+                padding: 10px;
+                cursor: pointer;
+                transition: background-color 0.2s;
+            }
+
+            #pet-dropdown .custom-option:hover {
+                background-color: antiquewhite;
+                color: black;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="toolbar"></div>
+
+        <main>
+            <article>
+                <div id="content">
+                    <div id="Treats-and-Food-title">
+                        <h1>Treats and Foods</h1>
+                    </div>   
+                    <h3>Select Animal Type</h3>
+                            <div id="pet-dropdown">
+                            <div class="custom-select" onclick="toggleDropdown()">Select Animal</div>
+                                <div class="custom-options" id="dropdown">
+                                    <div class="custom-option" onclick="selectAnimal('dog')">Dog</div>
+                                    <div class="custom-option" onclick="selectAnimal('cat')">Cat</div>
+                                </div>
+                            </div>
+
+
+                    <h3>Foods:</h3>
+                    <div id="foodList"></div>
+                    <script>
+                        //This is a Database of list of the foods and treats
+                        const foods = {
+                        dog: [
+                            "Doggo Food 1", "Doggo Food 2", "Doggo Food 3", "Doggo Food 4", "Doggo Food 5",
+                            "Doggo Food 6", "Doggo Food 7", "Doggo Food 8", "Doggo Food 9", "Doggo Food 10"
+                        ],
+                        cat: [
+                            "Catto Food 1", "Catto Food 2", "Catto Food 3", "Catto Food 4", "Catto Food 5",
+                            "Catto Food 6", "Catto Food 7", "Catto Food 8", "Catto Food 9", "Catto Food 10"
+                        ]
+                        };
+                        //Database of images of the foods, must match the list names below accurately
+                        const foodImages = {
+                        dog: {
+                            "Doggo Food 1": "",
+                            "Doggo Food 2": "https://www.naturesrecipe.com/wp-content/uploads/2024/04/Natures-Recipe-Chicken-Sweet-Potato-Pumpkin-Grain-Free-Small-Breed-Dry-Dog-Food-4LB-1536x1536.png",
+                            "Doggo Food 3": "https://cdn11.bigcommerce.com/s-ispzim1bub/images/stencil/640w/products/4641/6153/00017800475686_CL__PNG2400_0__37942.1644979936.png?c=1",
+                            "Doggo Food 4": "",
+                            "Doggo Food 5": "",
+                            "Doggo Food 6": "",
+                            "Doggo Food 7": "",
+                            "Doggo Food 8": "",
+                            "Doggo Food 9": "",
+                            "Doggo Food 10": ""
+                        },
+                        cat: {
+                            "Catto Food 1": "",
+                            "Catto Food 2": "",
+                            "Catto Food 3": "",
+                            "Catto Food 4": "",
+                            "Catto Food 5": "",
+                            "Catto Food 6": "",
+                            "Catto Food 7": "",
+                            "Catto Food 8": "",
+                            "Catto Food 9": "",
+                            "Catto Food 10": ""
+                        }
+                        };
+                        //update list function
+                        function updateFoodList(animal) {
+                            foodList.innerHTML = '';
+                            foods[animal].forEach(food => {
+                            const card = document.createElement('div');
+                            card.className = 'food-card';
+                            card.onclick = () => {
+                                window.location.href = `info.html?animal=${animal}&food=${encodeURIComponent(food)}`;
+                            };
+
+                            card.innerHTML = `
+                                <img src="${foodImages[animal][food]}" alt="${food}">
+                                <div class="food-card-name">${food}</div>
+                            `;
+                            foodList.appendChild(card);
+                            });
+                        }
+
+                        // first load
+                        updateFoodList('dog');
+
+                        // dropdown function
+                        function toggleDropdown() {
+                            const dropdown = document.getElementById("dropdown");
+                            dropdown.style.display = (dropdown.style.display === "block") ? "none" : "block";
+                        }
+
+                        function selectAnimal(animal) {
+                            document.querySelector('.custom-select').textContent = animal.charAt(0).toUpperCase() + animal.slice(1);
+                            updateFoodList(animal);
+                            document.getElementById("dropdown").style.display = "none";
+                        }
+
+                        document.addEventListener("click", function(e) {
+                            const wrapper = document.querySelector(".custom-select-wrapper");
+                            if (!wrapper.contains(e.target)) {
+                            document.getElementById("dropdown").style.display = "none";
+                            }
+                        });                    
+                    </script>
+                </div>
+            </article>
+        </main>
+        
+        <!-- Uncomment this to include dialog boxes on the webpage if available. -->
+        <!-- <div id="modal"></div>
+        <div id="dialog-box"></div> -->
+
+        <div id="toolbar-bottom"></div>
+    </body>
+</html> 
