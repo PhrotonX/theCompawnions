@@ -33,6 +33,8 @@
 .image-card img, .secondary-card img{
     border-radius: var(--border-radius-xl);
     width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .card-row{
