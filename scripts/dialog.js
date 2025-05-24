@@ -73,6 +73,8 @@ class ImageDialog extends Dialog{
 var imgDialog = new ImageDialog();
 
 document.addEventListener("DOMContentLoaded", function(){
+    // Add onclick event to each image-dialog-opener.
+    // ============================================================================
     var imageDialogOpener = document.getElementsByClassName("image-dialog-opener");
     
     for(let clickable of imageDialogOpener){
