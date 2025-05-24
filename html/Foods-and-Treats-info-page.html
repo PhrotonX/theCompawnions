@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Title - The ComPawnions</title>
+        <link rel="stylesheet" type="text/css" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/constants.css">
+        <script src="../scripts/script.js"></script>
+        <!-- Uncomment this to include dialog boxes on the webpage if available. -->
+        <!-- <script src="../scripts/dialog.js"></script> -->
+
+        <!-- This website requires to be run on http-server, XAMPP, or other servers in order to work. -->
+        <script>
+            loadPagePart('toolbar.html', 'toolbar');
+            loadPagePart('footer.html', 'toolbar-bottom');
+
+            // Uncomment this to include dialog boxes on the webpage if available.
+            // loadPagePart('image-dialog.html', 'dialog-box');
+        </script>
+        <style>
+            .pageContent{
+                flex-wrap: wrap;
+                background-color: white;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                border-radius: 20px;
+                width: fit-content;
+                margin: auto;
+                padding: 2%;
+            }
+            .titleSection{
+                display: flex;
+                flex-wrap: wrap;          
+                justify-content: center;  
+                gap: 20px;                
+                padding: 10px;
+            }
+            #foodPic {
+                width: 100%;
+                height: 100%;  
+                object-fit: cover;
+                display: block;
+                border-radius: 15px;
+            }
+            #titleFoodPic {
+                width: 320px;
+                height: 320px;
+                display: inline-block;
+                text-align: center;
+                border-radius: 20px;
+                border: 25px solid #F0F1C5;
+                background-color: #F0F1C5;
+                overflow: hidden;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            }
+            #titleName{
+                border: 10px solid #F0F1C5;
+                background-color: #F0F1C5;
+                border-radius: 20px;
+                width: 500px;
+                height: fit-content;
+                font-size: 300%;
+                text-align: center;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            }
+            .foodDescSection{
+                flex-wrap: wrap;
+                margin: 20px auto;
+                height: auto;
+                width: 70vw;
+                max-width: 900px;
+                border: 10px solid #F0F1C5;
+                border-radius: 20px;
+                background-color: #F0F1C5;
+                text-align: left;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            }
+            .foodDetails{
+                margin-left: 20px; margin-right: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <div id="toolbar"></div>
+
+        <main>
+            <article>
+                <!-- Add your content here. -->
+                <section class="pageContent">
+                    <section class="titleSection">
+                        <section id="titleFoodPic">
+                            <img id="foodPic" src="" alt="Food image"/>
+                        </section>
+                        <section id="titleName">
+                            <h1 id="foodTitle">Loading...</h1>
+                            <h6 id="foodType" style="font-size: 30%;">Loading...</h6>
+                        </section>
+                    </section>
+                    <section>
+                        <section class="foodDescSection">
+                            <p  class="foodDetails"><b>Description</b><p id="foodDesc" style="margin: 20px;"></p></p>
+                        </section>
+                        <section class="foodDescSection">
+                            <p class="foodDetails"><b>Recommended Brand/Recipe:</b><p id="recoBrandRecipe" style="margin: 20px;"></p></p>
+                        </section>
+                        <section class="foodDescSection">
+                            <p class="foodDetails"><b>Recipe Description:</b><p id="recoBrandRecipeDesc" style="margin: 20px;"></p></p> 
+                        </section>
+                        <section class="foodDescSection">
+                            <p class="foodDetails"><b>Ingredients:</b><p id="foodIngr" style="margin: 20px;"></p></p>
+                        </section>
+                        <section class="foodDescSection">
+                            <p ><b><h3 class="foodDetails">Links:</h3></b><br></p>
+                            <p class="foodDetails"><b>Shopee:</b><p id="linkShopee" style="margin: 20px;"></p></p>
+                            <p class="foodDetails"><b>Lazada:</b><p id="linkLazada" style="margin: 20px;"></p></p>
+                            <p class="foodDetails"><b>Website:</b><p id="linkWeb" style="margin: 20px;"></p></p>
+                        </section>
+                    </section>
+                </section>
+
+                 <script>
+                    const params = new URLSearchParams(window.location.search);
+                    const animal = params.get('animal');
+                    const food = params.get('food');
+
+                    // Unified food database
+                    const foodDatabase = {
+                        cat: {
+                            "Salmon": {
+                                info: "Salmon is safe and beneficial for cats if prepared correctly. Offers Omega-3s for coat, eye, brain, and heart health. Best served in fish-first cat foods, toppers, or treats. Avoid raw, smoked, or highly seasoned salmon. Canned salmon should be fed sparingly due to high sodium content.",
+                                image: "https://cdn.shopify.com/s/files/1/0688/3596/7262/files/ACME_Smoked_Fish_2021_ESG_Report_-_Photos_-_Selects_from_Marketing_00006_700x_99d665a5-a479-43ed-b429-aa6f8e5dac13_600x600.png?v=1689178958",
+                                type: "Protein Foods",
+                                brand: "Homemade Cat Food made with salmon",
+                                brandDesc: "Homemade cat food offers several advantages: you have control over quality by selecting high-quality, fresh ingredients and avoiding mystery fillers or additives; meals can be nutritionally balanced to include essential nutrients like taurine, omega-3s, and amino acids that support your cat’s health; there are no hidden artificial preservatives, which are often found in commercial brands and can trigger allergies or digestive issues; it can also be more cost-effective when buying ingredients in bulk; and for picky eaters, recipes can be easily customized to match your cat’s preferences, making mealtime more enjoyable.",
+                                indgredients: "Rice, Poultry Meal, Wheat Products, Soya by-products, Salmon meal (Real Fish Protein), Poultry Fat (natural source of Omega 6), Fish Oil (natural source of Omega 3 & DHA), Vitamins (A, D3, E, K3, B1, B2, B6, B12, Pantothenic Acid, Biotin, Folic acid) & Minerals (Iron, Copper, Manganese, Zinc, Iodine, Selenium), Choline Chloride, Taurine, Sodium bisulfate, Monocalcium phosphate, Calcium carbonate, Iodized salt, Antimold, Antioxidant, Palatants, Yucca Schidigera extract.",
+                                shopee: "https://shopee.ph/Maxime-Dry-Cat-Food-Kitten-Adult-Salmon-Flavor-7kg-i.327785230.18748852107",
+                                lazada: "https://www.lazada.com.ph/products/pdp-i3606073415-s18714031694.html",
+                                website: "https://maxime.asia/ph/products/cat/maxime-dry-cat-food-kitten-adult-salmon-flavor/",
+                            },
+                            "Beef": { 
+                                info: "Cooked, unseasoned beef is a rich source of protein for cats. Beef is also an excellent source of vitamin A, vitamin B, and vitamin C. Thanks to the health benefits it provides, beef is sometimes included as an ingredient in commercial cat food.", 
+                                image: "https://www.allrecipes.com/thmb/2qVJV2pY_oPVwCVePKimL701ttM=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Cuts-of-Beef-3x2-1-a557f31f8b13462185b4f2c17ab5b746.png", 
+                                type: "Protein Food", 
+                                brand: "Beef & Hoki Feast Canned Cat Food",
+                                brandDesc: "Made in New Zealand with grass-fed, free-range Beef and sustainably caught Hoki, our canned Beef & Hoki Feast assists brain and eye development and is a great diet for kittens.<br><ul><li>High in meat. Low in carbohydrates. Grain-free.</li><li>Complete and balanced, suitable for all life stages.</li><li>Meets all AAFCO standards, Veterinarian and Nutritionist approved.</li><li>Free from any binders, gum, or gelling agents.</li><li>The only thing we add is fresh New Zealand water for added hydration.</li><li>BPA-free and endlessly recyclable.</li></ul>",                                                                                               
+                                indgredients: "Rice, Poultry Meal, Wheat Products, Soya by-products, Salmon meal (Real Fish Protein), Poultry Fat (natural source of Omega 6), Fish Oil (natural source of Omega 3 & DHA), Vitamins (A, D3, E, K3, B1, B2, B6, B12, Pantothenic Acid, Biotin, Folic acid) & Minerals (Iron, Copper, Manganese, Zinc, Iodine, Selenium), Choline Chloride, Taurine, Sodium bisulfate, Monocalcium phosphate, Calcium carbonate, Iodized salt, Antimold, Antioxidant, Palatants, Yucca Schidigera extract.",
+                                shopee: "https://shopee.ph/Maxime-Dry-Cat-Food-Kitten-Adult-Salmon-Flavor-7kg-i.327785230.18748852107",
+                                lazada: "https://www.lazada.com.ph/products/pdp-i3606073415-s18714031694.html",
+                                website: "https://maxime.asia/ph/products/cat/maxime-dry-cat-food-kitten-adult-salmon-flavor/",
+                            },
+                            "Chicken": { 
+                                info: "Cooked, unseasoned chicken or turkey are excellent sources of protein for your cat. Aside from protein, cats also derive vitamin B6, selenium, phosphorus, and Omega-6 from these types of meat. Chicken and turkey are also beneficial because they are lean meats with a lower calorie content than beef. For this reason, chicken is one of the most popular ingredients in commercial cat food.", 
+                                image: "https://www.licious.in/blog/wp-content/uploads/2022/03/Chicken-Curry-Cut-min.png", 
+                                type: "Protein Food", 
+                                brand: "SmartHeart Cat Pouch - Chicken With Rice And Cheese",
+                                brandDesc: "<ul><li>Protein – To maintain good muscle mass</li><li>Fat – To maintain healthy skin and shiny coat</li><li>Minerals – Strengthen bones and teeth</li><li>Taurine Plus – Nourishing eye vision</li><li>Vitamins – Enhance body function and immune system</li></ul>",                                                                                               
+                                indgredients: "Chicken Meat and Chicken by-product*, Rice, Cheese, Chicken Oil, Gelling Agent, Vitamins and Minerals, Flavor, Enhancer, Food Coloring, Water.",
+                                shopee: "https://shopee.ph/SmartHeart-Adult-Cat-Wet-Food-Pouch-Chicken-with-Rice-and-Cheese-85g-BUNDLE-OF-12-PetMate-i.971629152.13299783002",
+                                lazada: "https://www.lazada.com.ph/products/smartheart-adult-chicken-with-rice-and-cheese-wet-cat-food-85g-6-pouches-i2986490422.html",
+                                website: "https://smartheart.my/smartheart-cat-pouch-chicken-and-rice-with-cheese-85g.html"
+                            },
+                            "Tuna": { 
+                                info: "Tuna is high in protein and low in carbohydrates. It’s also rich in omega fatty acids, which improves cardiac health and helps your cat maintain a thick, rich coat. Many of the vitamins and minerals in this oily fish are also beneficial to our feline friends. But tuna is deficient in vitamin E, and this can cause serious problems when tuna is fed in large amounts.", 
+                                image: "https://scottseafood-orders.co.nz/cdn/shop/files/YellowFinTunaLoins_1024x1024@2x.jpg?v=1714591757", 
+                                type: "Protein Food", 
+                                brand: "Whiskas Dry Adult Tuna",
+                                brandDesc: "Whiskas® Adult Dry Food with Tuna is a nutritionally complete and balanced recipe that has carefully been created to cater to the requirements of an adult cat’s system.",                                                                                               
+                                indgredients: "Whole grain cereals(corn,rice), corn glutan meal, poultry and poultry by products, ocean fish, soy bean meal, palm stearin, soy bean oil, iodized salt, wheat flour, taurine, vitamins(A,E, B!, B6, B2, B12, chlorine, niacin, folic acid) minerlas(calcium, phosphorus, zinc, iron, copper, selenium, manganese), food coloring, presevatives, flavor.",
+                                shopee: "https://shopee.ph/Whiskas-Dry-Adult-Tuna-7kg-i.238345847.19928676308",
+                                lazada: "https://www.lazada.com.ph/products/pdp-i7196828-s9127038.html",
+                                website: "https://www.petwarehouse.ph/cat/whiskas-tuna-flavor-7kg-cat-dry-food.html"
+                            },
+                            "Pumpkin": { 
+                                info: "On this list of the healthiest people food that cats can eat, let’s talk about our first fruit: the pumpkin. When fed to cats in moderation, cooked pureed pumpkin helps with digestion. In fact, pumpkin is particularly helpful for cats with constipation or diarrhea.", 
+                                image: "https://upload.wikimedia.org/wikipedia/commons/5/5c/FrenchMarketPumpkinsB.jpg", 
+                                type: "Fruits", 
+                                brand: "Signature 7 Monday Mackerel Pumpkin Wet Cat Food 70g",
+                                brandDesc: "Signature7 provides delicious meals for your cat every other day. For Monday, your beautiful cat will be enjoying the meal that is full of mackerel and pumpkin. This food is free of any harmful ingredient and it is all premium.It is glutton, grains, soy and wheat free.This meal is full of all the Omega 3 ingredients that has the capability of boosting the immune system of your Cat.Suitable for healthy bones and strong immunity.A complete and balanced meal for Cats of all life stages.",                                                                                               
+                                indgredients: "Mackerel, Water, Pumpkin, Pea protein, Tuna extract, Vitamins and Minerals (Tricalcium phosphate, Potassium chloride, Magnesium sulphate, Choline chloride, Ferrous sulphate, Zinc oxide, α-Tocopheryl acetate, Nicotinic acid, Vitamin A acetate, Manganese sulphate, Copper proteinate, Dicalcium phosphate, Thiamine mononitrate, Calcium pantothenate, Riboflavin supplement, Pyridoxine hydrochloride, Biotin, Vitamin B12 supplement, Sodium selenite, Cholecalciferol, Menadione sodium bisulfite complex, Folic acid, Potassium Iodide, Sodium chloride, Magnesium oxide), Soybean oil, Tuna oil, Salt, Taurine.",
+                                shopee: "https://shopee.ph/product/379394153/16314898365",
+                                lazada: "",
+                                website: "https://beary.com.sg/product/signature-7-monday-mackerel-pumpkin/"
+                            },
+                            "Broccoli": { 
+                                info: "Cooked pureed broccoli is a safe and healthy treat for cats thanks to its vitamin C, carotenoids, and dietary fiber. Broccoli is also an excellent source of antioxidants for cats. ", 
+                                image: "https://images.themodernproper.com/production/posts/2022/SteamedBroccoli_7.jpg?w=1200&q=82&auto=format&fit=crop&dm=1669042067&s=cbd40a516ff2d8304825d5c7a4fee1f2", 
+                                type: "Vegetable", 
+                                brand: "Moochie Creamy Broth with Chicken & Broccoli for Kitten 70g",
+                                brandDesc: "From deliberately slow simmering as well as selecting the best raw materials to get the aroma and delicious taste that caters to It is also useful for your beloved cat. Moochie soup helps to reduce cat dehydration. as well as creating a new dining experience to the cat like a personal chef to cook. , , Ingredients: Chicken broth, Chicken breast, Broccoli, Coconut Milk, Tapioca Starch, Glycine, Taurine, Tri Calcium Phosphate, Cellulose Gum, Guar Gum, Xanthan Gu.",                                                                                               
+                                indgredients: "Chicken Broth, Chicken Breast, Broccoli, Coconut Milk, Tapioca Starch, Glycine, Taurine, Tri Calcium Phosphate, Cellular Gum, Guar Gum, Xanthan Gum, and Vitamin E",
+                                shopee: "https://shopee.ph/Moochie-Creamy-Broth-with-Chicken-Broccoli-for-Kitten-70g-i.489400933.27431673691",
+                                lazada: "https://www.lazada.com.ph/products/moochie-creamy-broths-chicken-broccoli-wet-cat-food-40g-12-pouches-i4803056094.html",
+                                website: "https://www.petexpress.com.ph/products/moochie-creamy-broths-chicken-broccoli-wet-cat-food-40g-12-pouches"
+                            },
+                            "Shrimp": { 
+                                info: "Shrimp is a low-calorie, high-protein treat that supplies your kitty with a healthy boost of vitamin B12, omega-3 and omega-6 fatty acids, and choline. And, along with being nutritious, it’s tasty.", 
+                                image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7c7ekUAcUyj9ZDJQMo8l_tOZY6Mq4pWgCLw&s", 
+                                type: "Protein Food", 
+                                brand: "Fancy Feast Classic Cod Sole and Shrimp Wet Cat Food 85g",
+                                brandDesc: "Fancy Feast Classic Pate Cod, Sole & Shrimp Feast 85g Cat Wet Food is a finely ground paté with a deliciously smooth texture cats love, made with real seafood",                                                                                               
+                                indgredients: "Cod, fish, meat by-products, liver, fish broth, sole, shrimp, artificial and natural flavors, guar gum, Potassium Chloride, Magnesium Proteinate, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide, Tricalcium Phosphate, Taurine, Thiamine Mononitrate (Vitamin B-1), Vitamin E Supplement, Niacin (Vitamin B-3), Calcium Pantothenate (Vitamin B-5), Vitamin A Supplement, Menadione Sodium Bisulfite Complex (Vitamin K), Pyridoxine Hydrochloride (Vitamin B-6), Riboflavin Supplement (Vitamin B-2),  Vitamin B-12 Supplement, Biotin (Vitamin B-7), Folic Acid (Vitamin B-9), Vitamin D-3 Supplement, Salt",
+                                shopee: "https://shopee.ph/Fancy-Feast-Classic-Cod-Sole-and-Shrimp-Wet-Cat-Food-85g-(12-cans)-i.379394153.8217537846",
+                                lazada: "https://www.lazada.com.ph/products/fancy-feast-classic-cod-sole-shrimp-wet-cat-food-85g-12-pcs-i1846906860.htm",
+                                website: "https://www.petwarehouse.ph/cat/fancy-feast-classic-pate-cod-sole-shrimp-feast-85g-cat-wet-food.html"
+                            },
+                            "Carrots": { 
+                                info: "Carrots are a good source of fiber, vitamin A, and beta-carotene for cats. As one of the healthiest vegetable treats for cats, cooked and pureed carrots are great for a cat's vision, skin, and digestive system.", 
+                                image: "https://www.tasteofhome.com/wp-content/uploads/2019/01/carrots-shutterstock_789443206.jpg", 
+                                type: "Vegetable", 
+                                brand: "Dentalight Tasty Freshest Chicken & Carrot Flavour Cat Treat in Can 80g",
+                                brandDesc: "Dentalight Tasty+ Freshest Cat Treat in Can uses real farm-raised chicken and selected fresh carrots. Our snack is made with an easy to digest and absorb formula for a tasty + fresh high protein treat for your cats! They have added a variety of vitamins and minerals to help keep your cat healthy.",                                                                                               
+                                indgredients: "Chicken, chicken broth, carrot, potato starch, multi-vitamins, calcium hydrophosphate, sodium tripolyphosphate, salmon oil, glycine, taurine, trace minerals, mannose-oligosaccharides",
+                                shopee: "https://shopee.ph/Dentalight-Tasty-Freshest-SAVER'S-PACK-x6-Chicken-Carrot-Flavour-Cat-Treat-in-Can-6-80g-Cans-i.316128746.18069337185",
+                                lazada: "https://www.lazada.com.ph/products/dentalight-tasty-freshest-chicken-carrot-flavour-cat-treat-in-can-80g-i3414816581.html",
+                                website: "https://dogsandthecityph.com/products/dentalight-tasty-with-freshest-cat-treats-in-can-80g"
+                            },
+                            "Peas": { 
+                                info: "Cooked, pureed peas are a rich source of vitamins and minerals for cats, including vitamin C, vitamin A, and potassium.", 
+                                image: "https://www.alphafoodie.com/wp-content/uploads/2023/03/Sauteed-Peas-square.jpeg", 
+                                type: "Vegetable", 
+                                brand: "Cat & Co Wellness Adult fitness - Chicken and Peas Premium Cat Food 1.5kg Cat Foods",
+                                brandDesc: "Cat & Co Wellness Adult fitness - Chicken and Peas is a dry food formulated for kittens which live indoor and outdoor. It is produced without the use of artificial colourings or artificial preservatives and ensures high palatability and all nutrients necessary for the active life of cats.",                                                                                               
+                                indgredients: "Dehydrated animal proteins (chicken); rice; wheat; barley; animal fat; potato protein; maize gluten; natural fiber sources; pea flour; sunflower seed oil; prebiotics; fish oil; yucca schidigera; natural preservatives (rosemary, fennel, chamomile).",
+                                shopee: "https://shopee.ph/Cat-Co-Wellness-Adult-fitness-Chicken-and-Peas-Premium-healthy-dry-Cat-Food-400g-i.426471222.22621360695",
+                                lazada: "https://www.lazada.com.ph/products/cat-co-wellness-adult-fitness-chicken-and-peas-premium-cat-food-15kg-cat-foods-i3555083629.html",
+                                website: "https://snoonu.com/product/cat-and-co-wellness-adult-fitness-with-chicken-and-peas-15-kg/66eea9603a05c5e869c7549b"
+                            },
+                            "Pork": { 
+                                info: "It’s a good source of protein which is necessary for carnivores. It can easily be digested. Pork is loaded with vitamins and nutrients like vitamin B, niacin, zinc, potassium, and selenium. The vitamin B12 it contains can help boost your cat’s nervous and immune systems", 
+                                image: "https://assets.farmison.com/images/recipe-detail-1380/76438-pork-shoulder.jpg", 
+                                type: "Protein Food", 
+                                brand: "Oasy Chunks in Gravy Adult with Pork Wet Cat Food 85g",
+                                brandDesc: "Oasy Chunks in Gravy Adult with Pork Wet Cat Food 85g (16 pouches) . Complete Pet Food for Adult Cats. Soft chunks in gravy with Pork to delight your adult cat every day.Gluten-Free Formula, GMOs and Soya-Free. Cruelty-Free. No artificial flavorings and colorants added.",                                                                                               
+                                indgredients: "poultry, pork 4%, beef, corn starch, pea fibre, minerals, potato starch, dextrose, caramel. This recipe includes fresh animal ingredients: min. 15%.",
+                                shopee: "https://shopee.ph/Oasy-Chunks-in-Gravy-Adult-with-Pork-Wet-Cat-Food-85g-(12-pouches)-i.379394153.25608027970",
+                                lazada: "https://www.lazada.com.ph/products/oasy-chunks-in-gravy-pouch-wet-cat-food-85grams-1-pouch-i4565786857.html",
+                                website: "https://www.oasy.com/en/for-your-cat/chunks-in-gravy/cat-chunks-adult-with-pork"
+                            }
+                        },
+                        dog: {
+                            "Apples": {
+                                info: "",
+                                image: "",
+                                type: "",
+                                brand: ""
+                            },
+                            "Bananas": {
+                                info: "",
+                                image: "",
+                                type: "",
+                                brand: ""
+                            },
+                            "Beef": {
+                                info: "",
+                                image: "",
+                                type: "",
+                                brand: ""
+                            },
+                            "Blueberries": {
+                                info: "",
+                                image: "",
+                                type: "",
+                                brand: ""
+                            },
+                            "Carrots": {
+                                info: "",
+                                image: "",
+                                type: "",
+                                brand: ""
+                            },
+                            "Chicken": {
+                                info: "",
+                                image: "",
+                                type: "",
+                                brand: ""
+                            },
+                            "Pork": {
+                                info: "",
+                                image: "",
+                                type: "",
+                                brand: ""
+                            },
+                            "Lamb": {
+                                info: "",
+                                image: "",
+                                type: "",
+                                brand: ""
+                            },
+                            "Eggs": {
+                                info: "",
+                                image: "",
+                                type: "",
+                                brand: ""
+                            },
+                            "Fish": {
+                                info: "",
+                                image: "",
+                                type: "",
+                                brand: ""
+                            }
+                        }
+                    };
+
+                    // Accessing the data
+                    const selectedFood = foodDatabase[animal]?.[food];
+
+                    if (selectedFood) {
+                        document.getElementById('foodTitle').textContent = food;
+                        document.getElementById('foodType').textContent = selectedFood.type || "Type not available";
+                        document.getElementById('foodDesc').textContent = selectedFood.info || "Description not available.";
+                        document.getElementById('recoBrandRecipe').innerHTML = selectedFood.brand || "No recommended brand/recipe found.";
+                        document.getElementById('recoBrandRecipeDesc').innerHTML = selectedFood.brandDesc || "No descriptiond found.";
+                        document.getElementById('foodIngr').textContent = selectedFood.indgredients || "No indgredients found.";
+                        document.getElementById('linkShopee').innerHTML = `<a href="${selectedFood.shopee}">${selectedFood.shopee}</a>` || "No link found.";
+                        document.getElementById('linkLazada').innerHTML = `<a href="${selectedFood.lazada}">${selectedFood.lazada}</a>` || "No link found.";
+                        document.getElementById('linkWeb').innerHTML = `<a href="${selectedFood.website}">${selectedFood.website}</a>` || "No link found.";
+
+                        if (selectedFood.image) {
+                            const img = document.getElementById('foodPic');
+                            img.src = selectedFood.image;
+                            img.style.display = 'block';
+                        }
+                    } else {
+                        console.warn("Food item not found:", animal, food);
+                    }
+                </script>
+            </article>
+        </main>
+        
+        <!-- Uncomment this to include dialog boxes on the webpage if available. -->
+        <!-- <div id="modal"></div>
+        <div id="dialog-box"></div> -->
+
+        <div id="toolbar-bottom"></div>
+    </body>
+</html> 
