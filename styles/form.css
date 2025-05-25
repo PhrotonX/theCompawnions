@@ -33,3 +33,10 @@ span.labelled-input:active{
 .page-form input:hover{
     background-color: var(--primary-color);
 }
+
+form button{
+    width: 100%;
+    /* background-color: var(--primary-color); */
+    /* border: none; */
+    /* border-radius: var(--border-radius-xxl); */
+}

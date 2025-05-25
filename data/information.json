@@ -1,214 +1,52 @@
 {
     "item": [
         {
-            "breed": "Beagle 1",
+            "breed": "Beagle",
             "type": "Dog",
+            "title": "Image of a Beagle",
+            "link": null,
             "image": {
-                "src": "../images/gallery/sample.png",
+                "src": "../images/pawsAndKnow/breeds/DOG/beagle.jpg",
                 "alt": "This is an image of a Beagle."
             },
-            "gender": "male",
-            "age": 72
+            "gender": "Male",
+            "age": 3
         },
         {
-            "breed": "Beagle 2",
+            "breed": "Dachshund",
             "type": "Dog",
+            "title": "Image of a Dachshund",
+            "link": null,
             "image": {
-                "src": "../images/gallery/sample.png",
-                "alt": "This is an image of a Beagle."
+                "src": "../images/pawsAndKnow/breeds/DOG/dachshund.jpg",
+                "alt": "This is an image of a Dachshund."
             },
-            "gender": "male",
-            "age": 72
+            "gender": "Female",
+            "age": 4
         },
         {
-            "breed": "Beagle 3",
+            "breed": "Great Dane",
             "type": "Dog",
+            "title": "Image of a Great Dane",
+            "link": null,
             "image": {
-                "src": "../images/gallery/sample.png",
-                "alt": "This is an image of a Beagle."
+                "src": "../images/pawsAndKnow/breeds/DOG/chihuahua.jpg",
+                "alt": "This is an image of a Great Dane."
             },
-            "gender": "male",
-            "age": 72
+            "gender": "Male",
+            "age": 7
         },
         {
-            "breed": "Beagle 4",
+            "breed": "Pomeranian",
             "type": "Dog",
+            "title": "Image of a Pomeranian",
+            "link": null,
             "image": {
-                "src": "../images/gallery/sample.png",
-                "alt": "This is an image of a Beagle."
+                "src": "../images/pawsAndKnow/breeds/DOG/pomeranian.jpg",
+                "alt": "This is an image of a Pomeranian."
             },
-            "gender": "male",
-            "age": 72
-        },
-        {
-            "breed": "Beagle 5",
-            "type": "Dog",
-            "image": {
-                "src": "../images/gallery/sample.png",
-                "alt": "This is an image of a Beagle."
-            },
-            "gender": "male",
-            "age": 72
-        },
-        {
-            "breed": "Beagle 6",
-            "type": "Dog",
-            "image": {
-                "src": "../images/gallery/sample.png",
-                "alt": "This is an image of a Beagle."
-            },
-            "gender": "male",
-            "age": 72
-        },
-        {
-            "breed": "Beagle 7",
-            "type": "Dog",
-            "image": {
-                "src": "../images/gallery/sample.png",
-                "alt": "This is an image of a Beagle."
-            },
-            "gender": "female",
-            "age": 77
-        },
-        {
-            "breed": "Beagle 8",
-            "type": "Dog",
-            "image": {
-                "src": "../images/gallery/sample.png",
-                "alt": "This is an image of a Beagle."
-            },
-            "gender": "male",
-            "age": 72
-        },
-        {
-            "breed": "Beagle 9",
-            "type": "Dog",
-            "image": {
-                "src": "../images/gallery/sample.png",
-                "alt": "This is an image of a Beagle."
-            },
-            "gender": "male",
-            "age": 72
-        },
-        {
-            "breed": "Beagle 10",
-            "type": "Dog",
-            "image": {
-                "src": "../images/gallery/sample.png",
-                "alt": "This is an image of a Beagle."
-            },
-            "gender": "female",
-            "age": 77
-        },
-        {
-            "breed": "Beagle 11",
-            "type": "Dog",
-            "image": {
-                "src": "../images/gallery/sample.png",
-                "alt": "This is an image of a Beagle."
-            },
-            "gender": "male",
-            "age": 72
-        },
-        {
-            "breed": "Beagle 12",
-            "type": "Dog",
-            "image": {
-                "src": "../images/gallery/sample.png",
-                "alt": "This is an image of a Beagle."
-            },
-            "gender": "male",
-            "age": 72
-        },
-        {
-            "breed": "Beagle 10",
-            "type": "Dog",
-            "image": {
-                "src": "../images/gallery/sample.png",
-                "alt": "This is an image of a Beagle."
-            },
-            "gender": "female",
-            "age": 77
-        },
-        {
-            "breed": "Beagle 11",
-            "type": "Dog",
-            "image": {
-                "src": "../images/gallery/sample.png",
-                "alt": "This is an image of a Beagle."
-            },
-            "gender": "male",
-            "age": 72
-        },
-        {
-            "breed": "Beagle 12",
-            "type": "Dog",
-            "image": {
-                "src": "../images/gallery/sample.png",
-                "alt": "This is an image of a Beagle."
-            },
-            "gender": "male",
-            "age": 72
-        },
-        {
-            "breed": "Beagle 10",
-            "type": "Dog",
-            "image": {
-                "src": "../images/gallery/sample.png",
-                "alt": "This is an image of a Beagle."
-            },
-            "gender": "female",
-            "age": 77
-        },
-        {
-            "breed": "Beagle 11",
-            "type": "Dog",
-            "image": {
-                "src": "../images/gallery/sample.png",
-                "alt": "This is an image of a Beagle."
-            },
-            "gender": "male",
-            "age": 72
-        },
-        {
-            "breed": "Beagle 12",
-            "type": "Dog",
-            "image": {
-                "src": "../images/gallery/sample.png",
-                "alt": "This is an image of a Beagle."
-            },
-            "gender": "male",
-            "age": 72
-        },
-        {
-            "breed": "Beagle 10",
-            "type": "Dog",
-            "image": {
-                "src": "../images/gallery/sample.png",
-                "alt": "This is an image of a Beagle."
-            },
-            "gender": "female",
-            "age": 77
-        },
-        {
-            "breed": "Beagle 11",
-            "type": "Dog",
-            "image": {
-                "src": "../images/gallery/sample.png",
-                "alt": "This is an image of a Beagle."
-            },
-            "gender": "male",
-            "age": 72
-        },
-        {
-            "breed": "Beaglgregergerghe 12",
-            "type": "Dog",
-            "image": {
-                "src": "../images/gallery/sample.png",
-                "alt": "This is an image of a Beagle."
-            },
-            "gender": "male",
-            "age": 72
+            "gender": "Male",
+            "age": 2
         }
     ]
     

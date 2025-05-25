@@ -31,8 +31,11 @@
 }
 
 #gallery-heading-card{
-    background-image: url('../images/removeLater.png');
+    background-image: url('../images/pawsAndKnow/general_information/imgDogGenInfoOverview.jpg');
     background-color: var(--primary-color);
-    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0px 17%;
+    /* background-blend-mode: overlay; */
     height: 35vh;
 }

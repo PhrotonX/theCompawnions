@@ -19,6 +19,7 @@ class Gallery{
         console.log("Count: " + this.count);
 
         var currentTr = null;
+        var resultCtr = 0
         // Fill the table from HTML with contents.
         for(let i = this.beginRange; i <= this.endRange; i++){
             // Validate to check if the next item is not null.
@@ -26,21 +27,37 @@ class Gallery{
                 return;
             }
 
+            // Filters the resulting JSON file based on query parameter.
             if(query != null){
-                // Filters the resulting JSON file based on query parameter.
-                if(query.match(json.item[i].breed) == false){
-                    break;
+                let queryStr = query.get("gallery-search");
+                let queryFilter = query.get("gallery-filter");
+                switch(queryFilter){
+                    case "breed":
+                        if(json.item[i].breed.match(new RegExp(queryStr, "i")) == null){
+                            continue;
+                        }
+                        break;
+                    case "gender":
+                        //console.log(new RegExp(queryStr, "i"));
+                        console.log(json.item[i].gender + " and " + queryStr);
+                        if(json.item[i].gender != queryStr){
+                            continue;
+                        }
+                        break;
+                    case "age":
+                        if(json.item[i].age.match(new RegExp(queryStr, "i")) == null){
+                            continue;
+                        }
+                        break;
                 }
-                if(query.match(json.item[i].gender) == false){
-                    break;
-                }
-                if(query.match(json.item[i].age) == false){
-                    break;
-                }
+
+                //if(queryFilter == "gender"){
+                    
+                //}
             }
 
             // If the current item is in 0 or fifth index then make a new table row.
-            if((i % 4) == 0){
+            if((resultCtr % 4) == 0){
                 currentTr = document.createElement("tr");
             }
             
@@ -76,6 +93,8 @@ class Gallery{
             if((i % 4) == 0){
                 table.appendChild(currentTr);
             }
+
+            resultCtr++;
         }
 
         //var countInfo = document.getElementById("gallery-page-info");
@@ -105,5 +124,9 @@ var gallery = null;
 
 document.addEventListener("DOMContentLoaded", function(){
     gallery = new Gallery();
-    gallery.onLoadElements(null);
+
+    const query = new URLSearchParams(window.location.search);
+    // var param = url.get("gallery-search");
+    // var type = url.get("gallery-filter");
+    gallery.onLoadElements(query);
 });
