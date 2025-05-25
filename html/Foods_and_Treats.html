@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Page Title - The ComPawnions</title>
+        <title>Foods and Treats - The ComPawnions</title>
         <link rel="stylesheet" type="text/css" href="../styles/style.css">
         <script src="../scripts/script.js"></script>
         <!-- Uncomment this to include dialog boxes on the webpage if available. -->
@@ -42,7 +42,7 @@
             .food-card {
                 width: 300px;
                 height: 320px;
-                border: 1px solid #cccc;
+                border: 1px solid #eff2c7;
                 border-radius: 20px;
                 overflow: hidden;
                 text-align: center;
@@ -63,7 +63,8 @@
                 width: 100%;
                 height: 90%;
                 object-fit: cover;
-                margin-top: 5px;
+                margin-bottom: 0px;
+                border-radius: 20px;
             }
 
             .food-card-name {
@@ -94,7 +95,7 @@
                 left: 0;
                 width: 100%;
                 background-color: #eff2c7;
-                border-radius: 0 0 10px 10px;
+                border-radius: 10px;
                 box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
                 z-index: 10;
                 overflow: hidden;
@@ -107,7 +108,7 @@
             }
 
             #pet-dropdown .custom-option:hover {
-                background-color: antiquewhite;
+                background-color: #e9eab3;
                 color: black;
             }
         </style>
@@ -121,12 +122,12 @@
                     <div id="Treats-and-Food-title">
                         <h1>Treats and Foods</h1>
                     </div>   
-                    <h3>Select Animal Type</h3>
+                    <h3>Select Animal Type ⬇</h3>
                             <div id="pet-dropdown">
-                            <div class="custom-select" onclick="toggleDropdown()">Select Animal</div>
+                            <div class="custom-select" onclick="toggleDropdown()">Cat</div>
                                 <div class="custom-options" id="dropdown">
-                                    <div class="custom-option" onclick="selectAnimal('dog')">Dog</div>
                                     <div class="custom-option" onclick="selectAnimal('cat')">Cat</div>
+                                    <div class="custom-option" onclick="selectAnimal('dog')">Dog</div>
                                 </div>
                             </div>
 
@@ -136,40 +137,40 @@
                     <script>
                         //This is a Database of list of the foods and treats
                         const foods = {
-                        dog: [
-                            "Doggo Food 1", "Doggo Food 2", "Doggo Food 3", "Doggo Food 4", "Doggo Food 5",
-                            "Doggo Food 6", "Doggo Food 7", "Doggo Food 8", "Doggo Food 9", "Doggo Food 10"
-                        ],
                         cat: [
-                            "Catto Food 1", "Catto Food 2", "Catto Food 3", "Catto Food 4", "Catto Food 5",
-                            "Catto Food 6", "Catto Food 7", "Catto Food 8", "Catto Food 9", "Catto Food 10"
+                            "Salmon", "Beef", "Chicken", "Tuna", "Pumpkin",
+                            "Broccoli", "Shrimp", "Carrots", "Peas", "Pork"
+                        ],    
+                        dog: [
+                            "Apples", "Bananas", "Beef", "Blueberries", "Carrots",
+                            "Chicken", "Pork", "Lamb", "Eggs", "Fish"
                         ]
                         };
                         //Database of images of the foods, must match the list names below accurately
                         const foodImages = {
-                        dog: {
-                            "Doggo Food 1": "",
-                            "Doggo Food 2": "https://www.naturesrecipe.com/wp-content/uploads/2024/04/Natures-Recipe-Chicken-Sweet-Potato-Pumpkin-Grain-Free-Small-Breed-Dry-Dog-Food-4LB-1536x1536.png",
-                            "Doggo Food 3": "https://cdn11.bigcommerce.com/s-ispzim1bub/images/stencil/640w/products/4641/6153/00017800475686_CL__PNG2400_0__37942.1644979936.png?c=1",
-                            "Doggo Food 4": "",
-                            "Doggo Food 5": "",
-                            "Doggo Food 6": "",
-                            "Doggo Food 7": "",
-                            "Doggo Food 8": "",
-                            "Doggo Food 9": "",
-                            "Doggo Food 10": ""
-                        },
                         cat: {
-                            "Catto Food 1": "",
-                            "Catto Food 2": "",
-                            "Catto Food 3": "",
-                            "Catto Food 4": "",
-                            "Catto Food 5": "",
-                            "Catto Food 6": "",
-                            "Catto Food 7": "",
-                            "Catto Food 8": "",
-                            "Catto Food 9": "",
-                            "Catto Food 10": ""
+                            "Salmon": "https://cdn.shopify.com/s/files/1/0688/3596/7262/files/ACME_Smoked_Fish_2021_ESG_Report_-_Photos_-_Selects_from_Marketing_00006_700x_99d665a5-a479-43ed-b429-aa6f8e5dac13_600x600.png?v=1689178958",
+                            "Beef": "https://www.allrecipes.com/thmb/2qVJV2pY_oPVwCVePKimL701ttM=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Cuts-of-Beef-3x2-1-a557f31f8b13462185b4f2c17ab5b746.png",
+                            "Chicken": "https://www.licious.in/blog/wp-content/uploads/2022/03/Chicken-Curry-Cut-min.png",
+                            "Tuna": "https://scottseafood-orders.co.nz/cdn/shop/files/YellowFinTunaLoins_1024x1024@2x.jpg?v=1714591757",
+                            "Pumpkin": "https://upload.wikimedia.org/wikipedia/commons/5/5c/FrenchMarketPumpkinsB.jpg",
+                            "Broccoli": "https://images.themodernproper.com/production/posts/2022/SteamedBroccoli_7.jpg?w=1200&q=82&auto=format&fit=crop&dm=1669042067&s=cbd40a516ff2d8304825d5c7a4fee1f2",
+                            "Shrimp": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7c7ekUAcUyj9ZDJQMo8l_tOZY6Mq4pWgCLw&s",
+                            "Carrots": "https://www.tasteofhome.com/wp-content/uploads/2019/01/carrots-shutterstock_789443206.jpg",
+                            "Peas": "https://www.alphafoodie.com/wp-content/uploads/2023/03/Sauteed-Peas-square.jpeg",
+                            "Pork": "https://assets.farmison.com/images/recipe-detail-1380/76438-pork-shoulder.jpg"
+                        },
+                        dog: {
+                            "Apples": "https://ychef.files.bbci.co.uk/1280x720/p07v2wjn.jpg",
+                            "Bananas": "https://d2jx2rerrg6sh3.cloudfront.net/image-handler/picture/2018/2/banana.jpg",
+                            "Beef": "https://www.allrecipes.com/thmb/zN81HQ86Fa2rHnkH-KUvUf6pBZE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Cuts-of-Beef-3x2-1-a557f31f8b13462185b4f2c17ab5b746.png",
+                            "Blueberries": "https://media.post.rvohealth.io/wp-content/uploads/2020/08/blueberries_fresh_fullframe_732x549_thumb-732x549.jpg",
+                            "Carrots": "https://www.tasteofhome.com/wp-content/uploads/2019/01/carrots-shutterstock_789443206.jpg",
+                            "Chicken": "https://assets.farmison.com/images/recipe-detail-1380/76340-yorkshire-free-range-loose-birds-chicken3c3e9dd7-8edd-41fa-b35d-73f3cb951b8asquare900x900.jpg",
+                            "Pork": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIpiB7sgvF4YEvEoPdJVlHxuIa-CL6Ot4SXg&s",
+                            "Lamb": "https://assets.farmison.com/images/recipe-detail-1380/83409-36498-lamb-gigot-steak-3-.jpg",
+                            "Eggs": "https://images-prod.healthline.com/hlcmsresource/images/AN_images/health-benefits-of-eggs-1296x728-feature.jpg",
+                            "Fish": "https://5.imimg.com/data5/WI/ZZ/OL/ANDROID-81993397/product-jpeg-500x500.jpg"
                         }
                         };
                         //update list function
@@ -179,19 +180,18 @@
                             const card = document.createElement('div');
                             card.className = 'food-card';
                             card.onclick = () => {
-                                window.location.href = `info.html?animal=${animal}&food=${encodeURIComponent(food)}`;
+                                window.location.href = `Foods-and-Treats-info-page.html?animal=${animal}&food=${encodeURIComponent(food)}`;
                             };
 
                             card.innerHTML = `
                                 <img src="${foodImages[animal][food]}" alt="${food}">
-                                <div class="food-card-name">${food}</div>
-                            `;
+                                <div class="food-card-name">${food}</div>`;
                             foodList.appendChild(card);
                             });
                         }
 
                         // first load
-                        updateFoodList('dog');
+                        updateFoodList('cat');
 
                         // dropdown function
                         function toggleDropdown() {
