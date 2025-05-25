@@ -1,7 +1,140 @@
 <footer>
-    <p>&copy; 2025 Sample Footer</p>
-    <p>All rights reserved.</p>
-</footer><footer>
-    <p>This is a sample footer</p>
-    <p>Copyright @ 2025</p>
+    <head>
+    <meta charset="UTF-8" />
+    <title>Footer Example</title>
+    <style>
+        footer {
+        background-color: #BBD8A3;
+        color: black;
+        font-family: Arial, sans-serif;
+        }
+
+        .footer-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 1px 20px;
+        align-items: center;
+        }
+
+        .footer-section {
+        flex: 1 1 250px;
+        padding: 0 20px;
+        margin: 1px 0;
+        }
+    s
+        .footer-section h4 {
+        margin-bottom: 10px;
+        }
+
+        .footer-links {
+        list-style: none;
+        padding: 0;
+        }
+
+        .footer-links li {
+        margin-bottom: 5px;
+        }
+
+        .footer-links a {
+        color: black;
+        text-decoration: none;
+        }
+
+        .footer-links a:hover {
+        text-decoration: none;
+        color: black;
+        }
+
+        .footer-links.two-columns {
+        display: grid;
+        grid-template-columns: repeat(2, max-content);
+        gap: 5px 20px;
+        }    
+
+        .footer-socials {
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+        margin-top: 10px;
+        justify-content: center;
+        }
+
+        .footer-socials img {
+        width: 30px;
+        height: 30px;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+        }
+
+        .footer-socials img:hover {
+        transform: scale(1.1);
+        }
+        .social-media-section {
+        margin-bottom: 30px;
+        margin-right: 50px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        }
+
+        .footer-bottom {
+        border-top: 1px solid #555;
+        text-align: center;
+        padding: 10px 0;
+        width: 100%;
+        }
+
+        .footer-logo {
+        width: 300px;
+        height: auto;
+        }
+    </style>
+    </head>
+    <body>
+    <footer>
+        <div class="footer-container">
+        <div class="footer-section">
+            <img src="image/logo.png" class="footer-logo" alt="Logo" />
+        </div>
+        <div class="footer-section">
+            <h4>QUICK LINK</h4>
+            <ul class="footer-links two-columns">
+            <li><a href="/HOME">Home</a></li>
+            <li><a href="/tungkol">Paw and Know</a></li>
+            <li><a href="/serbisyo">Services</a></li>
+            <li><a href="/contact">Gallery</a></li>
+            <li><a href="/contact">About Us</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4>CONNECT WITH US</h4>
+            <p>Email: info@halimbawa.com</p>
+            <p>Telepono: 0912 345 6789</p>
+        </div>
+        <div class="footer-section social-media-section">
+            <h4>SOCIAL MEDIA FOR MORE UPDATES <br>
+            FOR YOUR COMPAWNIONS</h4>
+            <div class="footer-socials">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                <img src="https://img.icons8.com/?size=100&id=kQzCK4emnaD2&format=png&color=1A1A1A" alt="Facebook" />
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+                <img src="https://img.icons8.com/?size=100&id=phOKFKYpe00C&format=png&color=1A1A1A" alt="Twitter" />
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                <img src="https://img.icons8.com/?size=100&id=42328&format=png&color=000000" alt="Instagram" />
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">
+                <img src="https://img.icons8.com/?size=100&id=37326&format=png&color=1A1A1A" alt="YouTube" />
+            </a>
+            </div>
+        </div>
+        </div>
+        <div class="footer-bottom">
+        <p>&copy; 2025 ALL RIGHT RESERVED</p>
+        </div>
+    </footer>
+    </body>
 </footer>
