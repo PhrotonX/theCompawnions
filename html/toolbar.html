@@ -1,5 +1,10 @@
-<p id="website-title">The ComPawnions</p>
+<p></p>
 <nav>
+    <img
+        id="toolbar-logo"
+        src="../images/logo-horizontal2.png"
+        alt="The ComPawnions Logo"
+    >
     <menu>
         <li><button onclick="nav('index.html')"><p>Home</p></button></li>
         <li>
@@ -27,9 +32,17 @@
         </li>
         <li><button onclick="nav('gallery.html')"><p>Gallery</p></button></li>
         <li><button onclick="nav('about.html')"><p>About</p></button></li>
-        <li><button onclick="nav('search.html')"><p>Search</p></button></li>
-     
-    </menu>        
+        <!-- <li><input/></li> -->
+        <!-- <li><button onclick="nav('search.html')"><p>Search</p></button></li> -->
+    </menu>
+    <form action="search.html" method="get" class="search-box">
+        <input type="text" id="search" name="search" placeholder="Search...">
+        <button type="submit">
+            <span class="material-symbols-outlined">
+                search
+            </span>
+        </button>
+    </form>
 </nav>
 <div class="fab">
     <button onclick="nav('#')">
