@@ -1,62 +1,159 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>The ComPawnions</title>
+        <title>Home - The ComPawnions</title>
         <link rel="stylesheet" type="text/css" href="../styles/style.css">
         <script src="../scripts/script.js"></script>
-    </head>
-    <body>
-        <!-- This website requires to be run on XAMPP or other servers in order to work. -->
+        <style>
+            header button{
+                margin-left: 8px;
+                width: 25%;
+            }
+
+            body{
+                background-image: url('../images/index-cut.png');
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+
+            #website-info{
+                text-align: center;
+            }
+            #index-website-logo{
+                margin-left: 30%;
+                margin-right: 30%;
+            }
+
+            /* Override card styles */
+            .secondary-card img{
+                border-radius: var(--border-radius-xl);
+                width: auto;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            #website-mission-and-vision{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                /* width: 100%; */
+                /* flex-grow: 1; */
+                margin: 10%;
+            }
+
+            #website-mission-and-vision .image-card{
+                margin: 2.5%;
+                width: 100%;
+                height: auto;
+                object-fit:cover;
+            }
+
+            #website-mission-and-vision-content{
+                width: 50%;
+            }
+
+        </style>
+        <!-- Uncomment this to include dialog boxes or tooltips on the webpage if available. -->
+        <script src="../scripts/dialog.js"></script>
+        <!-- <script src="../scripts/tooltip.js"></script> -->
+
+        <!-- This website requires to be run on http-server, XAMPP, or other servers in order to work. -->
         <script>
             loadPagePart('toolbar.html', 'toolbar');
             loadPagePart('footer.html', 'toolbar-bottom');
+
+            // Uncomment this to include dialog boxes on the webpage if available.
+            loadPagePart('image-dialog.html', 'dialog-box');
         </script>
+    </head>
+    <body>
+        
         <div id="toolbar"></div>
 
-        <div id="content">
-            <div class="card">
-                <h2>This is a sample text</h2>
-                <p>This is a sample text</p>
-                <p>This is a sample text</p>
-                <button class="clickable clickable-text">
-                    Sample
-                </button>
-            </div>
+        <main>
+            <article>
+                <header>
+                    <span id="header-content">
+                        <div class="secondary-card card-s">
+                        <h1>More than Pets — Your Companions.</h1>
+                        </div>
+                        <div class="secondary-card card-m">
+                            <p>Here at The ComPawnions, every paw matters. Whether you’re Team Cat or Team Dog, we’re here to make your journey with your fur-iend even more special!</p>
+                        </div>
+                        <button class="clickable" onclick="nav('about.html')">
+                            <p>About Us</p>
+                        </button>
+                    </span>
+                    
+                </header>
+
+                <section id="website-info">
+                    <div id="index-website-logo" class="secondary-card card-s">
+                        <img
+                            src="../images/logo-horizontal2.png"
+                            alt="The ComPawnions Logo"
+                        >
+                    </div>
+                    <span class="card-row">
+                        <div class="secondary-card card-xs clickable" onclick="nav('paws-and-know.html')">
+                            <img
+                                src="../images/image_paws_and_know_button.png"
+                                alt="Paws and Know Logo"
+                            >
+                            <p>Paws and Know</p>
+                        </div>
+                        <div class="secondary-card card-xs clickable" onclick="nav('services.html')">
+                            <img
+                                src="../images/image_services_button.png"
+                                alt="Services Logo"
+                            >
+                            <p>Services</p>
+                        </div>
+                        <div class="secondary-card card-xs clickable"  onclick="nav('gallery.html')">
+                            <img
+                                src="../images/img_gallery_button.png"
+                                alt="Gallery Logo"
+                            >
+                            <p>Gallery</p>
+                        </div>
+                    </span>
+                    
+                </section>
+
+                <section id="website-mission-and-vision">
+                    <span class="image-card image-dialog-opener clickable">
+                        <img
+                            src="../images/img_mission_vision.jpeg"
+                            alt="An image of a dog and a cat under the mission and vision section of landing page"
+                        >
+                    </span>
+                    
+                    <span id="website-mission-and-vision-content">
+                        <div class="secondary-card center">
+                            <h2>Our Mission</h2>
+                            <p>At The ComPawnions, our mission is to empower pet lovers with reliable information and compassionate guidance. We are here to pass tips, advice, relevant information, and everything we've learned from caring for our own dogs and cats. We aim to be more than just a website; we strive to provide a warm, welcoming space where you can learn, connect, and celebrate the joy of companionship with your fur-iend.</p>
+                        </div>
+                        <div class="secondary-card center">
+                            <h2>Our Vision</h2>
+                            <p>At The ComPawnions, our mission is to empower pet lovers with reliable information and compassionate guidance. We are here to pass tips, advice, relevant information, and everything we've learned from caring for our own dogs and cats. We aim to be more than just a website; we strive to provide a warm, welcoming space where you can learn, connect, and celebrate the joy of companionship with your fur-iend.</p>
+                        </div>
+                    </span>
+                </section>
+                <div class="image-card clickable image-dialog-opener">
+                    <img
+                        src="../images/index_bottom_img.jpg"
+                        alt="A picture of a dog and cat on the bottom part of the landing page."
+                    >
+                </div>
+            </article>
+
             
-            <p>This is a sample text</p>
-            <p>This is a sample text</p>
-            <p>This is a sample text</p>
-            <p>This is a sample text</p>
-            <p>This is a sample text</p>
-            <p>This is a sample text</p>
-            <p>This is a sample text</p>
-            <p>This is a sample text</p>
-            <p>This is a sample text</p>
-            <p>This is a sample text</p>
-            <p>This is a sample text</p>
-            <p>This is a sample text</p>
-            <p>This is a sample text</p>
-            <p>This is a sample text</p>
-            <p>This is a sample text</p>
-            <p>This is a sample text</p>
-            <p>This is a sample text</p>
-            <p>This is a sample text</p>
-            <p>This is a sample text</p>
-            <p>This is a sample text</p>
-            <p>This is a sample text</p>
-            <p>This is a sample text</p>
-            <p>This is a sample text</p>
-            <p>This is a sample text</p>
-            <p>This is a sample text</p>
-            <p>This is a sample text</p>
-            <p>This is a sample text</p>
-            <p>This is a sample text</p>
-            <p>This is a sample text</p>
-            <p>This is a sample text</p>
-            <p>This is a sample text</p>
-            <p>This is a sample text</p>
-        </div>
+        </main>
+        
+        <!-- Uncomment this to include dialog boxes on the webpage if available. -->
+        <div id="modal"></div>
+        <div id="dialog-box"></div>
 
         <div id="toolbar-bottom"></div>
     </body>
-</html>
+</html> 
