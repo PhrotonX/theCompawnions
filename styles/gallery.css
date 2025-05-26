@@ -10,10 +10,36 @@
 
 #gallery-table{
     width: 100%;
-    
 }
 
-.gallery-item{
+#gallery-table tr{
+    display: flex;
+    flex-direction: row;
+}
+
+#gallery-table .secondary-card{
+    height: 100%;
+}
+
+#gallery-table p{
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+}
+
+#gallery-table .item-description{
+    background-color: white;
+    border-radius: var(--border-radius-l);
+    padding: 8px;
+    margin-top: 8px;
+}
+
+@media screen and (max-width: 900px) {
+    #gallery-table tr{
+        flex-direction: column;
+    }
+}
+
+/* .gallery-item{
     border-radius: var(--border-radius-xxl);
     padding: 16px;
     background-color: transparent;
@@ -27,8 +53,8 @@
 
 .gallery-item img{
     /* width: 12vw; */
-    width: 100%;
-}
+    /* width: 100%;
+} */
 
 #gallery-heading-card{
     background-image: url('../images/pawsAndKnow/general_information/imgDogGenInfoOverview.jpg');
