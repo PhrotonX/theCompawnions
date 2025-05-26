@@ -1,36 +1,59 @@
 class Gallery{
     constructor(){
         this.beginRange = 0;
-        this.endRange = 15;
+        //this.endRange = 15;
+        this.stepRange = 0;
         this.count = 0;
         this.rangeSize = 16;
+        this.query = null;
     }
 
     async onLoadElements(query){
+        this.query = query;
         var response = await fetch('../data/information.json');
         var json = await response.json();
 
         this.count = Object.keys(json.item).length;
 
+        var queryStr = query.get("gallery-search");
+        var queryFilter = query.get("gallery-filter");
+
+        const card = document.getElementById('gallery-table-card');
+
+        let resultInfo = document.createElement("h2");
+        resultInfo.innerHTML = "All images";
+
+        console.log(resultInfo);
+        if(queryStr != null || queryStr != "null" || queryStr != ""){
+            resultInfo.innerHTML = "Results for '" + queryStr + "'";
+        }
+
         const table = document.getElementById('gallery-table');
 
         table.innerHTML = "";
+
+        table.appendChild(resultInfo);
         
         console.log("Count: " + this.count);
 
         var currentTr = null;
         var resultCtr = 0
+
         // Fill the table from HTML with contents.
-        for(let i = this.beginRange; i <= this.endRange; i++){
+        //for(let i = this.beginRange; i <= this.endRange; i++){
+        for(let i = this.beginRange; i < this.count; i++){
             // Validate to check if the next item is not null.
             if(json.item[i] == null){
-                return;
+                continue;
+            }
+            if(resultCtr == 15){
+                this.stepRange = i - this.beginRange;
+                this.beginRange = resultCtr;
+                break;
             }
 
             // Filters the resulting JSON file based on query parameter.
             if(query != null){
-                let queryStr = query.get("gallery-search");
-                let queryFilter = query.get("gallery-filter");
                 switch(queryFilter){
                     case "breed":
                         if(json.item[i].breed.match(new RegExp(queryStr, "i")) == null){
@@ -109,20 +132,25 @@ class Gallery{
     }
 
     nextPage(){
-        if(this.beginRange + this.rangeSize <= this.count){
-            this.beginRange += this.rangeSize;
-            this.endRange += this.rangeSize;
+        // if(this.beginRange + this.rangeSize <= this.count){
+        //     this.beginRange += this.rangeSize;
+        //     this.endRange += this.rangeSize;
 
-            this.onLoadElements(null);
+        //     this.onLoadElements(this.query);
+        // }
+
+        if(this.beginRange <= this.count){
+            //this.beginRange += this.rangeSize;
+            //this.endRange += this.rangeSize;
+            this.onLoadElements(this.query);
         }
     }
 
     prevPage(){
-        if(this.beginRange - this.rangeSize >= 0){
-            this.beginRange -= this.rangeSize;
-            this.endRange -= this.rangeSize;
+        if(this.beginRange >= 0){
+            this.beginRange -= this.stepRange;
 
-            this.onLoadElements(null);
+            this.onLoadElements(this.query);
         }
     }
 }
