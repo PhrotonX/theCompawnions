@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Services - The ComPawnions</title>
+        <link rel="stylesheet" type="text/css" href="../styles/style.css">
+        <script src="../scripts/script.js"></script>
+        <style>
+            .services-content-card{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                /* width: 100%; */
+                /* flex-grow: 1; */
+                margin-left: 10%;
+                margin-right: 10%;
+            }
+
+           .services-content-card .image-card{
+                margin: 2.5%;
+                width: auto;
+                height: 100%;
+                object-fit:cover;
+            }
+
+           .services-content-card-content{
+                width: 50%;
+            }
+
+            .bottom-img{
+                margin-bottom: -50px;
+                margin-left: 10%;
+                margin-right: 10%;
+            }
+        </style>
+        <!-- Uncomment this to include dialog boxes or tooltips on the webpage if available. -->
+        <script src="../scripts/dialog.js"></script>
+        <!-- <script src="../scripts/tooltip.js"></script> -->
+
+        <!-- This website requires to be run on http-server, XAMPP, or other servers in order to work. -->
+        <script>
+            loadPagePart('toolbar.html', 'toolbar');
+            loadPagePart('footer.html', 'toolbar-bottom');
+
+            // Uncomment this to include dialog boxes on the webpage if available.
+            loadPagePart('image-dialog.html', 'dialog-box');
+        </script>
+    </head>
+    <body>
+        
+        <div id="toolbar"></div>
+
+        <main>
+            <article>
+                <header>
+                    <h1 class="center">Our Services</h1>
+                    <div class="secondary-card card-m card-m-center">
+                        <p class="center">We offer a range of caring services for your dogs and cats—from grooming and
+                            vet assistance to training and adoption support. Whether you're a pet parent
+                            or looking to become one, we're here to help you every step of the way.</p>
+                    </div>
+                </header>
+
+                <div class="card">
+                    <section 
+                        id="section-animal-pawtection-desk"
+                        class="services-content-card"
+                    >
+                        <span class="image-card image-dialog-opener clickable">
+                            <img
+                                src="../images/services/animal_protection.png"
+                                alt="Animal Pawtection Desk Logo"
+                            >
+                        </span>
+                        
+                        <span class="section-animal-pawtection-desk-content">
+                            <div class="secondary-card">
+                                <h2>Animal Pawtection Desk</h2>
+                            </div>
+                            <div class="secondary-card center">
+                                <p>At our Animal Protection Desk, we’re dedicated to the safety and well-being of every
+                                    dog and cat. Whether it's reporting neglect, finding support for rescued animals, or
+                                    learning about responsible pet care, we’re here to help. Together, we can give every
+                                    pet the love and protection they deserve.</p>
+                            </div>
+                            <button 
+                                class="clickable clickable-m"
+                                onclick="nav('animal-pawtection-desk.html')">
+                                Explore
+                            </button>
+                        </span>
+                    </section>
+
+                    <section 
+                        id="section-adopt-a-compawnion"
+                        class="services-content-card"
+                    >
+                        <span class="adopt-a-compawnion-content">
+                            <div class="secondary-card">
+                                <h2>Adopt A ComPawnion</h2>
+                            </div>
+                            <div class="secondary-card center">
+                                <p>Looking for a loyal friend? Our Adopt a Companion program connects loving homes with
+                                    dogs and cats in need. Each pet has a story—and a heart full of love just waiting for
+                                    you. Give them a second chance, and gain a lifelong companion.</p>
+                            </div>
+                            <button 
+                                class="clickable clickable-m"
+                                onclick="nav('adopt-a-compawnion.html')">
+                                Explore
+                            </button>
+                        </span>
+
+                        <span class="image-card image-dialog-opener clickable">
+                            <img
+                                src="../images/services/adopt_a_compawnion.jpg"
+                                alt="An image of ComPawnions"
+                            >
+                        </span>
+                    </section>
+                </div>
+                <div class="image-card clickable card-l bottom-img image-dialog-opener">
+                    <img
+                        src="../images/services/service.jpg"
+                        alt="A picture of a dog."
+                    >
+                </div>
+            </article>
+        </main>
+        
+        <!-- Uncomment this to include dialog boxes on the webpage if available. -->
+        <div id="modal"></div>
+        <div id="dialog-box"></div>
+
+        <div id="toolbar-bottom"></div>
+    </body>
+</html> 
