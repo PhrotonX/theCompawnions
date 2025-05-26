@@ -10,11 +10,16 @@
 
 #gallery-table{
     width: 100%;
+    margin-bottom: 4em;
 }
 
 #gallery-table tr{
     display: flex;
     flex-direction: row;
+}
+
+#gallery-table td{
+    margin-top: 8%;
 }
 
 #gallery-table .secondary-card{
