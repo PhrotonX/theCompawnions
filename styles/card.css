@@ -22,6 +22,18 @@
     overflow-wrap: break-word;
 }
 
+.card-xs{
+    width: 20%;
+}
+
+.card-s{
+    width: 35%;
+}
+
+.card-m{
+    width: 45%;
+}
+
 .image-card{
     border-radius: var(--border-radius-xxl);
     margin-top: 24px;
