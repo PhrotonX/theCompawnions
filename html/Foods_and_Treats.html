@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Foods and Treats - The ComPawnions</title>
+        <link rel="stylesheet" type="text/css" href="../styles/style.css">
+        <script src="../scripts/script.js"></script>
+        <!-- Uncomment this to include dialog boxes on the webpage if available. -->
+        <!-- <script src="../scripts/dialog.js"></script> -->
+
+        <!-- This website requires to be run on http-server, XAMPP, or other servers in order to work. -->
+        <script>
+            loadPagePart('toolbar.html', 'toolbar');
+            loadPagePart('footer.html', 'toolbar-bottom');
+
+            // Uncomment this to include dialog boxes on the webpage if available.
+            // loadPagePart('image-dialog.html', 'dialog-box');
+        </script>
+            <style>
+            #Treats-and-Food-title {
+                width: 100%;
+                text-align: center;
+                font-size: 300%;
+                color: #ffffff;
+                text-shadow: 3px 3px 5px rgba(43, 43, 43, 0.856);
+                font-family: Arial, Helvetica, sans-serif;
+                background-image: url(https://image.chewy.com/catalog/general/images/moe/0672e8b5-413b-7c88-8000-b7b2821c7b72._SY280_.jpeg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                border-radius: 20px;
+                overflow: hidden;
+            }
+
+            #foodList {
+                display: flex;
+                flex-wrap: wrap;
+                padding-left: 2%;
+                gap: 15px;
+                margin-top: 20px;
+            }
+
+            .food-card {
+                width: 300px;
+                height: 320px;
+                border: 1px solid #eff2c7;
+                border-radius: 20px;
+                overflow: hidden;
+                text-align: center;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                cursor: pointer;
+                transition: transform 0.2s;
+                background-color: #eff2c7;
+                background-size: cover;
+                background-position: center;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            .food-card:hover {
+                transform: scale(1.05);
+            }
+
+            .food-card img {
+                width: 100%;
+                height: 90%;
+                object-fit: cover;
+                margin-bottom: 0px;
+                border-radius: 20px;
+            }
+
+            .food-card-name {
+                padding: 0px;
+                font-weight: bold;
+            }
+
+            #pet-dropdown {
+                position: relative;
+                display: inline-block;
+                width: 200px;
+                margin-bottom: 10px;
+                font-family: sans-serif;
+            }
+
+            #pet-dropdown .custom-select {
+                background-color: #eff2c7;
+                padding: 10px;
+                border-radius: 10px;
+                cursor: pointer;
+                border: none;
+            }
+
+            #pet-dropdown .custom-options {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: #eff2c7;
+                border-radius: 10px;
+                box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+                z-index: 10;
+                overflow: hidden;
+            }
+
+            #pet-dropdown .custom-option {
+                padding: 10px;
+                cursor: pointer;
+                transition: background-color 0.2s;
+            }
+
+            #pet-dropdown .custom-option:hover {
+                background-color: #e9eab3;
+                color: black;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="toolbar"></div>
+
+        <main>
+            <article>
+                <div id="content">
+                    <div id="Treats-and-Food-title">
+                        <h1>Treats and Foods</h1>
+                    </div>   
+                    <h3>Select Animal Type ⬇</h3>
+                            <div id="pet-dropdown">
+                            <div class="custom-select" onclick="toggleDropdown()">Cat</div>
+                                <div class="custom-options" id="dropdown">
+                                    <div class="custom-option" onclick="selectAnimal('cat')">Cat</div>
+                                    <div class="custom-option" onclick="selectAnimal('dog')">Dog</div>
+                                </div>
+                            </div>
+
+
+                    <h3>Foods:</h3>
+                    <div id="foodList"></div>
+                    <script>
+                        //This is a Database of list of the foods and treats
+                        const foods = {
+                        cat: [
+                            "Salmon", "Beef", "Chicken", "Tuna", "Pumpkin",
+                            "Broccoli", "Shrimp", "Carrots", "Peas", "Pork"
+                        ],    
+                        dog: [
+                            "Apples", "Bananas", "Beef", "Blueberries", "Carrots",
+                            "Chicken", "Pork", "Lamb", "Eggs", "Fish"
+                        ]
+                        };
+                        //Database of images of the foods, must match the list names below accurately
+                        const foodImages = {
+                        cat: {
+                            "Salmon": "https://cdn.shopify.com/s/files/1/0688/3596/7262/files/ACME_Smoked_Fish_2021_ESG_Report_-_Photos_-_Selects_from_Marketing_00006_700x_99d665a5-a479-43ed-b429-aa6f8e5dac13_600x600.png?v=1689178958",
+                            "Beef": "https://www.allrecipes.com/thmb/2qVJV2pY_oPVwCVePKimL701ttM=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Cuts-of-Beef-3x2-1-a557f31f8b13462185b4f2c17ab5b746.png",
+                            "Chicken": "https://www.licious.in/blog/wp-content/uploads/2022/03/Chicken-Curry-Cut-min.png",
+                            "Tuna": "https://scottseafood-orders.co.nz/cdn/shop/files/YellowFinTunaLoins_1024x1024@2x.jpg?v=1714591757",
+                            "Pumpkin": "https://upload.wikimedia.org/wikipedia/commons/5/5c/FrenchMarketPumpkinsB.jpg",
+                            "Broccoli": "https://images.themodernproper.com/production/posts/2022/SteamedBroccoli_7.jpg?w=1200&q=82&auto=format&fit=crop&dm=1669042067&s=cbd40a516ff2d8304825d5c7a4fee1f2",
+                            "Shrimp": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7c7ekUAcUyj9ZDJQMo8l_tOZY6Mq4pWgCLw&s",
+                            "Carrots": "https://www.tasteofhome.com/wp-content/uploads/2019/01/carrots-shutterstock_789443206.jpg",
+                            "Peas": "https://www.alphafoodie.com/wp-content/uploads/2023/03/Sauteed-Peas-square.jpeg",
+                            "Pork": "https://assets.farmison.com/images/recipe-detail-1380/76438-pork-shoulder.jpg"
+                        },
+                        dog: {
+                            "Apples": "https://ychef.files.bbci.co.uk/1280x720/p07v2wjn.jpg",
+                            "Bananas": "https://d2jx2rerrg6sh3.cloudfront.net/image-handler/picture/2018/2/banana.jpg",
+                            "Beef": "https://www.allrecipes.com/thmb/zN81HQ86Fa2rHnkH-KUvUf6pBZE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Cuts-of-Beef-3x2-1-a557f31f8b13462185b4f2c17ab5b746.png",
+                            "Blueberries": "https://media.post.rvohealth.io/wp-content/uploads/2020/08/blueberries_fresh_fullframe_732x549_thumb-732x549.jpg",
+                            "Carrots": "https://www.tasteofhome.com/wp-content/uploads/2019/01/carrots-shutterstock_789443206.jpg",
+                            "Chicken": "https://assets.farmison.com/images/recipe-detail-1380/76340-yorkshire-free-range-loose-birds-chicken3c3e9dd7-8edd-41fa-b35d-73f3cb951b8asquare900x900.jpg",
+                            "Pork": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIpiB7sgvF4YEvEoPdJVlHxuIa-CL6Ot4SXg&s",
+                            "Lamb": "https://assets.farmison.com/images/recipe-detail-1380/83409-36498-lamb-gigot-steak-3-.jpg",
+                            "Eggs": "https://images-prod.healthline.com/hlcmsresource/images/AN_images/health-benefits-of-eggs-1296x728-feature.jpg",
+                            "Fish": "https://5.imimg.com/data5/WI/ZZ/OL/ANDROID-81993397/product-jpeg-500x500.jpg"
+                        }
+                        };
+                        //update list function
+                        function updateFoodList(animal) {
+                            foodList.innerHTML = '';
+                            foods[animal].forEach(food => {
+                            const card = document.createElement('div');
+                            card.className = 'food-card';
+                            card.onclick = () => {
+                                window.location.href = `Foods-and-Treats-info-page.html?animal=${animal}&food=${encodeURIComponent(food)}`;
+                            };
+
+                            card.innerHTML = `
+                                <img src="${foodImages[animal][food]}" alt="${food}">
+                                <div class="food-card-name">${food}</div>`;
+                            foodList.appendChild(card);
+                            });
+                        }
+
+                        // first load
+                        updateFoodList('cat');
+
+                        // dropdown function
+                        function toggleDropdown() {
+                            const dropdown = document.getElementById("dropdown");
+                            dropdown.style.display = (dropdown.style.display === "block") ? "none" : "block";
+                        }
+
+                        function selectAnimal(animal) {
+                            document.querySelector('.custom-select').textContent = animal.charAt(0).toUpperCase() + animal.slice(1);
+                            updateFoodList(animal);
+                            document.getElementById("dropdown").style.display = "none";
+                        }
+
+                        document.addEventListener("click", function(e) {
+                            const wrapper = document.querySelector(".custom-select-wrapper");
+                            if (!wrapper.contains(e.target)) {
+                            document.getElementById("dropdown").style.display = "none";
+                            }
+                        });                    
+                    </script>
+                </div>
+            </article>
+        </main>
+        
+        <!-- Uncomment this to include dialog boxes on the webpage if available. -->
+        <!-- <div id="modal"></div>
+        <div id="dialog-box"></div> -->
+
+        <div id="toolbar-bottom"></div>
+    </body>
+</html> 

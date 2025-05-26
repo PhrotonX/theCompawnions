@@ -1,0 +1,28 @@
+.search-box{
+    display: flex;
+    align-items: center;
+}
+
+.search-box input[type="text"]{
+    border: none;
+    padding: 17px 16px;
+    filter: brightness(95%);
+}
+
+.search-box button{
+    padding: 16px 16px;
+}
+
+.search-box .material-symbols-outlined{
+    /* margin-block-start: 0.01em; */
+    /* margin-block-end: 0.2em; */
+    /* padding-block: 0em;
+    padding-inline: 0em;
+     */
+    line-height: 0.5em;
+}
+
+.search-box input[type="text"]:focus{
+    outline: 2px solid #000;
+    filter: brightness(100%);
+}

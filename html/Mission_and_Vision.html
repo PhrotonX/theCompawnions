@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>The ComPawnions</title>
+        <link rel="stylesheet" type="text/css" href="../styles/style.css">
+        <script src="../scripts/script.js"></script>
+        <style>
+            body {
+                position: relative;
+                min-height: 100vh;
+                margin: 0;
+                padding: 0;
+            }
+            body::before {
+                content: "";
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+                background: url('https://muralsyourway.vtexassets.com/arquivos/ids/236047/Dog-Paw-Print-Love-Wallpaper-Mural.jpg?v=638164440862400000') center center/cover no-repeat;
+                opacity: 0.15; /* Adjust transparency here */
+                z-index: -1;
+                pointer-events: none;
+            }
+            .mv-title {
+                text-align: center;
+                margin-bottom: 70px;
+            }
+            .mv-section-title {
+                text-align: center;
+                margin-bottom: 16px;
+            }
+            .mv-section {
+                margin-bottom: 70px;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            loadPagePart('toolbar.html', 'toolbar');
+            loadPagePart('footer.html', 'toolbar-bottom');
+        </script>
+        <div id="toolbar"></div>
+
+        <div id="content">
+            <h1 class="mv-title">🐾Our Mission & Vision🐾</h1>
+            
+            <div class="mv-section">
+                <h2 class="mv-section-title">🐾Our Mission🐾</h2>
+                <p>
+                    At The ComPawnions, our mission is to empower pet lovers with reliable information and compassionate guidance. We are here to pass tips, advice, relevant information, and everything we've learned from caring for our own dogs and cats. We aim to be more than just a website; we strive to provide a warm, welcoming space where you can learn, connect, and celebrate the joy of companionship with your fur-iend.
+                </p>
+            </div>
+            <div class="mv-section">
+                <h2 class="mv-section-title">🐾Our Vision🐾</h2>
+                <p>
+                    We envision a world where every paw matters—where every cat and dog is healthy, happy, and loved unconditionally—and where every pet guardian feels educated, empowered, and fulfilled in their journey with their beloved furry companion. At The Compawnions, we believe that informed care can strengthen bonds and improve the lives for both humans and animals. Through easy to access information, a supportive community, and genuine compassion, we hope to inspire everyone to be responsible, kind-hearted, and knowledgeable fur parents. Together, we aim to create a world where every paw is protected, understood, and cherished—because at the heart of every happy animal is a human friend who cares.
+                </p>
+            </div>
+        </div>
+
+        <div id="toolbar-bottom"></div>
+    </body>
+</html>

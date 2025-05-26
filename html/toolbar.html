@@ -1,7 +1,10 @@
-<header>
-    <h1>The ComPawnions</h1>
-</header>
+<p></p>
 <nav>
+    <img
+        id="toolbar-logo"
+        src="../images/logo-horizontal2.png"
+        alt="The ComPawnions Logo"
+    >
     <menu>
         <li><button onclick="nav('index.html')"><p>Home</p></button></li>
         <li>
@@ -12,7 +15,7 @@
                 <li><button onclick="nav('general-information.html')"><p>General Information</p></button></li>
                 <li><button onclick="nav('pawrenting-101.html')"><p>Pawrenting 101</p></button></li>
                 <li><button onclick="nav('breeds.html')"><p>Breeds</p></button></li>
-                <li><button onclick="nav('education.html')"><p>Education</p></button></li>
+                <li><button onclick="nav('Education.html')"><p>Education</p></button></li>
                 <li><button onclick="nav('culture.html')"><p>Views towards animals based on culture and religion</p></button></li>
                 <li><button onclick="nav('misconceptions.html')"><p>Common Misconceptions</p></button></li>
             </menu>
@@ -24,13 +27,29 @@
             <menu>
                 <li><button onclick="nav('protection-desk.html')"><p>Animal Pawtection Desk</p></button></li>
                 <li><button onclick="nav('adopt.html')"><p>Adopt a ComPawnion</p></button></li>
+                <li><button onclick="nav('Mission_and_Vision.html')"><p>Mission & Vision</p></button></li>
             </menu>
         </li>
         <li><button onclick="nav('gallery.html')"><p>Gallery</p></button></li>
         <li><button onclick="nav('about.html')"><p>About</p></button></li>
-        <li><button onclick="nav('search.html')"><p>Search</p></button></li>
-    </menu>        
+        <!-- <li><input/></li> -->
+        <!-- <li><button onclick="nav('search.html')"><p>Search</p></button></li> -->
+    </menu>
+    <form action="search.html" method="get" class="search-box">
+        <input type="text" id="search" name="search" placeholder="Search...">
+        <button type="submit">
+            <span class="material-symbols-outlined">
+                search
+            </span>
+        </button>
+    </form>
 </nav>
 <div class="fab">
-    <button><p>+</p></button>
+    <button onclick="nav('#')">
+        <p>
+            <span class="material-symbols-outlined">
+                arrow_upward
+            </span>
+        </p>
+    </button>
 </div>

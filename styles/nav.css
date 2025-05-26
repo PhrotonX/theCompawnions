@@ -2,15 +2,13 @@
     position: sticky;
     top: 0;
     left: 0;
+}
+
+nav{
     box-shadow: var(--box-shadow-level-4);
     width: 100%;
     display: flex;
     background-color: var(--primary-color);
-}
-
-#toolbar nav{
-    position: absolute;
-    right:0;
 }
 
 #toolbar nav menu{
@@ -20,13 +18,13 @@
     margin-block-end: 0;
     /* display: flex;  */
     /* flex-direction: row; */
-    margin: 0px;
+    margin-left: auto;
     padding-left: 0%;
     
     /* float: right; */
 }
 
-#toolbar p, #toolbar h1{
+#toolbar p, #toolbar #website-title, #toolbar h1{
     color: var(--primary-text-color);
     margin-block-start:0;
     margin-block-end: 0;
@@ -37,8 +35,16 @@
     font-size: medium;
 }
 
-#toolbar h1{
+#toolbar p#website-title{
+    font-size: xx-large;
+}
+
+#toolbar #website-title, #toolbar h1{
     padding: 6px 16px;
+}
+
+#toolbar #toolbar-logo{
+    height: 48px;
 }
 
 #toolbar button{
