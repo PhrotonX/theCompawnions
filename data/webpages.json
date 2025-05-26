@@ -38,6 +38,30 @@
                 }
             ],
             "thumbnail": null
+        },
+        {
+            "webpage": "About",
+            "link": "about.html",
+            "tags": null,
+            "thumbnail": null
+        },
+        {
+            "webpage": "Contact Us",
+            "link": "contact-us.html",
+            "tags": null,
+            "thumbnail": null
+        },
+        {
+            "webpage": "Services",
+            "link": "services.html",
+            "tags": null,
+            "thumbnail": null
+        },
+        {
+            "webpage": "Gallery",
+            "link": "gallery.html",
+            "tags": null,
+            "thumbnail": null
         }
     ]
     

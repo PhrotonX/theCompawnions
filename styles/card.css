@@ -34,6 +34,11 @@
     width: 45%;
 }
 
+.card-s-center{
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
 .image-card{
     border-radius: var(--border-radius-xxl);
     margin-top: 24px;

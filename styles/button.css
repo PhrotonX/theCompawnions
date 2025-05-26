@@ -25,3 +25,8 @@
 .clickable-text{
     padding: 1em 2em;
 }
+
+.clickable-m{
+    padding: 16px 24px;
+    margin-left: 8px;
+}
