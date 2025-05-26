@@ -19,6 +19,7 @@
     /* flex-grow: 1; */
     /* height: 100%; */
     margin: 8px;
+    overflow-wrap: break-word;
 }
 
 .image-card{
