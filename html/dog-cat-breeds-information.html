@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Breed Information - The ComPawnions</title>
+        <link rel="stylesheet" type="text/css" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/breed-info.css">
+        <script src="../scripts/script.js"></script>
+        <!-- Uncomment this to include dialog boxes or tooltips on the webpage if available. -->
+        <script src="../scripts/dialog.js"></script>
+        <script src="../scripts/tooltip.js"></script>
+        <script src="../scripts/breedDatabase.js"></script>
+
+        <!-- This website requires to be run on http-server, XAMPP, or other servers in order to work. -->
+        <script>
+            loadPagePart('toolbar.html', 'toolbar');
+            loadPagePart('footer.html', 'toolbar-bottom');
+            // Uncomment this to include dialog boxes on the webpage if available.
+            loadPagePart('image-dialog.html', 'dialog-box');
+        </script>
+    </head>
+    <body>
+        
+        <div id="toolbar"></div>
+
+        <main>
+            <article>
+                <!-- Header -->
+                <div class= "profiles">
+                    <div class="header-section">
+                        <div>
+                            <h1 class="main-heading">Everyting You Need to<br> Know About <a id="breedName">Beagles</a> </h1> <!--breedName-->
+                            <p class="sub-heading" id="breedType">Hound Breed</p> <!--breedType-->
+                        </div>
+                        <div class="image-container">
+                            <img id="breedGallery0" src="image/dog breed/banner/Beagles.png" alt="dog" class="header-dog-image"> <!--breedGallery0-->
+                        </div>
+                    </div>
+                    <div class="gallery-container">
+                    <!-- Photo Gallery -->
+                        <h1 class="gallery-title">Gallery</h1>
+                        
+                        <div class="gallery-grid">
+                            <div class="gallery-item"> <!--breedGallery1 to 6-->
+                                <img id="breedGallery1" src="image/dog breed/beagles/beaglesgallery1.png" alt="Gallery Image 1">
+                            </div>
+                            
+                            <div class="gallery-item">
+                                <img id="breedGallery2" src="image/dog breed/beagles/beaglesgallery2.png" alt="Gallery Image 2">
+                            </div>
+                            
+                            <div class="gallery-item">
+                                <img id="breedGallery3" src="image/dog breed/beagles/beaglesgallery3.png" alt="Gallery Image 3">
+                            </div>
+                            
+                            <div class="gallery-item">
+                                <img id="breedGallery4" src="image/dog breed/beagles/beaglesgallery4.png" alt="Gallery Image 4">
+                            </div>
+                            
+                            <div class="gallery-item">
+                                <img id="breedGallery5" src="image/dog breed/beagles/beaglesgallery5.png" alt="Gallery Image 5">
+                            </div>
+                            
+                            <div class="gallery-item">
+                                <img id="breedGallery6" src="image/dog breed/beagles/beaglesgallery6.png" alt="Gallery Image 6">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- General Info -->
+                    <div class="gencontainer">
+                        <div class="image-section">
+                            <img id="breedGallery7" src="image/dog breed/beagles/beaglesgallery7.png" alt="beagles" class="gen-info-image"> <!--breedGallery7-->
+                        </div>
+                        <div class="content-section">
+                            <h1 class="title">GENERAL INFO</h1>
+                            <div class="text-content">
+                                <p id="genInfo">The Beagle is a friendly and curious hound known for its strong sense of smell and love of companionship. These dogs are cheerful and gentle, making them excellent family pets. Their sociable nature means they enjoy being around both humans and other dogs.</p>
+                                <!--genInfo-->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Breed Info -->
+                    <div class="breed-info">
+                        <h2 class="info-title">Average sizes and life expectancy of the breed.</h2>
+                        <div class="stats-container">
+                            <div class="stat-item">
+                                <div class="stat-icon">📏</div>
+                                <div class="stat-content">
+                                    <h3>Height</h3>
+                                    <p id="breedHeight">13-16 inches</p> <!--breedHeight-->
+                                </div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-icon">⚖️</div>
+                                <div class="stat-content">
+                                    <h3>Weight</h3>
+                                    <p id="breedWeight">30 pounds</p> <!--breedWeight-->
+                                </div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-icon life-icon">💧</div>
+                                <div class="stat-content">
+                                    <h3>Life Expectancy</h3>
+                                    <p id="breedLifespan">12- 15years</p> <!--breedLifespan-->
+                                </div>
+                            </div>
+                        </div><!--breedStats-->
+                        <p id="breedStats" style="margin: auto; margin-top: 20px;">Typically, Beagles stand about 13 to 16 inches (33 to 41 cm) tall and weigh between 20 and 30 pounds (9 to 14 kg). They belong to the hound group and generally live between 12 and 15 years with proper care.</p>
+                    </div>
+                    <div class="gencontainer">    
+                        <div class="content-section">
+                            <h1 class="title">Traits</h1>
+                            <div class="text-content"><!--breedTrait-->
+                                <p id="breedTrait">Beagles are cheerful, gentle, and social dogs. They have an excellent ability to track scents, which makes them popular in various detection roles. Their love for company means they thrive when they are part of a family or pack.</p>
+                            </div>
+                        </div>
+                        <div class="image-section"> <!--breedGallery8-->
+                            <img id="breedGallery8" src="image/dog breed/beagles/beaglesgallery8.png" alt="beagles" class="gen-info-image">
+                        </div>
+                    </div>
+                    
+                    <!--caring tips-->
+                    <div class="caring-tip-container">
+                        <h1>Caring Tips</h1>
+                        <!-- Diet -->
+                        <div class="trait-section">
+                            <div class="trait-header" onclick="toggleSection('diet')">
+                                <h3 class="trait-title">Diet</h3>
+                                <div class="expand-btn" id="diet-btn">+</div>
+                            </div>
+                            <div class="trait-content" id="diet-content"> <!--breedDiet-->
+                                <div class="placeholder-content" id="breedDiet"> Balanced meals; avoid overfeeding<br>
+                                Beagles require balanced meals with portion control to avoid overfeeding and obesity.</div>
+                            </div>
+                        </div>
+                        <!-- Grooming -->
+                        <div class="trait-section">
+                            <div class="trait-header" onclick="toggleSection('grooming')">
+                                <h3 class="trait-title">Grooming</h3>
+                                <div class="expand-btn" id="grooming-btn">+</div>
+                            </div>
+                            <div class="trait-content" id="grooming-content"> <!--breedGroom-->
+                                <div class="placeholder-content" id="breedGroom">Weekly brushing; clean ears.<br>
+                                Regular grooming includes weekly brushing and cleaning their long ears to prevent infections.</div>
+                            </div>
+                        </div>
+                        <!-- Training -->
+                        <div class="trait-section">
+                            <div class="trait-header" onclick="toggleSection('training')">
+                                <h3 class="trait-title">Training</h3>
+                                <div class="expand-btn" id="training-btn">+</div>
+                            </div>
+                            <div class="trait-content" id="training-content"> <!--breedTrain-->
+                                <div class="placeholder-content" id="breedTrain"> Food-driven; consistent methods <br>
+                                They respond well to consistent, food-driven training methods due to their high motivation for treats.
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Health -->
+                        <div class="trait-section">
+                            <div class="trait-header" onclick="toggleSection('health')">
+                                <h3 class="trait-title">Health</h3>
+                                <div class="expand-btn" id="health-btn">+</div>
+                            </div>
+                            <div class="trait-content" id="health-content"> <!--breedHealth-->
+                                <div class="placeholder-content" id="breedHealth">Prone to obesity, ear infections<br>
+                                    Common health concerns include obesity and ear infections.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gencontainer">
+                        <div class="content-section">
+                            <h1 class="title">Physical Characteristics</h1>
+                            <div class="text-content"> <!--breedPhysCharact-->
+                                <p id="breedPhysCharact">Beagles require balanced meals with portion control to avoid overfeeding and obesity. Regular grooming includes weekly brushing and cleaning their long ears to prevent infections. They respond well to consistent, food-driven training methods due to their high motivation for treats. Common health concerns include obesity and ear infections.</p>
+                            </div>
+                        </div>
+                        <div class="image-section"> <!--breedGallery9-->
+                            <img id="breedGallery9" src="image/dog breed/beagles/beaglesgallery9.png" alt="beagles" class="gen-info-image">
+                        </div>
+                    </div>
+                    <div class="gencontainer">
+                        <div class="image-section"> <!--breedGallery10-->
+                            <img id="breedGallery10" src="image/dog breed/beagles/beaglesgallery10.png" alt="beagles" class="gen-info-image">
+                        </div>
+                        <div class="content-section">
+                            <h1 class="title">Facts</h1>
+                            <div class="text-content">
+                                <p id="breedFacts"> <!--breedFacts--></p>                        
+                            </div>
+                        </div>   
+                    </div>
+                </div>
+                <script src="breed.js"></script>
+                <script>
+                    const params = new URLSearchParams(window.location.search);
+                    const animal = params.get('animal');
+                    const breed = params.get('breed');
+
+                    // Accessing the data
+                    const selectedBreed = breedDatabase[animal]?.[breed];
+
+                    if (selectedBreed) {
+                        document.getElementById('breedName').innerHTML = selectedBreed.breedName ||"No breed found bro";
+                        document.getElementById('breedType').innerHTML = selectedBreed.breedType ||"Ewan ko ano to bro"
+                        document.getElementById('genInfo').innerHTML = selectedBreed.genInfo ||"Ewan ko ano to bro"
+                        document.getElementById('breedHeight').innerHTML = selectedBreed.breedHeight ||"Ewan ko ano to bro"
+                        document.getElementById('breedWeight').innerHTML = selectedBreed.breedWeight ||"Ewan ko ano to bro"
+                        document.getElementById('breedLifespan').innerHTML = selectedBreed.breedLifespan ||"Ewan ko ano to bro"
+                        document.getElementById('breedTrait').innerHTML = selectedBreed.breedTrait ||"Ewan ko ano to bro"
+                        document.getElementById('breedStats').innerHTML = selectedBreed.breedStats ||"Ewan ko ano to bro"
+                        document.getElementById('breedDiet').innerHTML = selectedBreed.breedDiet ||"Ewan ko ano to bro"
+                        document.getElementById('breedGroom').innerHTML = selectedBreed.breedGroom ||"Ewan ko ano to bro"
+                        document.getElementById('breedTrain').innerHTML = selectedBreed.breedTrain ||"Ewan ko ano to bro"
+                        document.getElementById('breedHealth').innerHTML = selectedBreed.breedHealth ||"Ewan ko ano to bro"
+                        document.getElementById('breedPhysCharact').innerHTML = selectedBreed.breedPhysCharact ||"Ewan ko ano to bro"
+                        document.getElementById('breedFacts').innerHTML = selectedBreed.breedFacts ||"Ewan ko ano to bro"
+                        for (let i = 0; i < 10; i++) { 
+                            const key = `breedGallery${i}`;
+                            if (selectedBreed[key]) {
+                                const img = document.getElementById(key);
+                                if (img) {
+                                    img.src = selectedBreed[key];
+                                    img.style.display = 'block';
+                                }
+                            }
+                        }
+                    }
+                    
+                    function toggleSection(sectionId) {
+                    const content = document.getElementById(sectionId + '-content');
+                    const btn = document.getElementById(sectionId + '-btn');
+                    // Check if the section you click is currently expanded 
+                    if (content.classList.contains('active')) {
+                        // if the section is active, this "if" will close the section
+                        content.classList.remove('active');
+                        btn.classList.remove('active');
+                        btn.textContent = '+';
+                    } else {
+                        // if the section is not active, this "else" will expand a section
+                        content.classList.add('active');
+                        btn.classList.add('active');
+                        btn.textContent = '+';
+                    }
+                    }
+                </script>
+            </article>
+        </main>
+
+        <!-- Uncomment this to include dialog boxes on the webpage if available. -->
+        <!-- <div id="modal"></div>
+        <div id="dialog-box"></div> -->
+
+        <div id="toolbar-bottom"></div>
+    </body>
+</html> 
