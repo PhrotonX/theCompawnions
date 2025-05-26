@@ -7,8 +7,6 @@
   <link rel="stylesheet" href="../styles/dogbreed.css" />
 </head>
 <body>
-
-  <!-- Header -->
   <div class="header-section">
     <div>
       <h1 class="main-heading">Heading</h1>
@@ -18,7 +16,7 @@
       <img src="https://upload.wikimedia.org/wikipedia/commons/2/26/YellowLabradorLooking_new.jpg" alt="dog" class="header-dog-image">
     </div>
   </div>
-
+<div class= "profiles">
   <!-- Photo Gallery -->
   <div class="gallery-container">
         <h1 class="gallery-title">gallery</h1>
@@ -93,6 +91,71 @@
       </div>
     </div>
   </div>
+ <div class="gencontainer">
+    
+    <div class="content-section">
+      <h1 class="title">traits</h1>
+      <div class="text-content">
+        <p>for</p>
+        <p>for</p>
+        <p>dogs</p>
+      </div>
+    </div>
+  <div class="image-section">
+      <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=662&q=80" alt="Golden Retriever in a field" class="gen-info-image">
+    </div>
+  </div>
+  
+  <!--caring tips-->
+  <div class="caring-tip-container">
+    <h1>Caring Tips</h1>
 
+    <!-- Diet -->
+    <div class="trait-section">
+      <div class="trait-header" onclick="toggleSection('diet')">
+        <h3 class="trait-title">Diet</h3>
+        <div class="expand-btn" id="diet-btn">+</div>
+      </div>
+      <div class="trait-content" id="diet-content">
+        <div class="placeholder-content">Diet information will be displayed here.</div>
+      </div>
+    </div>
+
+    <!-- Grooming -->
+    <div class="trait-section">
+      <div class="trait-header" onclick="toggleSection('grooming')">
+        <h3 class="trait-title">Grooming</h3>
+        <div class="expand-btn" id="grooming-btn">+</div>
+      </div>
+      <div class="trait-content" id="grooming-content">
+        <div class="placeholder-content">Grooming information will be displayed here.</div>
+      </div>
+    </div>
+
+    <!-- Training -->
+    <div class="trait-section">
+      <div class="trait-header" onclick="toggleSection('training')">
+        <h3 class="trait-title">Training</h3>
+        <div class="expand-btn" id="training-btn">+</div>
+      </div>
+      <div class="trait-content" id="training-content">
+        <div class="placeholder-content">training information will be displayed here.</div>
+      </div>
+    </div>
+
+    <!-- Health -->
+    <div class="trait-section">
+      <div class="trait-header" onclick="toggleSection('health')">
+        <h3 class="trait-title">Health</h3>
+        <div class="expand-btn" id="health-btn">+</div>
+      </div>
+      <div class="trait-content" id="health-content">
+        <div class="placeholder-content">Health information will be displayed here.</div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <script src="breed.js"></script>
 </body>
 </html>
