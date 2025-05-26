@@ -19,7 +19,7 @@ body {
 /* Header Section */
 .header-section {
   background-color:  white;
-  height: 350px;
+  height: 450px;
   width: 1300px;
   margin: auto;
   display: flex;
@@ -50,9 +50,7 @@ body {
 
 .image-container {
   position: absolute;
-  right: 70px;
-  top: 38%;
-  transform: translateY(-50%);
+  left: 700px;
 }
 
 .header-dog-image {
