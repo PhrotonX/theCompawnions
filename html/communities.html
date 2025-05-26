@@ -1,13 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Communities</title>
-<link rel="stylesheet" href="Communities.css">
-<script src="Communities.js"></script>
-</head>
-<body>
+<html>
+    <head>
+        <title>Communities - The ComPawnions</title>
+        <link rel="stylesheet" type="text/css" href="../styles/style.css">
+        <script src="../scripts/script.js"></script>
+        <link rel="stylesheet" href="../styles/communities.css">
+<script src="../scripts/communities.js"></script>
+        <!-- Uncomment this to include dialog boxes or tooltips on the webpage if available. -->
+        <!-- <script src="../scripts/dialog.js"></script> -->
+        <!-- <script src="../scripts/tooltip.js"></script> -->
+
+        <style>
+            .card{
+                position: unset;
+            }
+        </style>
+
+        <!-- This website requires to be run on http-server, XAMPP, or other servers in order to work. -->
+        <script>
+            loadPagePart('toolbar.html', 'toolbar');
+            loadPagePart('footer.html', 'toolbar-bottom');
+
+            // Uncomment this to include dialog boxes on the webpage if available.
+            // loadPagePart('image-dialog.html', 'dialog-box');
+        </script>
+    </head>
+    <body>
+        
+        <div id="toolbar"></div>
+
     <div class="container">
         <h1 class="page-title">Communities</h1>
         
@@ -22,30 +43,30 @@
                 <div class="card" onclick="openExpanded(
                     'Unleash PH', 
                     ' Founded by pet lovers, this all-in-one platform combines fun features like e-commerce, social networking, entertainment, and essential information of various pet activities that pet owners need to know. Share your pets unique traits and find matches who also understand the bond between owner and furry friend.', 
-                    '../image/pawsAndKnow/communities/apps/img_unleashPH.png', 
+                    '../images/pawsAndKnow/communities/apps/img_unleashPH.png', 
                     'https://unleash.ph')">
                     <div class="card-image">
-                        <img src="../image/pawsAndKnow/communities/apps/img_unleashPH.png" alt="img_unleashPH">
+                        <img src="../images/pawsAndKnow/communities/apps/img_unleashPH.png" alt="img_unleashPH">
                     </div>
                 </div>
 
                 <div class="card" onclick="openExpanded(
                     'Zoop | Pet Community ',
                     'Zoop is revolutionizing the pet industry with its innovative approach to fostering a global community of pet lovers, experts, and enthusiasts. Zoop offers a comprehensive platform where individuals passionate about pets can connect, engage, and share their expertise in a supportive and inclusive environment.', 
-                    '../image/pawsAndKnow/communities/apps/img_zoop.png',
+                    '../images/pawsAndKnow/communities/apps/img_zoop.png',
                     'https://play.google.com/store/apps/details?id=com.zoop.zoop&hl=en&pli=1')">
                     <div class="card-image">
-                        <img src="../image/pawsAndKnow/communities/apps/img_zoop.png" alt="img_zoop">
+                        <img src="../images/pawsAndKnow/communities/apps/img_zoop.png" alt="img_zoop">
                     </div>
                 </div>
 
                 <div class="card" onclick="openExpanded(
                     'DogPack: Dog Parks & Services', 
                     'DogPack helps you find the best dog parks, dog-friendly places, hotels, and trusted local services—anywhere you go. Whether you’re searching for parks, trails, or pet-friendly stays like Airbnb, motels, or cottages, DogPack makes dog adventures easy.',
-                    '../image/pawsAndKnow/communities/apps/img_DogPack.png', 
+                    '../images/pawsAndKnow/communities/apps/img_DogPack.png', 
                     'https://play.google.com/store/apps/details?id=com.dogpack&hl=en')">
                     <div class="card-image">
-                        <img src="../image/pawsAndKnow/communities/apps/img_DogPack.png" alt="Local Connect App">
+                        <img src="../images/pawsAndKnow/communities/apps/img_DogPack.png" alt="Local Connect App">
                     </div>
                 </div>
             </div>
@@ -57,30 +78,30 @@
                 <div class="card" onclick="openExpanded(
                 'The Philippine Animal Welfare Society ', 
                 'PAWS is a registered non-profit organization which is dedicated to the protection and the promotion of humane treatment of all animals.', 
-                '../image/pawsAndKnow/communities/websites/img_PAWS.png', 
+                '../images/pawsAndKnow/communities/websites/img_PAWS.png', 
                 ' https://paws.org.ph')">
                     <div class="card-image">
-                        <img src="../image/pawsAndKnow/communities/websites/img_PAWS.png" alt="img_PAWS">
+                        <img src="../images/pawsAndKnow/communities/websites/img_PAWS.png" alt="img_PAWS">
                     </div>
                 </div>
 
                 <div class="card" onclick="openExpanded(
                 'CARA Welfare Philippines', 
                 ' CARA was formed in the year 2000 by a dedicated group of animal lovers determined to help the plight of animals in the Philippines. We are a non-profit, non-government organization that receives no government funding; we rely solely on private donations.', 
-                '../image/pawsAndKnow/communities/websites/img_CARA.png', 
+                '../images/pawsAndKnow/communities/websites/img_CARA.png', 
                 'https://www.caraphil.org/about-cara/')">
                     <div class="card-image">
-                        <img src="../image/pawsAndKnow/communities/websites/img_CARA.png" alt="img_CARA">
+                        <img src="../images/pawsAndKnow/communities/websites/img_CARA.png" alt="img_CARA">
                     </div>
                 </div>
 
                 <div class="card" onclick="openExpanded(
                 'YummyPets', 
                 'Yummypets is a social media network for pets. It allows members to create social profiles for their pets, store photos and videos, build communities, and access specific animal related content and services.',
-                '../image/pawsAndKnow/communities/websites/img_YummyPets.png', 
+                '../images/pawsAndKnow/communities/websites/img_YummyPets.png', 
                 'https://www.yummypets.com/photos/kudos')">
                     <div class="card-image">
-                        <img src="../image/pawsAndKnow/communities/websites/img_YummyPets.png" alt="Yummy pets image">
+                        <img src="../images/pawsAndKnow/communities/websites/img_YummyPets.png" alt="Yummy pets image">
                     </div>
                 </div>
             </div>
@@ -92,30 +113,30 @@
                 <div class="card" onclick="openExpanded(
                 'r/dogsofrph', 
                 'Welcome to r/dogsofrph, a community dedicated to dog lovers in the Philippines. 🇵🇭🐾 Share photos, stories, and tips about your furry friends. Discuss dog behavior, care, training, adoption, and more. Connect with fellow Filipino dog owners and dog lovers.', 
-                '../image/pawsAndKnow/communities/reddit/imf_dogsofrph.png', 
+                '../images/pawsAndKnow/communities/reddit/imf_dogsofrph.png', 
                 'https://www.reddit.com/r/dogsofrph/')">
                     <div class="card-image">
-                        <img src="../image/pawsAndKnow/communities/reddit/imf_dogsofrph.png" alt="dog of rph">
+                        <img src="../images/pawsAndKnow/communities/reddit/imf_dogsofrph.png" alt="dog of rph">
                     </div>
                 </div>
 
                 <div class="card" onclick="openExpanded(
                 'r/catsofrph', 
                 'Mingmings and Swswswswsws. Hello mga KA-Muning at Ka-Pusa. This space was created primarily for r/PH and other Filipino Redditors to post and share (cute) PH cat pictures. We welcome photos of your pets, family or friends pets, and cats in your neighborhood or current location, as long as you actually took the photo. Common all cat pics are cute. We trust the furparents to abide and maintain paw-sitive feels in the sub. Now go back to your cat overlords and serve them.', 
-                '../image/pawsAndKnow/communities/reddit/img_CatsofRPH.png', 
+                '../images/pawsAndKnow/communities/reddit/img_CatsofRPH.png', 
                 ' https://www.reddit.com/r/catsofrph/')">
                     <div class="card-image">
-                        <img src="../image/pawsAndKnow/communities/reddit/img_CatsofRPH.png" alt="r/catofrph image">
+                        <img src="../images/pawsAndKnow/communities/reddit/img_CatsofRPH.png" alt="r/catofrph image">
                     </div>
                 </div>
 
                 <div class="card" onclick="openExpanded(
                 'r/PetsareAmazing', 
                 ' A place to post anything amazing about your pets. Cuteness is Amazing too.', 
-                '../image/pawsAndKnow/communities/reddit/img_PetsareAmazing.png', 
+                '../images/pawsAndKnow/communities/reddit/img_PetsareAmazing.png', 
                 ' https://www.reddit.com/r/PetsareAmazing/')">
                     <div class="card-image">
-                        <img src="../image/pawsAndKnow/communities/reddit/img_PetsareAmazing.png" alt="r/PetsareAmazing">
+                        <img src="../images/pawsAndKnow/communities/reddit/img_PetsareAmazing.png" alt="r/PetsareAmazing">
                     </div>
                 </div>
             </div>
@@ -126,30 +147,30 @@
                 <div class="card" onclick="openExpanded(
                 'Pet Lovers PH', 
                 'PET Lovers PH was created to see how many people show love for their pets in the Philippines. Everyone is welcome to share photos or videos but selling live pets is strictly prohibited. Do not use captions such as rehoming or other similar words to cover up a live pet selling post. Anyone seen breaking the group rules will be removed and blocked from this group', 
-                '../image/pawsAndKnow/communities/fb_groups/img_PetLoversPh.png', 
+                '../images/pawsAndKnow/communities/fb_groups/img_PetLoversPh.png', 
                 'https://www.facebook.com/groups/229632427626567/')">
                     <div class="card-image">
-                        <img src="../image/pawsAndKnow/communities/fb_groups/img_PetLoversPh.png" alt="pet lover image">
+                        <img src="../images/pawsAndKnow/communities/fb_groups/img_PetLoversPh.png" alt="pet lover image">
                     </div>
                 </div>
 
                 <div class="card" onclick="openExpanded(
                 'Cats & Dogs Ph', 
                 'Purebred Cat 🐈 and Dog 🐕 Philippines 🇵🇭 is a place where you can share your knowledges, ideas 💡, pictures, videos and other related products to our beloved cats 🐈 and dogs 🐕.', 
-                '../image/pawsAndKnow/communities/fb_groups/img_Cats&DogsPh.png', 
+                '../images/pawsAndKnow/communities/fb_groups/img_Cats&DogsPh.png', 
                 ' https://www.facebook.com/groups/845141185920346/')">
                     <div class="card-image">
-                        <img src="../image/pawsAndKnow/communities/fb_groups/img_Cats&DogsPh.png" alt="cat and dogs image">
+                        <img src="../images/pawsAndKnow/communities/fb_groups/img_Cats&DogsPh.png" alt="cat and dogs image">
                     </div>
                 </div>
 
                 <div class="card" onclick="openExpanded(
                 'Lucky Pet Care Community', 
                 ' A Safe and Supportive Environment: We place a high priority on creating a friendly, inviting environment where participants may openly discuss their experiences, ask questions, and seek guidance without fear of being judged. All opinions are valued, and polite conversation is encouraged.', 
-                '../image/pawsAndKnow/communities/fb_groups/img_LuckyPetCareCommunity.png', 
+                '../images/pawsAndKnow/communities/fb_groups/img_LuckyPetCareCommunity.png', 
                 '  https://www.facebook.com/groups/3096589427317352/')">
                     <div class="card-image">
-                        <img src="../image/pawsAndKnow/communities../image/pawsAndKnow/communities/fb_groups/img_LuckyPetCareCommunity.png" alt="lucky pert care community image">
+                        <img src="../images/pawsAndKnow/communities../images/pawsAndKnow/communities/fb_groups/img_LuckyPetCareCommunity.png" alt="lucky pert care community image">
                     </div>
                 </div>
                 </div>
@@ -163,30 +184,30 @@
                 <div class="card" onclick="openExpanded(
                 '@nala_cat', 
                 'Nala, a charming 10-year-old Siamese-tabby mix, was adopted from a shelter outside Los Angeles. Over the years, her Instagram account has surged in popularity, earning her the title of “the most followed cat on Instagram” in 2019 from Guinness World Records. Audiences adore Nala for her cozy snuggles, irresistible dress-up photos, and especially for her short, stubby legs. Nala is a pet influencer veteran of influencer marketing on Instagram, having participated in numerous brand collaborations with well-known companies, including Bissell, Friskies, and Petsmart. The growing success of this account underscores the value of brand partnerships and effective influencer marketing performance.', 
-                '../image/pawsAndKnow/communities/content_creators/img_nalacat.png', 
+                '../images/pawsAndKnow/communities/content_creators/img_nalacat.png', 
                 ' https://www.instagram.com/nala_cat/')">
                     <div class="card-image">
-                        <img src="../image/pawsAndKnow/communities/content_creators/img_nalacat.png" alt="nala cat image">
+                        <img src="../images/pawsAndKnow/communities/content_creators/img_nalacat.png" alt="nala cat image">
                     </div>
                 </div>
 
                 <div class="card" onclick="openExpanded(
                 '@tuckerbudzyn', 
                 'Description:@tuckerbudzyn presents a delightful family of two golden retrievers: Tucker and his son, Todd. Dog influencers Tucker and Todd share entertaining reels with their 3.8 million followers, showcasing dressing up, performing skits, and connecting with dog owners everywhere. Despite their impressive follower count, the duo remains relatively untapped regarding brand partnerships. According to Lefty data, only 1.67% of their content over the past year has been sponsored posts, making Tucker and Todd ideal partners for brands looking to find influencers with a large and highly engaged audience.', 
-                '../image/pawsAndKnow/communities/pawsAndKnow/communities/content_creators/img_Tucker.png', 
+                '../images/pawsAndKnow/communities/pawsAndKnow/communities/content_creators/img_Tucker.png', 
                 ' https://www.instagram.com/tuckerbudzyn/')">
                     <div class="card-image">
-                        <img src="../image/pawsAndKnow/communities/content_creators/img_Tucker.png" alt="tucker's image">
+                        <img src="../images/pawsAndKnow/communities/content_creators/img_Tucker.png" alt="tucker's image">
                     </div>
                 </div>
 
                 <div class="card" onclick="openExpanded(
                 '@itsdougthepug', 
                 ' Doug the Pug is an Instagram sensation famously known as “the OG celebrity dog.” He has gained widespread recognition for his adorable interactions with stars like Billie Eilish and Justin Bieber. Doug’s content primarily shows him in charming outfits and funny reels that resonate particularly well with his young audience. According to Lefty data, nearly half of Doug’s fans are Gen Zers aged 18-24, with American users comprising 45% of his followers. Like many other prominent dog influencers, Doug has developed a brand focused on holistic dog care,leveraging the virality of his account for the health and well-being of different pets. ,', 
-                '../image/pawsAndKnow/communities/content_creators/img_itsdougthepug.png', 
+                '../images/pawsAndKnow/communities/content_creators/img_itsdougthepug.png', 
                 '  https://www.instagram.com/itsdougthepug/')">
                     <div class="card-image">
-                        <img src="../image/pawsAndKnow/communities/content_creators/img_itsdougthepug.png" alt="itsdoughtthepusg image">
+                        <img src="../images/pawsAndKnow/communities/content_creators/img_itsdougthepug.png" alt="itsdoughtthepusg image">
                     </div>
                 </div>
                 </div>
@@ -196,30 +217,30 @@
                 <div class="card" onclick="openExpanded(
                 '@juniperfoxx', 
                 'Since being rescued and adopted in 2015, Juniper the Fox has gained a loyal following on Instagram, where her owners, who also manage an animal sanctuary, share her adventures. The account includes a variety of rescue animals, including several other foxes, a skunk, an opossum, and a raccoon, creating a satisfying mix of content that resonates with audiences. With an impressive average engagement rate of 3.4%, this account outperforms many others of its size on Instagram. Furthermore, brand collaborations have yet to be explored, presenting a unique opportunity to collaborate with the sanctuary.', 
-                '../image/pawsAndKnow/communities/content_creators/img_juniperfoxx.png', 
+                '../images/pawsAndKnow/communities/content_creators/img_juniperfoxx.png', 
                 'https://www.instagram.com/juniperfoxx/')">
                     <div class="card-image">
-                        <img src="../image/pawsAndKnow/communities/content_creators/img_juniperfoxx.png" alt="juniperfoxx image">
+                        <img src="../images/pawsAndKnow/communities/content_creators/img_juniperfoxx.png" alt="juniperfoxx image">
                     </div>
                 </div>
 
                 <div class="card" onclick="openExpanded(
                 '@swagrman', 
                 'Much like Doug the Pug, Swaggy Wolfdog has gained fame for his appearances alongside renowned celebrities, often donning his signature outfit: a hoodie, sunglasses, and gold chain. While he is most active on TikTok, this dog influencer has also garnered significant attention on Instagram, with his most notable post featuring a memorable moment with Taylor Swift at this years Coachella. Swaggy Wolfdog has not established any brand partnerships, making him an attractive prospect for potential collaborations.', 
-                '../image/pawsAndKnow/communities/content_creators/img_swagrman.png',
+                '../images/pawsAndKnow/communities/content_creators/img_swagrman.png',
                 'https://www.instagram.com/swagrman/')">
                     <div class="card-image">
-                        <img src="../image/pawsAndKnow/communities/content_creators/img_swagrman.png" alt="swagrman image">
+                        <img src="../images/pawsAndKnow/communities/content_creators/img_swagrman.png" alt="swagrman image">
                     </div>
                 </div>
 
                 <div class="card" onclick="openExpanded(
                 '@LennonTheBunny', 
                 'Lennon the Bunny is a popular YouTube star and emotional support animal, a 9-year-old Havana mix rabbit owned by Lorelei Carlson. Lorelei makes videos featuring Lennon, documenting their life and educating others on rabbit care, particularly on free-roaming rabbits.', 
-                '../image/pawsAndKnow/communities/content_creators/img_lenonthebunny.png', 
+                '../images/pawsAndKnow/communities/content_creators/img_lenonthebunny.png', 
                 'https://www.youtube.com/channel/UCUSfEor0VihlL4fMt-VlLgQ/videos')">
                     <div class="card-image">
-                        <img src="../image/pawsAndKnow/communities/content_creators/img_lenonthebunny.png" alt="lenon the bunny image">
+                        <img src="../images/pawsAndKnow/communities/content_creators/img_lenonthebunny.png" alt="lenon the bunny image">
                     </div>
                 </div>
             </div>
@@ -228,30 +249,30 @@
                 <div class="card" onclick="openExpanded(
                 '@CreativePetKeeping', 
                 'Hi! My name is Kasia and I have a small apartment fish room that is also my work from home office.  I make videos about betta fish breeding, betta fish care, and betta community tanks. I also breed dwarf cichlids and keep freshwater neocaradina shrimp', 
-                '../image/pawsAndKnow/communities/content_creators/img_CreativePetkeeping.png', 
+                '../images/pawsAndKnow/communities/content_creators/img_CreativePetkeeping.png', 
                 'https://www.youtube.com/channel/UCEqns2C5eQR4PZfQvqn7tOQ')">
                     <div class="card-image">
-                        <img src="../image/pawsAndKnow/communities/content_creators/img_CreativePetkeeping.png" alt="creative pet keeping image">
+                        <img src="../images/pawsAndKnow/communities/content_creators/img_CreativePetkeeping.png" alt="creative pet keeping image">
                     </div>
                 </div>
 
                 <div class="card" onclick="openExpanded(
                 '@TheDodo', 
                 'The home for animal people. The Dodo serves up emotionally and visually compelling, highly sharable animal-related stories and videos to help make caring about animals a viral cause.', 
-                '../image/pawsAndKnow/communities/content_creators/img_thedodo.png',
+                '../images/pawsAndKnow/communities/content_creators/img_thedodo.png',
                 'https://www.youtube.com/channel/UCINb0wqPz-A0dV9nARjJlOQ')">
                     <div class="card-image">
-                        <img src="../image/pawsAndKnow/communities/content_creators/img_thedodo.png" alt="the dodo image">
+                        <img src="../images/pawsAndKnow/communities/content_creators/img_thedodo.png" alt="the dodo image">
                     </div>
                 </div>
 
                 <div class="card" onclick="openExpanded(
                 '@petcollective', 
                 ' For the spoiling, nurturing and whole-heartedly pet-obsessed, The Pet Collective is a playground that cultivates community, promotes joyful moments, and fuels your pet lifestyle. From entertainment, to pet-ucation, to the newest trends and products, and everything in between - TPC is the catnip for the modern pet parent. Join in on the frenzy.', 
-                '../image/pawsAndKnow/communities/content_creators/img_ThePetCollective.png', 
+                '../images/pawsAndKnow/communities/content_creators/img_ThePetCollective.png', 
                 'https://www.youtube.com/channel/UCPIvT-zcQl2H0vabdXJGcpg')">
                     <div class="card-image">
-                        <img src="../image/pawsAndKnow/communities/content_creators/img_ThePetCollective.png" alt="petcollective image">
+                        <img src="../images/pawsAndKnow/communities/content_creators/img_ThePetCollective.png" alt="petcollective image">
                     </div>
                 </div>
             </div>
@@ -272,5 +293,12 @@
             </div>
         </div>
     </div>
-</body>
-</html>
+
+        
+        <!-- Uncomment this to include dialog boxes on the webpage if available. -->
+        <!-- <div id="modal"></div>
+        <div id="dialog-box"></div> -->
+
+        <div id="toolbar-bottom"></div>
+    </body>
+</html> 
