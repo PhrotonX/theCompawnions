@@ -1,11 +1,6 @@
-class Gallery{
+class Gallery extends ItemList{
     constructor(){
-        this.beginRange = 0;
-        //this.endRange = 15;
-        this.stepRange = 0;
-        this.count = 0;
-        this.rangeSize = 16;
-        this.query = null;
+        super();
     }
 
     async onLoadElements(query){
@@ -131,28 +126,7 @@ class Gallery{
 
     }
 
-    nextPage(){
-        // if(this.beginRange + this.rangeSize <= this.count){
-        //     this.beginRange += this.rangeSize;
-        //     this.endRange += this.rangeSize;
-
-        //     this.onLoadElements(this.query);
-        // }
-
-        if(this.beginRange <= this.count){
-            //this.beginRange += this.rangeSize;
-            //this.endRange += this.rangeSize;
-            this.onLoadElements(this.query);
-        }
-    }
-
-    prevPage(){
-        if(this.beginRange >= 0){
-            this.beginRange -= this.stepRange;
-
-            this.onLoadElements(this.query);
-        }
-    }
+    
 }
 
 var gallery = null;
