@@ -20,37 +20,46 @@
         
         <div id="toolbar"></div>
 
-        <div id="content">
-            <div class="secondary-card center">
-                <h1 id="search-heading">Results for </h1>
-            </div>
-
-            <div class="card" id="search-card">
-                <div id="search-results" class="link-list">
-                    <!-- <div class="link-list-item">
-                        <p class="title"></p>
-                        <p class="description"></p>
-                    </div> -->
+        <main>
+            <article>
+                <div class="secondary-card center">
+                    <h1 id="search-heading">Results for </h1>
                 </div>
 
-                <span class="page-buttons">
-                    <button class="clickable" onclick="search.prevPage()">
-                        <span class="material-symbols-outlined">
-                            arrow_back
-                        </span>
-                    </button>
-                    <p id="gallery-page-info"></p>
-                    <button class="clickable" onclick="search.nextPage()">
-                        <span class="material-symbols-outlined">
-                            arrow_forward
-                        </span>
-                    </button>
-                </span>
-                
-                
-            </div>
+                <div class="card" id="search-card">
+                    <div id="search-results" class="link-list">
+                        <!-- <div class="link-list-item">
+                            <p class="title"></p>
+                            <p class="description"></p>
+                        </div> -->
+                    </div>
+
+                    <span class="page-buttons">
+                        <button class="clickable" onclick="search.prevPage()">
+                            <span class="material-symbols-outlined">
+                                arrow_back
+                            </span>
+                        </button>
+                        <p id="gallery-page-info"></p>
+                        <button class="clickable" onclick="search.nextPage()">
+                            <span class="material-symbols-outlined">
+                                arrow_forward
+                            </span>
+                        </button>
+                    </span>
+                    
+                    
+                </div>
+                <div class="image-card card-default bottom-img-default">
+                    <img
+                        src="../images/image_above_footer.png"
+                        alt="A picture of a dog and cat looking suspiciously."
+                    >
+                </div>
+            </article>
             
-        </div>
+            
+        </main>
 
         <div id="toolbar-bottom"></div>
     </body>
