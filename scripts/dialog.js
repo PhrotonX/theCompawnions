@@ -62,6 +62,7 @@ class ImageDialog extends Dialog{
         const dialogParagraph = this.dialog.querySelector("#" + this.dialogId + '-alt');
 
         const img = div.querySelector('img');
+        console.log(img);
 
         dialogImg.setAttribute('src', img.getAttribute('src'));
         dialogImg.setAttribute('alt', "An image displayed on a dialog box");
@@ -73,6 +74,11 @@ class ImageDialog extends Dialog{
 var imgDialog = new ImageDialog();
 
 document.addEventListener("DOMContentLoaded", function(){
+    onAddImgDialogClickEvent();
+});
+
+
+function onAddImgDialogClickEvent(){
     // Add onclick event to each image-dialog-opener.
     // ============================================================================
     var imageDialogOpener = document.getElementsByClassName("image-dialog-opener");
@@ -83,4 +89,6 @@ document.addEventListener("DOMContentLoaded", function(){
         };
         // console.log(clickable.querySelector('img').getAttribute('alt'));
     }
-});
+
+    return true;
+}

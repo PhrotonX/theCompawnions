@@ -20,7 +20,7 @@ async function loadPagePart(filepath, containerId){
     return result;
 }
 
-// Obtains URL parameters. FOr example, www.url.com?query=Sample has query parameter with value "Sample".
+// Obtains URL parameters. For example, www.url.com?query=Sample has query parameter with value "Sample".
 function getUrlParam(url, parameter){
     const urlParams = new URLSearchParams(url);
 
