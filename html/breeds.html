@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Breeds - The ComPawnions</title>
+        <link rel="stylesheet" type="text/css" href="../styles/style.css">
+        <script src="../scripts/script.js"></script>
+        <!-- Uncomment this to include dialog boxes or tooltips on the webpage if available. -->
+        <!-- <script src="../scripts/dialog.js"></script> -->
+        <!-- <script src="../scripts/tooltip.js"></script> -->
+
+        <!-- This website requires to be run on http-server, XAMPP, or other servers in order to work. -->
+        <script>
+            loadPagePart('toolbar.html', 'toolbar');
+            loadPagePart('footer.html', 'toolbar-bottom');
+
+            // Uncomment this to include dialog boxes on the webpage if available.
+            // loadPagePart('image-dialog.html', 'dialog-box');
+        </script>
+        <style>
+            #breeds-page-title {
+                width: 100%;
+                text-align: center;
+                font-size: 300%;
+                color: #ffffff;
+                text-shadow: 3px 3px 5px rgba(43, 43, 43, 0.856);
+                font-family: Arial, Helvetica, sans-serif;
+                background-image: url(https://tr.rbxcdn.com/180DAY-5c2f09364310917fe567662b5c35d540/420/420/Hat/Webp/noFilter);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                border-radius: 20px;
+                overflow: hidden;
+            }
+
+            #breedList {
+                display: flex;
+                flex-wrap: wrap;
+                padding-left: 2%;
+                gap: 15px;
+                margin-top: 20px;
+            }
+
+            .breed-card {
+                width: 300px;
+                height: 320px;
+                border: 1px solid #eff2c7;
+                border-radius: 20px;
+                overflow: hidden;
+                text-align: center;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                cursor: pointer;
+                transition: transform 0.2s;
+                background-color: #eff2c7;
+                background-size: cover;
+                background-position: center;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            .breed-card:hover {
+                transform: scale(1.05);
+            }
+
+            .breed-card img {
+                width: 100%;
+                height: 90%;
+                object-fit: cover;
+                margin-bottom: 0px;
+                border-radius: 20px;
+            }
+
+            .breed-card-name {
+                padding: 0px;
+                font-weight: bold;
+            }
+
+            #pet-dropdown {
+                position: relative;
+                display: inline-block;
+                width: 200px;
+                margin-bottom: 10px;
+                font-family: sans-serif;
+            }
+
+            #pet-dropdown .custom-select {
+                background-color: #eff2c7;
+                padding: 10px;
+                border-radius: 10px;
+                cursor: pointer;
+                border: none;
+            }
+
+            #pet-dropdown .custom-options {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: #eff2c7;
+                border-radius: 10px;
+                box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+                z-index: 10;
+                overflow: hidden;
+            }
+
+            #pet-dropdown .custom-option {
+                padding: 10px;
+                cursor: pointer;
+                transition: background-color 0.2s;
+            }
+
+            #pet-dropdown .custom-option:hover {
+                background-color: #e9eab3;
+                color: black;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="toolbar"></div>
+        <main>
+            <article>
+                <div id="content">
+                    <div id="breeds-page-title">
+                        <h1>Breeds</h1>
+                    </div>   
+                    <h3>Select Animal Type ⬇</h3>
+                            <div id="pet-dropdown">
+                            <div class="custom-select" onclick="toggleDropdown()">Cat</div>
+                                <div class="custom-options" id="dropdown">
+                                    <div class="custom-option" onclick="selectAnimal('cat')">Cat</div>
+                                    <div class="custom-option" onclick="selectAnimal('dog')">Dog</div>
+                                </div>
+                            </div>
+
+
+                    <h3>Breeds:</h3>
+                    <div id="breedList"></div>
+                    <script>
+                        //This is a Database of list of the foods and treats
+                        const animals = {
+                            cat: {
+                                "Maine Coon": {
+                                    img: "../images/gallery/cat_profile/mainecoon.jpg"
+                                },
+                                "Siamese": {
+                                    img: "../images/gallery/cat_profile/siamese.jpg"
+                                },
+                                "Persian": {
+                                    img: "../images/gallery/cat_profile/persian.jpg"
+                                },
+                                "Bengal": {
+                                    img: "../images/gallery/cat_profile/bengal.jpg"
+                                },
+                                "Ragdoll": {
+                                    img: "../images/gallery/cat_profile/ragdoll.jpg"
+                                },
+                                "Sphynx": {
+                                    img: "../images/gallery/cat_profile/sphynx.jpg"
+                                },
+                                "Scottish Fold": {
+                                    img: "../images/gallery/cat_profile/scottishfold.jpg"
+                                },
+                                "British Shorthair": {
+                                    img: "../images/gallery/cat_profile/britishshorthair.jpg"
+                                },
+                                "Abyssinian": {
+                                    img: "../images/gallery/cat_profile/abyssianian.jpg"
+                                },
+                                "Russian Blue": {
+                                    img: "../images/gallery/cat_profile/russianblue.jpg"
+                                },
+                            },
+                            dog: {
+                                "Beagle": {
+                                    img: "../images/gallery/dog_profile/profile_beagles.png"
+                                },
+                                "Rottweiler": {
+                                    img: "../images/gallery/dog_profile/profile_rottweiler.png"
+                                },
+                                "Yorkshire Terrier": {
+                                    img: "../images/gallery/dog_profile/profile_yorkshire_terrier.png"
+                                },
+                                "Dachshund": {
+                                    img: "../images/gallery/dog_profile/profile_dachshund.png"
+                                },
+                                "Shih Tzu": {
+                                    img: "../images/gallery/dog_profile/profile_shih_tzu.png"
+                                },
+                                "Siberian Husky": {
+                                    img: "../images/gallery/dog_profile/profile_siberian_husky.png"
+                                },
+                                "Chihuahua": {
+                                    img: "../images/gallery/dog_profile/profile_chihuahua.png"
+                                },
+                                "Great Dane": {
+                                    img: "../images/gallery/dog_profile/profile_great_dane.png"
+                                },
+                                "Pomeranian": {
+                                    img: "../images/gallery/dog_profile/profile_pomeranian.png"
+                                },
+                                "Poodle": {
+                                    img: "../images/gallery/dog_profile/profile_poodle.png"
+                                },
+                            }
+                        };
+
+                        // Update breed list based on selected animal
+                        function updateBreedList(animal) {
+                            const breedList = document.getElementById('breedList'); // make sure this ID exists in your HTML
+                            breedList.innerHTML = '';
+
+                            const breeds = animals[animal];
+                            Object.keys(breeds).forEach(breed => {
+                                const breedData = breeds[breed];
+                                const card = document.createElement('div');
+                                card.className = 'breed-card';
+                                card.onclick = () => {
+                                    window.location.href = `dog-cat-breeds-information.html?animal=${animal}&breed=${encodeURIComponent(breed)}`;
+                                };
+
+                                card.innerHTML = `
+                                    <img src="${breedData.img || 'default-image.png'}" alt="${breed}">
+                                    <div class="breed-card-name">${breed}</div>`;
+                                breedList.appendChild(card);
+                            });
+                        }
+
+
+                        // first load
+                        updateBreedList('cat');
+
+                        window.onload = function() {
+                            updateBreedList("cat"); // or "dog" if that's your default
+                        };
+
+                        // dropdown function
+                        function toggleDropdown() {
+                            const dropdown = document.getElementById("dropdown");
+                            dropdown.style.display = (dropdown.style.display === "block") ? "none" : "block";
+                        }
+
+                        function selectAnimal(animal) {
+                            document.querySelector('.custom-select').textContent = animal.charAt(0).toUpperCase() + animal.slice(1);
+                            updateBreedList(animal);
+                            document.getElementById("dropdown").style.display = "none";
+                        }
+
+                        document.addEventListener("click", function(e) {
+                            const wrapper = document.querySelector(".custom-select-wrapper");
+                            if (!wrapper.contains(e.target)) {
+                            document.getElementById("dropdown").style.display = "none";
+                            }
+                        });                    
+                    </script>
+                </div>
+            </article>
+        </main>
+        
+        <!-- Uncomment this to include dialog boxes on the webpage if available. -->
+        <!-- <div id="modal"></div>
+        <div id="dialog-box"></div> -->
+
+        <div id="toolbar-bottom"></div>
+    </body>
+</html> 
