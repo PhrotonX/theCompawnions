@@ -44,6 +44,10 @@
     margin-right: 25%;
 }
 
+.card-default{
+    width: 70%;
+}
+
 .image-card{
     border-radius: var(--border-radius-xxl);
     margin-top: 24px;
