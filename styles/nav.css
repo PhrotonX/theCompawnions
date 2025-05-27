@@ -178,6 +178,7 @@ menu li:hover menu li p{
     background-color: transparent;
     width: unset;
     left: unset;
+    right: unset;
 }
 
 @media screen and (max-width: 1000px){
@@ -204,8 +205,9 @@ menu li:hover menu li p{
         display: block;
         position: fixed;
         background-color: var(--seventh-color);
-        width: 100%;
-        left: 0;
+        width: 35%;
+        right: 0;
+        left: unset;
     }
 
     .menu-nav-content{
@@ -215,6 +217,17 @@ menu li:hover menu li p{
 }
 
 @media screen and (max-width: 500px){
+    nav menu li button{
+        width: 100%;
+    }
+
+    .menu-nav-content.nav-toggled{
+        width: 100%;
+        left: 0;
+        right: unset;
+    }
+
+
     #toolbar #toolbar-logo-small{
         display: block;
     }
