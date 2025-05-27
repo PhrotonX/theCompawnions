@@ -32,7 +32,7 @@ class Gallery extends ItemList{
         console.log("Count: " + this.count);
 
         var currentTr = null;
-        var resultCtr = 0
+        var resultCtr = 0;
 
         // Fill the table from HTML with contents.
         //for(let i = this.beginRange; i <= this.endRange; i++){
@@ -41,7 +41,7 @@ class Gallery extends ItemList{
             if(json.item[i] == null){
                 continue;
             }
-            if(resultCtr == 15){
+            if(resultCtr == 16){
                 this.stepRange = i - this.beginRange;
                 this.beginRange = resultCtr;
                 break;
@@ -77,8 +77,10 @@ class Gallery extends ItemList{
             
             var currentTd = document.createElement("td");
 
+            currentTd.setAttribute("class", "clickable");
+
             let currentDiv = document.createElement("div");
-            currentDiv.setAttribute("class", "secondary-card clickable image-dialog-opener");
+            currentDiv.setAttribute("class", "gallery-item image-dialog-opener");
             currentDiv.onclick = () => {
                 imgDialog.openDialog(currentDiv);
             };
