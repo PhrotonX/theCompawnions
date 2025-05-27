@@ -17,7 +17,7 @@ body{
     margin: 0px;
 }
 
-p, h1, h2, h3, h4, h5, h6{
+p, h1, h2, h3, h4, h5, h6, input{
     font-family: Arial, Helvetica, sans-serif;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -26,10 +26,23 @@ h1{
     font-size:xx-large;
 }
 
+input{
+    font-size: medium;
+}
+
 .heading h1{
     text-align: center;
 }
 
 .center{
     text-align: center;
+}
+
+.banner-text h1, .banner-text h1 span {
+    font-size: 48px;
+}
+
+.banner-text h1, .banner-text p{
+    color: #F0F1C5;
+    text-shadow: 4px 4px 4px rgba(0,0,0,0.8);
 }

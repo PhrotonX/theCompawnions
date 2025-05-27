@@ -49,16 +49,41 @@ nav{
 
 #toolbar button{
     padding: 14px 16px;
-    background-color: var(--primary-color);
+    background-color: transparent;
     border: none;
 }
 
+#toolbar button, #toolbar input[type="text"]{
+    border-top-left-radius: var(--border-radius-xxl);
+    border-top-right-radius: var(--border-radius-xxl);
+}
+
 #toolbar button:hover{
-    filter: brightness(115%);
+    background-color: var(--secondary-color);
 }
 
 #toolbar button:active{
+    background-color: var(--tertiary-color);
+}
+
+#toolbar .selected > button{
+    background-color: var(--quaternary-color);
+}
+
+#toolbar .selected > menu{
+    background-color: var(--quaternary-color);
+}
+
+#toolbar .selected button:hover{
+    filter: brightness(115%);
+}
+
+#toolbar .selected button:active{
     filter: brightness(75%);
+}
+
+#toolbar .selected menu button:hover, #toolbar .selected menu button:active{
+    background-color: var(--quaternary-color);
 }
 
 menu li{

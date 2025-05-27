@@ -1,10 +1,16 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Home - The ComPawnions</title>
         <link rel="stylesheet" type="text/css" href="../styles/style.css">
         <script src="../scripts/script.js"></script>
         <style>
+            header{
+                /* padding-top: 200px; */
+                padding-top: 35vh;
+            }
+
             header button{
                 margin-left: 8px;
                 width: 25%;
@@ -32,6 +38,11 @@
                 object-fit: cover;
             }
 
+            #website-info{
+                /* margin-top: 100px; */
+                margin-top: 10vh;
+            }
+
             #website-mission-and-vision{
                 display: flex;
                 flex-direction: row;
@@ -52,6 +63,13 @@
                 width: 50%;
             }
 
+            #header-content{
+                padding-top: 200px;
+            }
+
+            #header-content p, #header-content h1{
+                color: var(--primary-color);
+            }
         </style>
         <!-- Uncomment this to include dialog boxes or tooltips on the webpage if available. -->
         <script src="../scripts/dialog.js"></script>
@@ -73,18 +91,15 @@
         <main>
             <article>
                 <header>
-                    <span id="header-content">
-                        <div class="secondary-card card-s">
-                        <h1>More than Pets — Your Companions.</h1>
+                    <span id="header-content" class="banner-text">
+                        <div class="tertiary-card">
+                            <h1>More than Pets — Your Companions.</h1>
                         </div>
-                        <div class="secondary-card card-m">
-                            <p>Here at The ComPawnions, every paw matters. Whether you’re Team Cat or Team Dog, we’re here to make your journey with your fur-iend even more special!</p>
-                        </div>
-                        <button class="clickable" onclick="nav('about.html')">
-                            <p>About Us</p>
-                        </button>
                     </span>
                     
+                    <div class="secondary-card card-m">
+                        <p>Here at The ComPawnions, every paw matters. Whether you’re Team Cat or Team Dog, we’re here to make your journey with your fur-iend even more special!</p>
+                    </div>
                 </header>
 
                 <section id="website-info">
@@ -120,7 +135,7 @@
                     
                 </section>
 
-                <section id="website-mission-and-vision">
+                <!-- <section id="website-mission-and-vision">
                     <span class="image-card image-dialog-opener clickable">
                         <img
                             src="../images/img_mission_vision.jpeg"
@@ -144,7 +159,7 @@
                         src="../images/index_bottom_img.jpg"
                         alt="A picture of a dog and cat on the bottom part of the landing page."
                     >
-                </div>
+                </div> -->
             </article>
 
             

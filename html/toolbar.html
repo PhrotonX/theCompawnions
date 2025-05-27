@@ -7,15 +7,14 @@
         onclick="nav('index.html')"
     >
     <menu>
-        <li><button onclick="nav('index.html')"><p>Home</p></button></li>
-        <li>
+        <li id="menu-home"><button onclick="nav('index.html')"><p>Home</p></button></li>
+        <li id="menu-paws-and-know">
             <button onclick="nav('paws-and-know.html')">
                 <p>Paws and Know</p>
             </button>
             <menu>
                 <li><button onclick="nav('general-information.html')"><p>General Information</p></button></li>
                 <li><button onclick="nav('pawrenting-101.html')"><p>Pawrenting 101</p></button></li>
-                <li><button onclick="nav('Diseases_temp.html')"><p>Diseases</p></button></li>
                 <li><button onclick="nav('breeds.html')"><p>Breeds</p></button></li>
                 <li><button onclick="nav('Education.html')"><p>Education</p></button></li>
                 <li><button onclick="nav('communities.html')"><p>Communities</p></button></li>
@@ -23,7 +22,7 @@
                 <li><button onclick="nav('common-misconceptions-test.html')"><p>Common Misconceptions</p></button></li>
             </menu>
         </li>
-        <li>
+        <li id="menu-services">
             <button onclick="nav('services.html')">
                 <p>Services</p>
             </button>
@@ -33,12 +32,12 @@
                 <li><button onclick="nav('Mission_and_Vision.html')"><p>Mission & Vision</p></button></li>
             </menu>
         </li>
-        <li><button onclick="nav('gallery.html')"><p>Gallery</p></button></li>
-        <li><button onclick="nav('about.html')"><p>About</p></button></li>
+        <li id="menu-gallery"><button onclick="nav('gallery.html')"><p>Gallery</p></button></li>
+        <li id="menu-about"><button onclick="nav('about.html')"><p>About</p></button></li>
         <!-- <li><input/></li> -->
         <!-- <li><button onclick="nav('search.html')"><p>Search</p></button></li> -->
     </menu>
-    <form action="search.html" method="get" class="search-box">
+    <form id="menu-search" action="search.html" method="get" class="search-box">
         <input type="text" id="search" name="search" placeholder="Search...">
         <button type="submit">
             <span class="material-symbols-outlined">
