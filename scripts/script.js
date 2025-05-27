@@ -23,7 +23,7 @@ async function loadToolbar(currentPage){
         listItem.classList.add('selected');
         var navBar = document.getElementsByTagName('nav').item(0);
         if(navBar){
-            navBar.style.borderBottom = "2px var(--quaternary-color) solid";
+            navBar.style.borderBottom = "2px var(--fifth-color) solid";
         }
     }
     

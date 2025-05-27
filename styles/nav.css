@@ -47,43 +47,47 @@ nav{
     height: 48px;
 }
 
-#toolbar button{
+#toolbar nav button{
     padding: 14px 16px;
     background-color: transparent;
     border: none;
 }
 
-#toolbar button, #toolbar input[type="text"]{
+#toolbar nav > menu > li > button, #toolbar input{
     border-top-left-radius: var(--border-radius-xxl);
     border-top-right-radius: var(--border-radius-xxl);
 }
 
-#toolbar button:hover{
+#toolbar #menu-search button{
+    border-radius: var(--border-radius-xl);
+}
+
+#toolbar nav button:hover{
     background-color: var(--secondary-color);
 }
 
-#toolbar button:active{
+#toolbar nav button:active{
     background-color: var(--tertiary-color);
 }
 
-#toolbar .selected > button{
-    background-color: var(--quaternary-color);
+#toolbar nav .selected > button{
+    background-color: var(--fifth-color);
 }
 
-#toolbar .selected > menu{
-    background-color: var(--quaternary-color);
+#toolbar nav .selected > menu{
+    border: 2px var(--fifth-color) solid;
 }
 
-#toolbar .selected button:hover{
+#toolbar nav .selected button:hover{
     filter: brightness(115%);
 }
 
-#toolbar .selected button:active{
+#toolbar nav .selected button:active{
     filter: brightness(75%);
 }
 
-#toolbar .selected menu button:hover, #toolbar .selected menu button:active{
-    background-color: var(--quaternary-color);
+#toolbar nav .selected menu button:hover, #toolbar nav .selected menu button:active{
+    background-color: var(--fifth-color);
 }
 
 menu li{
@@ -95,18 +99,22 @@ menu li menu{
     display: none;
     position: absolute;
     left: 0;
-    background-color: var(--primary-color);
+    /* background-color: var(--primary-color); */
+    background-color: var(--seventh-color);
     box-shadow: var(--box-shadow-dropdown);
-    border-radius: 0px 0px var(--border-radius-xxl) var(--border-radius-xxl);
+    border: var(--border-radius-xs) var(--secondary-color) solid;
+    border-radius: 0px 0px var(--border-radius-xs) var(--border-radius-xs);
 }
 
 menu li:hover menu{
     display: flex;
     flex-direction: column;
+    width: 200%;
 }
-menu li:hover menu li button{
+menu > li:hover > menu > li > button{
     width: 100%;
-    border-radius: var(--border-radius-xxl);
+    /* border-radius: var(--border-radius-xs); */
+    /* border-radius: var(--border-radius-xxl); */
 }
 menu li:hover menu li p{
     text-align: left;
