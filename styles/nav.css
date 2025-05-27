@@ -43,7 +43,7 @@ nav{
     padding: 6px 16px;
 }
 
-#toolbar #toolbar-logo{
+#toolbar #toolbar-logo, #toolbar #toolbar-logo-small{
     height: 48px;
 }
 
@@ -58,7 +58,7 @@ nav{
     border-top-right-radius: var(--border-radius-xxl);
 }
 
-#toolbar #menu-search button{
+#toolbar #menu-search button, .menu-toggle{
     border-radius: var(--border-radius-xl);
 }
 
@@ -118,4 +118,77 @@ menu > li:hover > menu > li > button{
 }
 menu li:hover menu li p{
     text-align: left;
+}
+
+.nav-box button, .menu-toggle{
+    padding: 7px 8px !important;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+.nav-box{
+    display: flex;
+    align-items: center;
+}
+
+.nav-box input[type="text"]{
+    border: none;
+    padding: 10px 16px;
+    filter: brightness(95%);
+    margin-left: 4px;
+}
+
+/* .nav-box .material-symbols-outlined{
+    margin-block-start: 0.01em;
+    margin-block-end: 0.2em;
+    padding-block: 0em;
+    padding-inline: 0em;
+    
+    line-height: 1em;
+} */
+
+.nav-box input[type="text"]{
+    background-color: var(--sixth-color);
+    border-radius: var(--border-radius-xl);
+    /* opacity: 50%; */
+}
+
+.nav-box input[type="text"]:focus{
+    outline: 2px solid var(--sixth-color);
+    background-color: white;
+    filter: brightness(100%);
+}
+
+.nav-box input[type="text"]::placeholder {
+  color: black;
+  opacity: 1;
+}
+
+/* Hide the menu button by default */
+.menu-toggle{
+    display: none;
+}
+#toolbar #toolbar-logo-small{
+    display: none;
+}
+
+@media screen and (max-width: 1000px){
+    .menu-toggle{
+        display: block;
+    }
+
+    .menu-nav-content{
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 500px){
+    #toolbar #toolbar-logo-small{
+        display: block;
+    }
+
+    #toolbar #toolbar-logo{
+        display: none;
+    }
 }
