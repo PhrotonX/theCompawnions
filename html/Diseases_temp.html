@@ -27,6 +27,16 @@
             <h1>Common Diseases in Cats and Dogs 🐾</h1>
         </header>
 
+        <!-- Disease Selector -->
+        <div class="center" style="margin: 24px 0;">
+            <label for="disease-selector" style="font-weight:bold;">Select Animal: </label>
+            <select id="disease-selector" style="padding: 6px 12px; border-radius: 6px;">
+                <option value="all">Show All</option>
+                <option value="dog">Dog Diseases</option>
+                <option value="cat">Cat Diseases</option>
+            </select>
+        </div>
+
         <article>
             <section id="dog-diseases">
                 <div class="center">
@@ -185,5 +195,28 @@
     <div id="modal"></div>
     <div id="dialog-box"></div>
     <div id="toolbar-bottom"></div>
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    const selector = document.getElementById('disease-selector');
+    const dogSection = document.getElementById('dog-diseases');
+    const catSection = document.getElementById('cat-diseases');
+
+    function updateSections() {
+        if (selector.value === 'dog') {
+            dogSection.style.display = '';
+            catSection.style.display = 'none';
+        } else if (selector.value === 'cat') {
+            dogSection.style.display = 'none';
+            catSection.style.display = '';
+        } else {
+            dogSection.style.display = '';
+            catSection.style.display = '';
+        }
+    }
+
+    selector.addEventListener('change', updateSections);
+    updateSections();
+});
+</script>
 </body>
 </html>
