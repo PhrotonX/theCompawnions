@@ -6,9 +6,15 @@
         alt="The ComPawnions Logo"
         onclick="nav('index.html')"
     >
+    <img
+        id="toolbar-logo-small"
+        src="../images/logo.png"
+        alt="Small variant of The ComPawnions Logo"
+        onclick="nav('index.html')"
+    >
     <menu>
-        <li id="menu-index"><button onclick="nav('index.html')"><p>Home</p></button></li>
-        <li id="menu-paws-and-know">
+        <li class="menu-nav-content" id="menu-index"><button onclick="nav('index.html')"><p>Home</p></button></li>
+        <li class="menu-nav-content" id="menu-paws-and-know">
             <button onclick="nav('paws-and-know.html')">
                 <p>Paws and Know</p>
             </button>
@@ -22,7 +28,7 @@
                 <li><button onclick="nav('common-misconceptions-test.html')"><p>Common Misconceptions</p></button></li>
             </menu>
         </li>
-        <li id="menu-services">
+        <li class="menu-nav-content" id="menu-services">
             <button onclick="nav('services.html')">
                 <p>Services</p>
             </button>
@@ -31,12 +37,12 @@
                 <li><button onclick="nav('adopt-a-compawnion-test.html')"><p>Adopt a ComPawnion</p></button></li>
             </menu>
         </li>
-        <li id="menu-gallery"><button onclick="nav('gallery.html')"><p>Gallery</p></button></li>
-        <li id="menu-about"><button onclick="nav('about.html')"><p>About</p></button></li>
+        <li class="menu-nav-content" id="menu-gallery"><button onclick="nav('gallery.html')"><p>Gallery</p></button></li>
+        <li class="menu-nav-content" id="menu-about"><button onclick="nav('about.html')"><p>About</p></button></li>
         <!-- <li><input/></li> -->
         <!-- <li><button onclick="nav('search.html')"><p>Search</p></button></li> -->
     </menu>
-    <form id="menu-search" action="search.html" method="get" class="search-box">
+    <form id="menu-search" action="search.html" method="get" class="nav-box">
         <input type="text" id="search" name="search" placeholder="Search...">
         <button type="submit">
             <span class="material-symbols-outlined">
@@ -44,6 +50,15 @@
             </span>
         </button>
     </form>
+    <span class="nav-box">
+        <button class="menu-toggle">
+            <span class="material-symbols-outlined">
+                menu
+            </span>
+        </button>
+    </span>
+    
+    
 </nav>
 <div class="fab">
     <button onclick="nav('#')">
