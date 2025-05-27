@@ -10,7 +10,7 @@
 }
 
 .search-box button{
-    padding: 16px 16px;
+    padding: 11px 16px !important;
 }
 
 .search-box .material-symbols-outlined{
@@ -19,7 +19,7 @@
     /* padding-block: 0em;
     padding-inline: 0em;
      */
-    line-height: 0.5em;
+    /* line-height: 1em; */
 }
 
 .search-box input[type="text"]:focus{
