@@ -34,22 +34,15 @@
             <div class="card" id="gallery-table-card">
                 <table>
                     <tr>
-                        <td id="gallery-column">
-                            <table id="gallery-table">
-                                <!-- <tr>
-                                    <td>
-                                        <div class="gallery-item">
-                                            <img src="" alt="">
-                                            <p>Name</p>
-                                            <p>Gender</p>
-                                            <p>Age</p>
-                                        </div>
-                                    </td>
-                                    <td></td>
-                                    <td></td>
-                                </tr> -->
-                            </table>
+                        <td>
+                            <h2 id="gallery-table-heading"></h2>
                         </td>
+                        <td>
+                            
+                        </td>
+                    </tr>
+                    <tr>
+                        
                         <td id="search-column">
                             <div class="card">
                                 <form action="gallery.html" method="get" class="page-form">
@@ -101,22 +94,56 @@
                                     </button>
                                 </form>
                             </div>
+                            <br>
+                        </td>
+                        <td id="gallery-column">
+                            <!-- <div id="gallery-item">
+                                <img src="" alt="">
+                                <p>Name</p>
+                                <p>Gender</p>
+                                <p>Age</p>
+                            </div> -->
+
+                            <!-- <table id="gallery-table"> -->
+                                <!-- <tr>
+                                    <td>
+                                        <div class="gallery-item">
+                                            <img src="" alt="">
+                                            <p>Name</p>
+                                            <p>Gender</p>
+                                            <p>Age</p>
+                                        </div>
+                                    </td>
+                                    <td></td>
+                                    <td></td>
+                                </tr> -->
+                            <!-- </table> -->
+                        </td>
+                        
+                    </tr>
+                    <tr>
+                        <td>
+                            
+                        </td>
+                        <td>
+                            <br><br>
+                            <span class="page-buttons">
+                                <button class="clickable" onclick="gallery.prevPage('#gallery-table-card')">
+                                    <span class="material-symbols-outlined">
+                                        arrow_back
+                                    </span>
+                                </button>
+                                <p id="gallery-page-info"></p>
+                                <button class="clickable" onclick="gallery.nextPage('#gallery-table-card')">
+                                    <span class="material-symbols-outlined">
+                                        arrow_forward
+                                    </span>
+                                </button>
+                            </span>
                         </td>
                     </tr>
                 </table>
-                <span class="page-buttons">
-                    <button class="clickable" onclick="gallery.prevPage()">
-                        <span class="material-symbols-outlined">
-                            arrow_back
-                        </span>
-                    </button>
-                    <p id="gallery-page-info"></p>
-                    <button class="clickable" onclick="gallery.nextPage()">
-                        <span class="material-symbols-outlined">
-                            arrow_forward
-                        </span>
-                    </button>
-                </span>
+                
                 
                 
             </div>

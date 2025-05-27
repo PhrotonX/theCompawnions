@@ -8,17 +8,19 @@ class ItemList{
         this.query = null;
     }
 
-    nextPage(){
+    nextPage(location){
         if(this.beginRange <= this.count){
             this.onLoadElements(this.query);
+            window.location.href = location;
         }
     }
 
-    prevPage(){
+    prevPage(location){
         if(this.beginRange >= 0){
             this.beginRange -= this.stepRange;
 
             this.onLoadElements(this.query);
+            window.location.href = location;
         }
     }
 }

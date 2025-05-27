@@ -13,25 +13,23 @@ class Gallery extends ItemList{
         var queryStr = query.get("gallery-search");
         var queryFilter = query.get("gallery-filter");
 
-        const card = document.getElementById('gallery-table-card');
-
-        let resultInfo = document.createElement("h2");
+        let resultInfo = document.getElementById('gallery-table-heading');
         resultInfo.innerHTML = "All images";
 
         console.log(resultInfo);
         if(queryStr != null || queryStr != "null" || queryStr != ""){
             resultInfo.innerHTML = "Results for '" + queryStr + "'";
         }
+        
+        const column = document.getElementById('gallery-column');
 
-        const table = document.getElementById('gallery-table');
+        column.innerHTML = "";
 
-        table.innerHTML = "";
-
-        table.appendChild(resultInfo);
+        
         
         console.log("Count: " + this.count);
 
-        var currentTr = null;
+        //var currentTr = null;
         var resultCtr = 0;
 
         // Fill the table from HTML with contents.
@@ -71,16 +69,16 @@ class Gallery extends ItemList{
 
             
             // If the current item is in 0 or fifth index then make a new table row.
-            if((resultCtr % 4) == 0){
-                currentTr = document.createElement("tr");
-            }
+            //if((resultCtr % 4) == 0){
+            //    currentTr = document.createElement("tr");
+            //}
             
-            var currentTd = document.createElement("td");
+            //var currentTd = document.createElement("td");
 
-            currentTd.setAttribute("class", "clickable");
+            //currentTd.setAttribute("class", "clickable");
 
             let currentDiv = document.createElement("div");
-            currentDiv.setAttribute("class", "gallery-item image-dialog-opener");
+            currentDiv.setAttribute("class", "gallery-item clickable image-dialog-opener");
             currentDiv.onclick = () => {
                 imgDialog.openDialog(currentDiv);
             };
@@ -110,14 +108,16 @@ class Gallery extends ItemList{
 
             currentDiv.appendChild(currentDivDescription);
 
-            currentTd.appendChild(currentDiv);
+            //currentTd.appendChild(currentDiv);
             // Append the items into the table row.
-            currentTr.appendChild(currentTd);
+            //currentTr.appendChild(currentTd);
 
             // If the current item is in the fifth column, then append the row into the table.
-            if((resultCtr % 4) == 0){
-                table.appendChild(currentTr);
-            }
+            //if((resultCtr % 4) == 0){
+            //    column.appendChild(currentTr);
+            //}
+
+            column.appendChild(currentDiv);
 
             resultCtr++;
         }
