@@ -28,7 +28,7 @@
         },
         {
             "webpage": "Foods and Treats - Pawrenting - Paws and Know",
-            "link": "Foot_and_Treats.html",
+            "link": "Foods_and_Treats.html",
             "tags": [
                 {
                     "tag": "cat"
@@ -60,6 +60,30 @@
         {
             "webpage": "Gallery",
             "link": "gallery.html",
+            "tags": null,
+            "thumbnail": null
+        },
+        {
+            "webpage": "Adopt a ComPawnion",
+            "link": "gallery.html",
+            "tags": null,
+            "thumbnail": null
+        },
+        {
+            "webpage": "Communities",
+            "link": "communities.html",
+            "tags": null,
+            "thumbnail": null
+        },
+        {
+            "webpage": "Diseases - Pawrenting - Paws and Know",
+            "link": "diseases-temp.html",
+            "tags": null,
+            "thumbnail": null
+        },
+        {
+            "webpage": "Breeds",
+            "link": "breeds.html",
             "tags": null,
             "thumbnail": null
         }
