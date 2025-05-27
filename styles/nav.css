@@ -47,42 +47,42 @@ nav{
     height: 48px;
 }
 
-#toolbar button{
+#toolbar nav button{
     padding: 14px 16px;
     background-color: transparent;
     border: none;
 }
 
-#toolbar button, #toolbar input[type="text"]{
+#toolbar nav button, #toolbar input[type="text"]{
     border-top-left-radius: var(--border-radius-xxl);
     border-top-right-radius: var(--border-radius-xxl);
 }
 
-#toolbar button:hover{
+#toolbar nav button:hover{
     background-color: var(--secondary-color);
 }
 
-#toolbar button:active{
+#toolbar nav button:active{
     background-color: var(--tertiary-color);
 }
 
-#toolbar .selected > button{
+#toolbar nav .selected > button{
     background-color: var(--quaternary-color);
 }
 
-#toolbar .selected > menu{
+#toolbar nav .selected > menu{
     background-color: var(--quaternary-color);
 }
 
-#toolbar .selected button:hover{
+#toolbar nav .selected button:hover{
     filter: brightness(115%);
 }
 
-#toolbar .selected button:active{
+#toolbar nav .selected button:active{
     filter: brightness(75%);
 }
 
-#toolbar .selected menu button:hover, #toolbar .selected menu button:active{
+#toolbar nav .selected menu button:hover, #toolbar nav .selected menu button:active{
     background-color: var(--quaternary-color);
 }
 

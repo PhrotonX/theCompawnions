@@ -11,7 +11,7 @@
     background-color: var(--primary-color);
     /* box-shadow: var(--box-shadow-level-1); */
     border-radius: var(--border-radius-xxl);
-    padding: 4px 24px;
+    padding: 16px;
     margin-top: 24px;
     margin-bottom: 24px;
     display: flex;
