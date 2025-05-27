@@ -30,3 +30,14 @@
     padding: 16px 24px;
     margin-left: 8px;
 }
+
+.page-buttons{
+    display: flex;
+    flex-direction: row;
+}
+
+.page-buttons button{
+    padding: 16px;
+    border-radius: 360px;
+    margin: auto;
+}
