@@ -3,78 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us - The Compawnions</title>
-  <style>
-    /* body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f9f9f9;
-      color: #333;
-    } */
-
-    .about-section {
-      background-color: #ffffff;
-      padding: 60px 20px;
-      text-align: center;
-    }
-
-    .about-section h1 {
-      font-size: 42px;
-      margin-bottom: 20px;
-      color: #2b3e50;
-    }
-
-    .about-section p {
-      font-size: 18px;
-      max-width: 900px;
-      margin: 0 auto 20px;
-      line-height: 1.8;
-      color: #444;
-    }
-
-    .highlight {
-      font-weight: bold;
-      color: #2b7a78;
-    }
-
-    .team {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin-top: 40px;
-    }
-
-    .team-member {
-      background-color: #eef6f7;
-      border-radius: 10px;
-      padding: 20px;
-      margin: 10px;
-      width: 250px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-    }
-
-    .team-member h3 {
-      margin: 10px 0 5px;
-      color: #17252a;
-    }
-
-    .team-member p {
-      font-size: 14px;
-      color: #3a3a3a;
-    }
-  </style>
-</head>
-<body>
-
-  
-</body>
-</html>
-
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Page Title - The ComPawnions</title>
+        <title>About Us - The ComPawnions</title>
         <link rel="stylesheet" type="text/css" href="../styles/style.css">
         <script src="../scripts/script.js"></script>
         <!-- Uncomment this to include dialog boxes or tooltips on the webpage if available. -->
@@ -83,12 +12,84 @@
 
         <!-- This website requires to be run on http-server, XAMPP, or other servers in order to work. -->
         <script>
-            loadPagePart('toolbar.html', 'toolbar');
+          // document.addEventListener("DOMContentLoaded", () => {
+          //   var currentPage = document.getElementById("menu-about");
+          //   currentPage.setAttribute("class", "selected");
+          // });
+
+            loadToolbar('menu-about');
             loadPagePart('footer.html', 'toolbar-bottom');
 
             // Uncomment this to include dialog boxes on the webpage if available.
             // loadPagePart('image-dialog.html', 'dialog-box');
+
+            
         </script>
+
+        <style>
+          /* body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+          } */
+
+          /* nav{
+            border-bottom: 2px var(--quaternary-color) solid;
+          } */
+
+          .about-section {
+            background-color: #ffffff;
+            padding: 60px 20px;
+            text-align: center;
+          }
+
+          .about-section h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+            color: #2b3e50;
+          }
+
+          .about-section p {
+            font-size: 18px;
+            max-width: 900px;
+            margin: 0 auto 20px;
+            line-height: 1.8;
+            color: #444;
+          }
+
+          .highlight {
+            font-weight: bold;
+            color: #2b7a78;
+          }
+
+          .team {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 40px;
+          }
+
+          .team-member {
+            background-color: #eef6f7;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px;
+            width: 250px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+          }
+
+          .team-member h3 {
+            margin: 10px 0 5px;
+            color: #17252a;
+          }
+
+          .team-member p {
+            font-size: 14px;
+            color: #3a3a3a;
+          }
+        </style>
     </head>
     <body>
         

@@ -2,22 +2,32 @@ var menuToggled = false;
 
 // Loads page parts. Requires servers such as XAMPP in order to work.
 async function loadPagePart(filepath, containerId){
-    var result = false;
+    try{
+        const response = await fetch(filepath);
+        const html = await response.text();
+        const element = document.getElementById(containerId);
+        element.innerHTML = html;
+        return true;
+    }catch(error){
+        console.log('Failed loading element:', error.message);
+        return false;
+    }
+}
 
-    fetch(filepath)
-        .then(response => response.text())
-        .then(html => {
-            const element = document.getElementById(containerId);
-            element.innerHTML = html;
-            result = true;
-        })
-        .catch(error => {
-            console.log('Failed loading element:', error.message);
+async function loadToolbar(currentPage){
+    await loadPagePart('toolbar.html', 'toolbar');
 
-            result = false;
-        });
-
-    return result;
+    var listItem = document.getElementById(currentPage);
+    if(listItem){
+        // console.log(listItem);
+        listItem.classList.add('selected');
+        var navBar = document.getElementsByTagName('nav').item(0);
+        if(navBar){
+            navBar.style.borderBottom = "2px var(--quaternary-color) solid";
+        }
+    }
+    
+    
 }
 
 // Obtains URL parameters. For example, www.url.com?query=Sample has query parameter with value "Sample".

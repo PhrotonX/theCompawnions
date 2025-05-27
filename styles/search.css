@@ -5,7 +5,7 @@
 
 .search-box input[type="text"]{
     border: none;
-    padding: 17px 16px;
+    padding: 14px 16px;
     filter: brightness(95%);
 }
 
@@ -22,7 +22,14 @@
     /* line-height: 1em; */
 }
 
+.search-box input[type="text"]{
+    background-color: #e0b386;
+    /* opacity: 50%; */
+}
+
 .search-box input[type="text"]:focus{
-    outline: 2px solid #000;
+    outline: 2px solid var(--quaternary-color);
+    background-color: white;
     filter: brightness(100%);
 }
+
