@@ -163,7 +163,7 @@ body {
 
 /* Breed Info Section */
 .breed-info {
-  width: 1300px;
+  width: 100%;
   background: var(--primary-color);
   margin: auto;
   padding: 40px;

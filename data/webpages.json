@@ -68,6 +68,24 @@
             "link": "gallery.html",
             "tags": null,
             "thumbnail": null
+        },
+        {
+            "webpage": "Communities",
+            "link": "communities.html",
+            "tags": null,
+            "thumbnail": null
+        },
+        {
+            "webpage": "Diseases - Pawrenting - Paws and Know",
+            "link": "diseases-temp.html",
+            "tags": null,
+            "thumbnail": null
+        },
+        {
+            "webpage": "Breeds",
+            "link": "breeds.html",
+            "tags": null,
+            "thumbnail": null
         }
     ]
     
