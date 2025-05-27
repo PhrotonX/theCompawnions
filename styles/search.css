@@ -5,12 +5,14 @@
 
 .search-box input[type="text"]{
     border: none;
-    padding: 14px 16px;
+    padding: 10px 16px;
     filter: brightness(95%);
 }
 
 .search-box button{
-    padding: 11px 16px !important;
+    padding: 7px 8px !important;
+    margin-left: 4px;
+    margin-right: 4px;
 }
 
 /* .search-box .material-symbols-outlined{
@@ -24,6 +26,7 @@
 
 .search-box input[type="text"]{
     background-color: var(--sixth-color);
+    border-radius: var(--border-radius-xl);
     /* opacity: 50%; */
 }
 

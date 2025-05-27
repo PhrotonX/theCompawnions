@@ -4,6 +4,7 @@
         <title>Dogs - General Information - The ComPawnions</title>
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="../styles/style.css">
+        <link rel="stylesheet" type="text/css" href="../styles/marquee.css">
         <script src="../scripts/script.js"></script>
         <script src="../scripts/dialog.js"></script>
         <script src="../scripts/tooltip.js"></script>
@@ -17,6 +18,14 @@
         <style>
             #behavior-image-div{
                 width: 500vw;
+            }
+
+            .dog-img-medium{
+                width: 1000px;
+            }
+
+            .dog-img-large{
+                width: 1400px;
             }
         </style>
     </head>
@@ -36,7 +45,7 @@
                         <div id="section-overview-content">
                             <div class="card-row">
                                 <div 
-                                    class="image-card clickable image-dialog-opener"
+                                    class="image-card clickable image-dialog-opener dog-img-large"
                                     >
                                     <img
                                         class="img-m"
@@ -92,7 +101,7 @@
                                         </p>
                                     </section>
                                 </div>
-                                <div class="image-card clickable image-dialog-opener">
+                                <div class="image-card clickable image-dialog-opener dog-img-medium">
                                     <img
                                         class="img-m"
                                         src="../images/pawsAndKnow/general_information/imgDogGenInfoDomestication.jpg"
@@ -150,7 +159,10 @@
                                 <div class="secondary-card center">
                                     <h3>Common Breeds</h3>
                                 </div>
-                                <div class="card-row">
+                                <div class="card-row scroll-row">
+                                    <!-- <span class="marquee"> -->
+
+                                    
                                     <figure class="secondary-card center clickable image-dialog-opener">
                                         <img
                                             src="../images/pawsAndKnow/general_information/imgDogGenInfoBeagle.jpg"
@@ -191,8 +203,8 @@
                                             <p>German Shepherd</p>
                                         </figcaption>
                                     </figure>
-                                </div>
-                                <div class="card-row">
+                                <!-- </div> -->
+                                <!-- <div class="card-row"> -->
                                     <figure class="secondary-card center clickable image-dialog-opener">
                                         <img
                                             src="../images/pawsAndKnow/general_information/imgDogGenInfoGoldenRetriever.jpg"
@@ -233,6 +245,7 @@
                                             <p>Yorkie</p>
                                         </figcaption>
                                     </figure>
+                                    <!-- </span> -->
                                 </div>
                             </section>
                         </div>
@@ -376,17 +389,15 @@
                             </div>
                             
                         </div>
-                        
-                        <div class="image-card img-l bottom-img clickable image-dialog-opener">
-                            <img
-                                src="../images/pawsAndKnow/general_information/imgDogGenInfoCompanion.jpg"
-                                alt="A picture of a child hugging a dog."
-                            >
-                        </div>
                     </section>
                 </div>
                 
-                
+                <div class="image-card card-default bottom-img-default">
+                    <img
+                        src="../images/image_above_footer.png"
+                        alt="A picture of a dog and cat looking suspiciously."
+                    >
+                </div>
             </article>
         </main>
 

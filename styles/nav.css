@@ -53,9 +53,13 @@ nav{
     border: none;
 }
 
-#toolbar nav > menu > li > button, #toolbar input, #toolbar #menu-search button{
+#toolbar nav > menu > li > button, #toolbar input{
     border-top-left-radius: var(--border-radius-xxl);
     border-top-right-radius: var(--border-radius-xxl);
+}
+
+#toolbar #menu-search button{
+    border-radius: var(--border-radius-xl);
 }
 
 #toolbar nav button:hover{
