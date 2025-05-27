@@ -29,10 +29,11 @@ async function loadToolbar(currentPage){
     
     window.addEventListener("resize", () => {
         if(window.innerWidth > 1000){
-            var toolbarItems = document.getElementsByClassName("nav-toggled");
+            var toolbarItems = document.getElementsByClassName("menu-nav-content");
             for(item of toolbarItems){
                 item.style.top = 0;
                 item.classList.remove("nav-toggled");
+                menuToggled = false;
             }
         }
         
@@ -54,16 +55,14 @@ function onMenuToggle(menuItemId){
     if(!menuToggled){
         menuItem.forEach(items => {
             items.classList.add("nav-toggled");
-            // items.style.display = 'block';
-            items.style.width = '100%';
             items.style.top = em + "em";
             em += 3;
         });
         menuToggled = true;
     }else{
         menuItem.forEach(items => {
+            item.style.top = 0;
             items.classList.remove("nav-toggled");
-            // items.style.display = 'none';
         });
         menuToggled = false;
     }
