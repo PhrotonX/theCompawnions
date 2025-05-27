@@ -33,3 +33,7 @@
     filter: brightness(100%);
 }
 
+.search-box input[type="text"]::placeholder {
+  color: black;
+  opacity: 1;
+}
