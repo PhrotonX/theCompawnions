@@ -1,7 +1,7 @@
 .link-list{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
+    gap: 2px;
 }
 
 .link-list .title{
@@ -14,4 +14,20 @@
     width: 100%;
     margin-block-start: 0em;
     margin-block-end: 0em;
+}
+
+@media screen and (max-width: 900px) {
+    .link-list{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .link-list{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 2px;
+    }
 }
