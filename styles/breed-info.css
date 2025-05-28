@@ -11,16 +11,18 @@ body {
 }
 
 .profiles {
-    /*background-color: #F0F1C5;*/
+    width: 82%;
+    margin: auto;
     border-radius: 20px;
     padding: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     }
+    
 /* Header Section */
 .header-section {
   background-color: #F0F1C5;
   min-height: 200px; 
-  width: 82%;
+  width: 100%;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
@@ -46,7 +48,7 @@ body {
   font-size: 20px;
   border-radius: 8px;
   background-color: var(--secondary-color);
-  width: 82%;
+  width: 100%;
   min-width: 70%;
   height: 10%;
   text-align: center;
@@ -61,7 +63,7 @@ body {
   background-color: var(--secondary-color);
   border-radius: 30px;
   min-width: 200px;
-  width: 90%;
+  width: 100%;
   height: 25vh;
   box-sizing: border-box;
 }
@@ -88,7 +90,7 @@ body {
 
 /* General Info Section */
 .gencontainer {
-  max-width: 82%;
+  max-width: 100%;
   height: 20%;
   min-height: 200px;
   margin: 20px auto;
@@ -113,7 +115,18 @@ body {
   height: 200px;
   box-sizing: border-box;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
+.image-section-facts {
+  flex: 1 1 20px;
+  display: flex;
+  justify-content: center;
+  border-radius: 30px;
+  width: 10px;
+  height: 90%;
+  min-height: 200px;
+  box-sizing: border-box;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .gen-info-image {
@@ -137,7 +150,8 @@ body {
 @media screen and (max-width: 768px) {
     .gencontainer,
     .image-section,
-    .gen-info {
+    .gen-info,
+    .image-section-facts {
         flex: 1 1 100%;
         text-align: center;
     }
@@ -172,7 +186,7 @@ body {
 
 /* Photo Gallery Section */
 .gallery-container {
-    width: 82%;
+    width: 100%;
     margin: auto;
     margin-top: 20px;
     background: var(--primary-color);
@@ -218,7 +232,7 @@ body {
 
 /* Breed Info Section */
 .breed-info {
-  width: 82%;
+  width: 100%;
   background: var(--primary-color);
   margin: auto;
   padding: 40px;
@@ -278,7 +292,7 @@ body {
 /*CARING TIPS*/
 
 .caring-tip-container {
-  max-width: 82%;
+  max-width: 100%;
   margin: 0 auto;
   background-color: var(--primary-color);
   padding: 30px;
