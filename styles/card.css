@@ -2,7 +2,7 @@
     background-color: white;
     box-shadow: var(--box-shadow-level-1);
     border-radius: var(--border-radius-xxl);
-    padding: 24px;
+    padding: 8px;
     margin-top: 24px;
     margin-bottom: 24px;
 }
