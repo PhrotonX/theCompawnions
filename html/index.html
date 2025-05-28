@@ -7,8 +7,7 @@
         <script src="../scripts/script.js"></script>
         <style>
             header{
-                /* padding-top: 200px; */
-                padding-top: 35vh;
+                padding-top: 25vh;
             }
 
             header button{
@@ -49,12 +48,12 @@
                 align-items: center;
                 /* width: 100%; */
                 /* flex-grow: 1; */
-                margin: 10%;
+                margin: 2.5%;
             }
 
             #website-mission-and-vision .image-card{
                 margin: 2.5%;
-                width: 100%;
+                width: 50%;
                 height: auto;
                 object-fit:cover;
             }
@@ -63,12 +62,43 @@
                 width: 50%;
             }
 
-            #header-content{
-                padding-top: 200px;
-            }
-
             #header-content p, #header-content h1{
                 color: var(--primary-color);
+            }
+
+            .index-paragraph{
+                margin: 24px;
+                margin-top: 5em;
+            }
+
+            @media screen and (max-width: 900px) {
+                header{
+                    padding-top: 20vh;
+                }
+            }
+
+            @media screen and (max-width: 700px) {
+                header{
+                    padding-top: 17h;
+                }
+            }
+
+            @media screen and (max-width: 600px) {
+                header{
+                    padding-top: 15vh;
+                }
+
+                #website-mission-and-vision{
+                    flex-direction: column;
+                }
+
+                #website-mission-and-vision .image-card{
+                    width: 50%;
+                }
+
+                #website-mission-and-vision-content{
+                    width: 100%;
+                }
             }
         </style>
         <!-- Uncomment this to include dialog boxes or tooltips on the webpage if available. -->
@@ -97,18 +127,24 @@
                         </div>
                     </span>
                     
-                    <div class="secondary-card card-m">
-                        <p>Here at The ComPawnions, every paw matters. Whether you’re Team Cat or Team Dog, we’re here to make your journey with your fur-iend even more special!</p>
-                    </div>
+                    
                 </header>
 
+
                 <section id="website-info">
+                    
+
                     <div id="index-website-logo" class="secondary-card card-s">
                         <img
                             src="../images/logo-horizontal2.png"
                             alt="The ComPawnions Logo"
                         >
                     </div>
+
+<!-- <div class="secondary-card"> -->
+                        <p class="index-paragraph">Here at The ComPawnions, every paw matters. Whether you’re Team Cat or Team Dog, we’re here to make your journey with your fur-iend even more special!</p>
+                    <!-- </div> -->
+
                     <span class="card-row">
                         <div class="tertiary-card card-xs clickable" onclick="nav('paws-and-know.html')">
                             <img
@@ -135,8 +171,8 @@
                     
                 </section>
 
-                <!-- <section id="website-mission-and-vision">
-                    <span class="image-card image-dialog-opener clickable">
+                <section id="website-mission-and-vision">
+                    <span class="image-card image-dialog-opener img-m clickable">
                         <img
                             src="../images/img_mission_vision.jpeg"
                             alt="An image of a dog and a cat under the mission and vision section of landing page"
@@ -154,7 +190,7 @@
                         </div>
                     </span>
                 </section>
-                <div class="image-card clickable image-dialog-opener">
+                <!-- <div class="image-card clickable image-dialog-opener">
                     <img
                         src="../images/index_bottom_img.jpg"
                         alt="A picture of a dog and cat on the bottom part of the landing page."
