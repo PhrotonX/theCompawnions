@@ -32,21 +32,19 @@
                 border-radius: 20px;
                 overflow: hidden;
                 box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
             }
 
             #breedList {
-                display: flex;
-                flex-wrap: wrap;
-                padding-left: 2%;
-                gap: 15px;
-                margin-top: 20px;
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+                gap: 20px;
+                padding: 20px;
+                margin-top: 20px;            
             }
 
             .breed-card {
                 flex: 1 1 1%;
-                max-width: 300px;
-                width: 300px;
+                width: 100%;
                 min-width: 255px;
                 height: 320px;
                 min-height: 280px;
@@ -56,28 +54,28 @@
                 text-align: center;
                 box-shadow: 0 2px 5px rgba(0,0,0,0.1);
                 cursor: pointer;
-                transition: transform 0.2s;
                 background-color: #eff2c7;
                 background-size: cover;
                 background-position: center;
                 font-family: Arial, Helvetica, sans-serif;
                 font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                transform: var(--transform, translateY(20px));
                 opacity: 0;
-                transform: translateY(20px);
-                animation: fadeSlideUp 0.6s ease forwards;
+                transform: translateY(20px); /* initial position */
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                position: relative;
+                z-index: 1;
             }
 
-            @keyframes fadeSlideUp {
-                to {
-                    opacity: 1;
-                    transform: translateY(0);
-                }
+            .breed-card.animate {
+                opacity: 1;
+                transform: translateY(0);
             }
 
-            .breed-card:hover {
-                transform: scale(1.05);
-                box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-                transition: 0.5 ease;
+            .breed-card.animate:hover {
+                transform: translateY(0) scale(1.05);
+                box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+                z-index: 10;
             }
 
             .breed-card img {
@@ -132,7 +130,7 @@
         </style>
     </head>
     <body>
-        <div id="toolbar"></div>
+        <div id="toolbar" style="z-index: 1000;"></div>
         <main>
             <article>
                 <div id="content">
@@ -151,7 +149,7 @@
                     <h3>Breeds:</h3>
                     <div id="breedList"></div>
                     <script>
-                        //This is a Database of list of the foods and treats
+                        //This is a Database of list of the breeds
                         const animals = {
                             cat: {
                                 "Maine Coon": {
@@ -220,59 +218,43 @@
                         };
 
                         // Update breed list based on selected animal
-                        function updateBreedList(animal) {
-                            const breedList = document.getElementById('breedList'); // make sure this ID exists in your HTML
-                            breedList.innerHTML = '';
+                            function updateBreedList(animal) {
+                                const breedListEl = document.getElementById("breedList");
+                                breedListEl.innerHTML = '';
 
-                            const breeds = animals[animal];
-                            Object.keys(breeds).forEach(breed => {
-                                const breedData = breeds[breed];
-                                const card = document.createElement('div');
-                                card.className = 'breed-card';
-                                card.onclick = () => {
-                                    window.location.href = `dog-cat-breeds-information.html?animal=${animal}&breed=${encodeURIComponent(breed)}`;
-                                };
+                                const breeds = Object.keys(animals[animal]);
 
-                                card.innerHTML = `
-                                    <img src="${breedData.img || 'default-image.png'}" alt="${breed}">
-                                    <div class="breed-card-name">${breed}</div>`;
-                                breedList.appendChild(card);
-                            });
-                        }
-                        
-                        const maxCards = 10;
-                        let style = document.createElement('style');
-                        let css = '';
+                                breeds.forEach((breed, index) => {
+                                    const card = document.createElement('div');
+                                    card.className = 'breed-card';
+                                    card.onclick = () => {
+                                        window.location.href = `dog-cat-breeds-information.html?animal=${animal}&breed=${encodeURIComponent(breed)}`;
+                                    };
 
-                        for (let i = 1; i <= maxCards; i++) {
-                            const delay = (i * 0.1).toFixed(1);
-                            css += `.breed-card:nth-child(${i}) { animation-delay: ${delay}s; }\n`;
-                        }
+                                    card.innerHTML = `
+                                        <img src="${animals[animal][breed].img}" alt="${breed}">
+                                        <div class="breed-card-name">${breed}</div>
+                                    `;
+                                    breedListEl.appendChild(card);
+                                    setTimeout(() => {
+                                        card.classList.add('animate');
+                                    }, index * 100);
+                                });
+                            }
 
-                        style.textContent = css;
-                        document.head.appendChild(style);
+                            // Toggle animal type
+                            function selectAnimal(animal) {
+                                updateBreedList(animal);
 
-                        // first load
-                        updateBreedList('cat');
+                                document.getElementById('catBtn').classList.remove('active');
+                                document.getElementById('dogBtn').classList.remove('active');
+                                document.getElementById(animal + 'Btn').classList.add('active');
+                            }
 
-                        window.onload = function() {
-                            updateBreedList("cat");
-                        };
-                        
-                        // toggle button
-                        function selectAnimal(animal) {
-                        updateBreedList(animal);
-
-                        // Update button states
-                        document.getElementById('catBtn').classList.remove('active');
-                        document.getElementById('dogBtn').classList.remove('active');
-                        document.getElementById(animal + 'Btn').classList.add('active');
-                        }
-
-                        // Initial state
-                        window.onload = function () {
-                        selectAnimal("cat");
-                        };                    
+                            // Load initial list
+                            window.onload = () => {
+                                selectAnimal("cat");
+                            };          
                     </script>
                 </div>
             </article>

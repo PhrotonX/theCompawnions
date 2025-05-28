@@ -38,21 +38,40 @@
           /* nav{
             border-bottom: 2px var(--quaternary-color) solid;
           } */
-
+          .content-container {
+              background-color: #F0F1C5;
+              min-height: 200px; 
+              width: 95%;
+              display: flex;
+              flex-wrap: wrap;
+              padding: 20px;
+              border-radius: 30px;
+              box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+              overflow: hidden;
+              gap: 50px;
+              margin: auto;
+          }
           .about-section {
-            background-color: #ffffff;
-            padding: 60px 20px;
-            text-align: center;
+            display: flex;
+            flex-wrap: wrap;
+            width: 70%;
+            margin: auto;
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
           }
 
-          .about-section h1 {
-            font-size: 42px;
+          .content-container h1,h2 {
+            font-size: 40px;
             margin-bottom: 20px;
-            color: #2b3e50;
+            color: var(--tertiary-color);
+            text-align: center;
+            margin: auto;
           }
 
-          .about-section p {
-            font-size: 18px;
+          .content-container p {
+            font-size: 16px;
             max-width: 900px;
             margin: 0 auto 20px;
             line-height: 1.8;
@@ -61,7 +80,7 @@
 
           .highlight {
             font-weight: bold;
-            color: #2b7a78;
+            color: var(--tertiary-color);
           }
 
           .team {
@@ -98,6 +117,7 @@
         <main>
             <article>
                 <section class="about-section">
+                  <section class="content-container">
                   <h1>About Us</h1>
                   <p>
                     <strong>The Compawnions</strong> is an educational platform dedicated to helping you understand and learn more about your loyal and beloved canine and feline companion. Whether you are a veteran fur parent, someone who wishes to adopt, or just someone who loves cats and dogs, we provide a wide range of information here.
@@ -115,16 +135,16 @@
                     Because here at <strong>The Compawnions</strong>, they’re more than pets—they’re companions. And to us, <strong>every paw matters.</strong>
                   </p>
 
-                  <h1 class="mv-title">🐾Our Mission & Vision🐾</h1>
+                  <h1>🐾Our Mission & Vision🐾</h1>
             
-                <div class="mv-section">
-                    <h2 class="mv-section-title">🐾Our Mission🐾</h2>
+                <div style="margin: auto;">
+                    <h2>🐾Our Mission🐾</h2>
                     <p>
                         At The ComPawnions, our mission is to empower pet lovers with reliable information and compassionate guidance. We are here to pass tips, advice, relevant information, and everything we've learned from caring for our own dogs and cats. We aim to be more than just a website; we strive to provide a warm, welcoming space where you can learn, connect, and celebrate the joy of companionship with your fur-iend.
                     </p>
                 </div>
-                <div class="mv-section">
-                    <h2 class="mv-section-title">🐾Our Vision🐾</h2>
+                <div style="margin: auto;">
+                    <h2>🐾Our Vision🐾</h2>
                     <p>
                         We envision a world where every paw matters—where every cat and dog is healthy, happy, and loved unconditionally—and where every pet guardian feels educated, empowered, and fulfilled in their journey with their beloved furry companion. At The Compawnions, we believe that informed care can strengthen bonds and improve the lives for both humans and animals. Through easy to access information, a supportive community, and genuine compassion, we hope to inspire everyone to be responsible, kind-hearted, and knowledgeable fur parents. Together, we aim to create a world where every paw is protected, understood, and cherished—because at the heart of every happy animal is a human friend who cares.
                     </p>
@@ -145,6 +165,7 @@
                       <p></p>
                     </div>
                   </div> -->
+                  </section>
                 </section>
                 <div class="image-card card-default bottom-img-default">
                 <img
