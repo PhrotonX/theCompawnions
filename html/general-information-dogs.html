@@ -5,7 +5,7 @@
         <title>Dogs - General Information - The ComPawnions</title>
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="../styles/style.css">
-        <link rel="stylesheet" type="text/css" href="../styles/marquee.css">
+        <link rel="stylesheet" type="text/css" href="../styles/geninfo.css">
         <script src="../scripts/script.js"></script>
         <script src="../scripts/dialog.js"></script>
         <script src="../scripts/tooltip.js"></script>
@@ -16,19 +16,6 @@
             loadPagePart('footer.html', 'toolbar-bottom');
             loadPagePart('image-dialog.html', 'dialog-box');
         </script>
-        <style>
-            #behavior-image-div{
-                width: 500vw;
-            }
-
-            .dog-img-medium{
-                width: 1000px;
-            }
-
-            .dog-img-large{
-                width: 1400px;
-            }
-        </style>
     </head>
     <body>
         <div id="toolbar"></div>
@@ -46,7 +33,7 @@
                         <div id="section-overview-content">
                             <div class="card-row">
                                 <div 
-                                    class="image-card clickable image-dialog-opener dog-img-large "
+                                    class="image-card clickable image-dialog-opener geninfo-img-large "
                                     >
                                     <img
                                         class="img-m"
@@ -102,25 +89,26 @@
                                         </p>
                                     </section>
                                 </div>
-                                <div class="image-card clickable image-dialog-opener dog-img-medium">
+                                <div class="image-card clickable image-dialog-opener geninfo-img-medium">
                                     <img
                                         class="img-m"
                                         src="../images/pawsAndKnow/general_information/imgDogGenInfoDomestication.jpg"
-                                        alt="Dog">
+                                        alt="Image of a dog under History and Domestication section.">
                                 </div>
                             </div>
                             <div class="card-row">
-                                <div 
-                                    class="image-card clickable image-dialog-opener"
-                                    id="behavior-image-div"
-                                    >
-                                    <img
-                                        class="img-m"
-                                        src="../images/pawsAndKnow/general_information/imgDogGenInfoBehavior.jpg"
-                                        alt="Image of a dog">
-                                </div>
-                                <div class="secondary-card">
-                                    <section id="section-behavior">
+                                <section id="section-dog-behavior">
+                                    <div 
+                                        class="image-card clickable image-dialog-opener"
+                                        id="behavior-image-div"
+                                        >
+                                        <img
+                                            class="img-m"
+                                            src="../images/pawsAndKnow/general_information/imgDogGenInfoBehavior.jpg"
+                                            alt="Image of a dog eating a piece of wood.">
+                                    </div>
+                                    <div class="secondary-card">
+                                    
                                         <h3>Behavior</h3>
                                         <p>
                                             Domestic dogs are similar to their ancestors, <a href="https://animaldiversity.org/accounts/Canis_lupus/" target="_blank">wolves</a>, in that they are both pack animals
@@ -153,8 +141,9 @@
                                             Domestic dogs can be active at any time of the day or night. Feral domestic dogs maintain home
                                             ranges that they defend against others and may move around throughout the year.
                                         </p>
-                                    </section>
-                                </div>
+                                    
+                                    </div>
+                                </section>
                             </div>
                             <section id="section-common-breeds">
                                 <div class="secondary-card center">
@@ -357,8 +346,8 @@
                                     >
                                     <img
                                         class="img-m"
-                                        src="../images/pawsAndKnow/general_information/imgDogGenInfoBehavior.jpg"
-                                        alt="Image of a dog">
+                                        src="../images/pawsAndKnow/general_information/imgDogGenInfoCompanion.jpg"
+                                        alt="Image of a Dog as a ComPawnion">
                                 </div>
                                 <div class="secondary-card">
                                     <p>
