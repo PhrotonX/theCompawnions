@@ -172,9 +172,42 @@ menu li:hover menu li p{
     display: none;
 }
 
+.menu-nav-content {
+    display: inline;
+    position: relative;
+    background-color: transparent;
+    width: unset;
+    left: unset;
+    right: unset;
+}
+
 @media screen and (max-width: 1000px){
     .menu-toggle{
         display: block;
+    }
+
+    nav menu li button{
+        width: 100%;
+        text-align: left;
+    }
+
+    #toolbar nav > menu > li > button{
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        box-shadow: var(--box-shadow-level-4);
+    }
+
+    menu li:hover menu{
+        display: none;
+    }
+
+    .menu-nav-content.nav-toggled{
+        display: block;
+        position: fixed;
+        background-color: var(--seventh-color);
+        width: 35%;
+        right: 0;
+        left: unset;
     }
 
     .menu-nav-content{
@@ -184,6 +217,17 @@ menu li:hover menu li p{
 }
 
 @media screen and (max-width: 500px){
+    nav menu li button{
+        width: 100%;
+    }
+
+    .menu-nav-content.nav-toggled{
+        width: 100%;
+        left: 0;
+        right: unset;
+    }
+
+
     #toolbar #toolbar-logo-small{
         display: block;
     }

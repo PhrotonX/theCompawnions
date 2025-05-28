@@ -12,8 +12,8 @@
                 align-items: center;
                 /* width: 100%; */
                 /* flex-grow: 1; */
-                margin-left: 10%;
-                margin-right: 10%;
+                margin-left: auto;
+                margin-right: auto;
             }
 
            .services-content-card .image-card{
@@ -31,6 +31,22 @@
                 margin-bottom: -50px;
                 margin-left: 10%;
                 margin-right: 10%;
+            }
+
+            /* @media screen and (max-width: 800px){
+                .services-content-card{
+                    margin-left: 10%;
+                    margin-right: 10%;
+                }
+                .services-content-card-content{
+                    width: 80%;
+                }
+            } */
+
+            @media screen and (max-width: 600px){
+                .services-content-card{
+                    display: inline;
+                }
             }
         </style>
         <!-- Uncomment this to include dialog boxes or tooltips on the webpage if available. -->
@@ -83,6 +99,7 @@
                                     learning about responsible pet care, we’re here to help. Together, we can give every
                                     pet the love and protection they deserve.</p>
                             </div>
+                            <br>
                             <button 
                                 class="clickable clickable-m"
                                 onclick="nav('animal-pawtection-desk.html')">
@@ -119,10 +136,10 @@
                         </span>
                     </section>
                 </div>
-                <div class="image-card clickable card-l bottom-img image-dialog-opener">
+                <div class="image-card card-default bottom-img-default">
                     <img
-                        src="../images/services/service.jpg"
-                        alt="A picture of a dog."
+                        src="../images/image_above_footer.png"
+                        alt="A picture of a dog and cat looking suspiciously."
                     >
                 </div>
             </article>

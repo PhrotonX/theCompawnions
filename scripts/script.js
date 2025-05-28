@@ -27,7 +27,17 @@ async function loadToolbar(currentPage){
         }
     }
     
-    
+    window.addEventListener("resize", () => {
+        if(window.innerWidth > 1000){
+            var toolbarItems = document.getElementsByClassName("menu-nav-content");
+            for(item of toolbarItems){
+                item.style.top = 0;
+                item.classList.remove("nav-toggled");
+                menuToggled = false;
+            }
+        }
+        
+    });
 }
 
 // Obtains URL parameters. For example, www.url.com?query=Sample has query parameter with value "Sample".
@@ -38,17 +48,21 @@ function getUrlParam(url, parameter){
 }
 
 // Toggle for mobile toolbar.
-function onMenuToggle(menuItemId, style){
+function onMenuToggle(menuItemId){
     var menuItem = Array.from(document.getElementsByClassName(menuItemId));
 
+    var em = 3;
     if(!menuToggled){
         menuItem.forEach(items => {
-            items.style.display = style;
+            items.classList.add("nav-toggled");
+            items.style.top = em + "em";
+            em += 3;
         });
         menuToggled = true;
     }else{
         menuItem.forEach(items => {
-            items.style.display = 'none';
+            item.style.top = 0;
+            items.classList.remove("nav-toggled");
         });
         menuToggled = false;
     }
