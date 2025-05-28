@@ -3,7 +3,7 @@ class Search extends ItemList{
         super();
     }
 
-    async onLoadItems(query){
+    async onLoadElements(query){
         this.query = query;
         var response = await fetch('../data/webpages.json');
         var json = await response.json();
@@ -14,6 +14,8 @@ class Search extends ItemList{
 
         var resultList = document.getElementById('search-results');
         var resultHeading = document.getElementById('search-heading');
+
+        resultList.innerHTML = "";
 
         console.log(resultHeading);
         console.log("Count: " + this.count);
@@ -78,5 +80,5 @@ document.addEventListener("DOMContentLoaded", () => {
     search = new Search();
 
     const query = new URLSearchParams(window.location.search);
-    search.onLoadItems(query);
+    search.onLoadElements(query);
 });

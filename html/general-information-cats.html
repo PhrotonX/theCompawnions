@@ -4,6 +4,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Cats - General Information - The ComPawnions</title>
         <link rel="stylesheet" type="text/css" href="../styles/style.css">
+        <link rel="stylesheet" type="text/css" href="../styles/geninfo.css">
         <script src="../scripts/script.js"></script>
         <script src="../scripts/dialog.js"></script>
         <script src="../scripts/tooltip.js"></script>
@@ -12,11 +13,6 @@
             loadPagePart('footer.html', 'toolbar-bottom');
             loadPagePart('image-dialog.html', 'dialog-box');
         </script>
-        <style>
-            #behavior-image-div{
-                width: 500vw;
-            }
-        </style>
     </head>
     <body>
         <!-- This website requires to be run on XAMPP or other servers in order to work. -->
@@ -33,7 +29,7 @@
                     </div>
                     <div id="section-overview-content">
                         <div class="card-row">
-                            <div class="image-card clickable image-dialog-opener">
+                            <div class="image-card clickable image-dialog-opener geninfo-img-large">
                                 <img
                                     class="img-l"
                                     src="../images/pawsAndKnow/breeds/CAT/persian.jpg"
@@ -114,22 +110,23 @@
                                     </p>
                                 </section>
                             </div>
-                            <div class="image-card clickable image-dialog-opener">
+                            <div class="image-card clickable image-dialog-opener geninfo-img-large">
                                 <img
                                     class="img-m"
                                     src="../images/pawsAndKnow/general_information/imgCatGenInfoDomestication.jpg"
-                                    alt="Persian Cat">
+                                    alt="An image of a cat">
                             </div>
                         </div>
                         <div class="card-row">
-                            <div class="image-card clickable image-dialog-opener">
-                                <img
-                                    class="img-m"
-                                    src="../images/pawsAndKnow/general_information/imgCatGenInfoBehavior.jpg"
-                                    alt="Persian Cat">
-                            </div>
-                            <div class="secondary-card">
-                                <section id="section-cat-behavior">
+                            <section id="section-cat-behavior">
+                                <div class="image-card clickable image-dialog-opener">
+                                    <img
+                                        class="img-m"
+                                        src="../images/pawsAndKnow/general_information/imgCatGenInfoBehavior.jpg"
+                                        alt="Image of a Cat">
+                                </div>
+                                <div class="secondary-card">
+                                
                                     <h3>Behavior</h3>
                                     <p>
                                         Territorial boundaries are demarcated by adult cats via rubbing or marking with urine. Scent is
@@ -174,8 +171,9 @@
                                         stimuli, such as seeing a bird or animal outside and the behavior is then redirected toward a person.
                                         Males often show more aggression toward each other than toward females ("Health Topics", 2011).
                                     </p>
-                                </section>
-                            </div>
+                                
+                                </div>
+                            </section>
                         </div>
 
                         <section id="section-common-breeds">
@@ -251,7 +249,8 @@
                     </div>
                     
                 </section>
-                
+            </div>
+            <div class="card">
                 <section id="section-taxonomy">
                     <div class="secondary-card center">
                         <h2>Scientific Classification (Taxonomy)</h2>
@@ -334,34 +333,45 @@
                         </div>
                     </div>
                 </section>
-                
+            </div>
+            <div class="card">
                 <section id="section-cat-as-companion">
                     <div class="secondary-card center">
                         <h2>Cat as Companion</h2>
                     </div>
                     <div id="section-cat-as-companion-content">
-                        <div class="secondary-card">
-                            <p>
-                                The ways in which humans interact with cats have evolved over time. While cats
-                                were once valued primarily for their hunting abilities, they are now seen as
-                                beloved household pets and valued for their companionship. People turn to cats
-                                for emotional support, comfort, and as a source of entertainment. This evolution
-                                of the human-cat relationship has led to a better understanding of the many
-                                benefits that cats can offer people.
-                            </p>
-                            <p>
-                                Studies have shown that spending time with cats can reduce stress and anxiety,
-                                lower blood pressure, and even improve mood. In addition, cats can provide a
-                                sense of purpose and responsibility for their owners, as well as a source of
-                                unconditional love and affection.
-                            </p>
-                            <p>
-                                It’s clear that the relationship between humans and cats has come a long way
-                                since the days of ancient Egypt. While their role as protectors of grain
-                                stores may have been their original purpose, cats have evolved to become much
-                                more than just pest control. They are now cherished members of many households 
-                                and offer their owners a wide range of benefits beyond their hunting abilities.
-                            </p>
+                        <div class="card-row">
+                            <div 
+                                class="image-card clickable image-dialog-opener geninfo-img-medium"
+                                >
+                                <img
+                                    class="img-m"
+                                    src="../images/pawsAndKnow/general_information/imgCatGenInfoCatsCompanion.jpg"
+                                    alt="Image of a cat as a companion">
+                            </div>
+                            <div class="secondary-card">
+                                <p>
+                                    The ways in which humans interact with cats have evolved over time. While cats
+                                    were once valued primarily for their hunting abilities, they are now seen as
+                                    beloved household pets and valued for their companionship. People turn to cats
+                                    for emotional support, comfort, and as a source of entertainment. This evolution
+                                    of the human-cat relationship has led to a better understanding of the many
+                                    benefits that cats can offer people.
+                                </p>
+                                <p>
+                                    Studies have shown that spending time with cats can reduce stress and anxiety,
+                                    lower blood pressure, and even improve mood. In addition, cats can provide a
+                                    sense of purpose and responsibility for their owners, as well as a source of
+                                    unconditional love and affection.
+                                </p>
+                                <p>
+                                    It’s clear that the relationship between humans and cats has come a long way
+                                    since the days of ancient Egypt. While their role as protectors of grain
+                                    stores may have been their original purpose, cats have evolved to become much
+                                    more than just pest control. They are now cherished members of many households 
+                                    and offer their owners a wide range of benefits beyond their hunting abilities.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </section>

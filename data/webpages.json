@@ -77,13 +77,43 @@
         },
         {
             "webpage": "Diseases - Pawrenting - Paws and Know",
-            "link": "diseases-temp.html",
+            "link": "diseases_temp.html",
             "tags": null,
             "thumbnail": null
         },
         {
             "webpage": "Breeds",
             "link": "breeds.html",
+            "tags": null,
+            "thumbnail": null
+        },
+        {
+            "webpage": "Common Misconceptions - Paws and Knows",
+            "link": "common-misconceptions.html",
+            "tags": null,
+            "thumbnail": null
+        },
+        {
+            "webpage": "Views towards animals based on different cultures in Cats - Paws and Knows",
+            "link": "views-test.html",
+            "tags": null,
+            "thumbnail": null
+        },
+        {
+            "webpage": "Animal Pawtection Desk - Services",
+            "link": "animal-pawtection-desk.html",
+            "tags": null,
+            "thumbnail": null
+        },
+        {
+            "webpage": "Adopt a ComPawnion - Services",
+            "link": "adopt-a-compawnion-desk.html",
+            "tags": null,
+            "thumbnail": null
+        },
+        {
+            "webpage": "Privacy Policy",
+            "link": "privacy-policy.html",
             "tags": null,
             "thumbnail": null
         }

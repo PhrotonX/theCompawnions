@@ -28,7 +28,7 @@ async function loadToolbar(currentPage){
     }
     
     window.addEventListener("resize", () => {
-        if(window.innerWidth > 1000){
+        if(window.innerWidth > 1050){
             var toolbarItems = document.getElementsByClassName("menu-nav-content");
             for(item of toolbarItems){
                 item.style.top = 0;
