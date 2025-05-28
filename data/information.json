@@ -324,6 +324,136 @@
             },
             "gender": "Male",
             "age": 9
+        },
+        {
+            "breed": "Beagle",
+            "type": "Dog",
+            "title": "Image of a Beagle",
+            "link": null,
+            "copyright": null,
+            "image": {
+                "src": "../images/pawsAndKnow/general_information/imgDogGenInfoBeagle.jpg",
+                "alt": "This is an image of a Beagle."
+            },
+            "gender": "Male",
+            "age": 9
+        },
+        {
+            "breed": "Bichon Frise",
+            "type": "Dog",
+            "title": "Image of a Bichon Frise",
+            "link": null,
+            "copyright": null,
+            "image": {
+                "src": "../images/pawsAndKnow/general_information/imgDogGenInfoBichonFrise.jpg",
+                "alt": "This is an image of a Bichon Frise."
+            },
+            "gender": "Male",
+            "age": 8
+        },
+        {
+            "breed": "Dachshund",
+            "type": "Dog",
+            "title": "Image of a Dachshund",
+            "link": null,
+            "copyright": null,
+            "image": {
+                "src": "../images/pawsAndKnow/general_information/imgDogGenInfoDachshund.jpg",
+                "alt": "This is an image of a Dachshund."
+            },
+            "gender": "Male",
+            "age": 7
+        },
+        {
+            "breed": "Bulldog",
+            "type": "Dog",
+            "title": "Image of a Bulldog",
+            "link": null,
+            "copyright": null,
+            "image": {
+                "src": "../images/pawsAndKnow/general_information/imgDogGenInfoFrenchBulldog.jpg",
+                "alt": "This is an image of a Bulldog."
+            },
+            "gender": "Male",
+            "age": 6
+        },
+        {
+            "breed": "German Shepherd",
+            "type": "Dog",
+            "title": "Image of a German Shepherd",
+            "link": null,
+            "copyright": null,
+            "image": {
+                "src": "../images/pawsAndKnow/general_information/imgDogGenInfoGermanShepherd.jpg",
+                "alt": "This is an image of a German Shepherd."
+            },
+            "gender": "Male",
+            "age": 5
+        },
+        {
+            "breed": "Golden Retriever",
+            "type": "Dog",
+            "title": "Image of a Golden Retriever",
+            "link": null,
+            "copyright": null,
+            "image": {
+                "src": "../images/pawsAndKnow/general_information/imgDogGenInfoGoldenRetriever.jpg",
+                "alt": "This is an image of a Golden Retriever."
+            },
+            "gender": "Male",
+            "age": 4
+        },
+        {
+            "breed": "Labrador Retriever",
+            "type": "Dog",
+            "title": "Image of a Labrador Retriever",
+            "link": null,
+            "copyright": null,
+            "image": {
+                "src": "../images/pawsAndKnow/general_information/imgDogGenInfoLabradorRetriever.jpg",
+                "alt": "This is an image of a Labrador Retriever."
+            },
+            "gender": "Female",
+            "age": 3
+        },
+        {
+            "breed": "Poodle",
+            "type": "Dog",
+            "title": "Image of a Poodle",
+            "link": null,
+            "copyright": null,
+            "image": {
+                "src": "../images/pawsAndKnow/general_information/imgDogGenInfoPoodle.jpg",
+                "alt": "This is an image of a Poodle."
+            },
+            "gender": "Female",
+            "age": 6
+        },
+        {
+            "breed": "Rottweiler",
+            "type": "Dog",
+            "title": "Image of a Rottweiler",
+            "link": null,
+            "copyright": null,
+            "image": {
+                "src": "../images/pawsAndKnow/general_information/imgDogGenInfoRottweiler.jpg",
+                "alt": "This is an image of a Rottweiler."
+            },
+            "gender": "Male",
+            "age": 6
+        },
+        {
+            "breed": "Yorkie",
+            "type": "Dog",
+            "title": "Image of a Yorkie",
+            "link": null,
+            "copyright": null,
+            "image": {
+                "src": "../images/pawsAndKnow/general_information/imgDogGenInfoYorkie.jpg",
+                "alt": "This is an image of a Yorkie."
+            },
+            "gender": "Male",
+            "age": 7
         }
     ]
     
