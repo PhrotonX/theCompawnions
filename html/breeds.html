@@ -25,12 +25,14 @@
                 color: #ffffff;
                 text-shadow: 3px 3px 5px rgba(43, 43, 43, 0.856);
                 font-family: Arial, Helvetica, sans-serif;
-                background-image: url(https://tr.rbxcdn.com/180DAY-5c2f09364310917fe567662b5c35d540/420/420/Hat/Webp/noFilter);
+                background-image: url('../images/index.jpg');
                 background-position: center;
                 background-repeat: no-repeat;
                 background-size: cover;
                 border-radius: 20px;
                 overflow: hidden;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
             }
 
             #breedList {
@@ -42,8 +44,12 @@
             }
 
             .breed-card {
+                flex: 1 1 1%;
+                max-width: 300px;
                 width: 300px;
+                min-width: 255px;
                 height: 320px;
+                min-height: 280px;
                 border: 1px solid #eff2c7;
                 border-radius: 20px;
                 overflow: hidden;
@@ -55,14 +61,28 @@
                 background-size: cover;
                 background-position: center;
                 font-family: Arial, Helvetica, sans-serif;
+                font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                opacity: 0;
+                transform: translateY(20px);
+                animation: fadeSlideUp 0.6s ease forwards;
+            }
+
+            @keyframes fadeSlideUp {
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
             }
 
             .breed-card:hover {
                 transform: scale(1.05);
+                box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+                transition: 0.5 ease;
             }
 
             .breed-card img {
-                width: 100%;
+                width: 300px;
+                max-width: 100%;
                 height: 90%;
                 object-fit: cover;
                 margin-bottom: 0px;
@@ -73,45 +93,41 @@
                 padding: 0px;
                 font-weight: bold;
             }
-
-            #pet-dropdown {
-                position: relative;
-                display: inline-block;
-                width: 200px;
-                margin-bottom: 10px;
-                font-family: sans-serif;
+            
+            @media screen and (max-width: 768px) {
+                .breed-card,
+                .breed-card-name,
+                .breed-card img {
+                    flex: 1 1 100%;
+                    text-align: center;
+                }
             }
 
-            #pet-dropdown .custom-select {
-                background-color: #eff2c7;
-                padding: 10px;
-                border-radius: 10px;
-                cursor: pointer;
-                border: none;
+            #breed-toggle-container {
+            text-align: center;
+            margin-bottom: 20px;
             }
 
-            #pet-dropdown .custom-options {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background-color: #eff2c7;
-                border-radius: 10px;
-                box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
-                z-index: 10;
-                overflow: hidden;
+            .toggle-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 10px;
             }
 
-            #pet-dropdown .custom-option {
-                padding: 10px;
-                cursor: pointer;
-                transition: background-color 0.2s;
+            .toggle-buttons button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: 2px solid var(--secondary-color);
+            border-radius: 10px;
+            background-color: white;
+            cursor: pointer;
+            transition: background-color 0.5s;
             }
 
-            #pet-dropdown .custom-option:hover {
-                background-color: #e9eab3;
-                color: black;
+            .toggle-buttons button.active {
+            background-color: var(--secondary-color);
+            color: white;
             }
         </style>
     </head>
@@ -123,15 +139,14 @@
                     <div id="breeds-page-title">
                         <h1>Breeds</h1>
                     </div>   
-                    <h3>Select Animal Type ⬇</h3>
-                            <div id="pet-dropdown">
-                            <div class="custom-select" onclick="toggleDropdown()">Cat</div>
-                                <div class="custom-options" id="dropdown">
-                                    <div class="custom-option" onclick="selectAnimal('cat')">Cat</div>
-                                    <div class="custom-option" onclick="selectAnimal('dog')">Dog</div>
-                                </div>
+                        <div id="breed-toggle-container">
+                            <h3>⬇ Select Animal Breed ⬇</h3>
+                            <div class="toggle-buttons">
+                                <button id="catBtn" onclick="selectAnimal('cat')">Cat</button>
+                                <button id="dogBtn" onclick="selectAnimal('dog')">Dog</button>
                             </div>
-
+                        </div>
+                        <div id="breedList"></div> <!-- Make sure this exists -->
 
                     <h3>Breeds:</h3>
                     <div id="breedList"></div>
@@ -224,33 +239,40 @@
                                 breedList.appendChild(card);
                             });
                         }
+                        
+                        const maxCards = 10;
+                        let style = document.createElement('style');
+                        let css = '';
 
+                        for (let i = 1; i <= maxCards; i++) {
+                            const delay = (i * 0.1).toFixed(1);
+                            css += `.breed-card:nth-child(${i}) { animation-delay: ${delay}s; }\n`;
+                        }
+
+                        style.textContent = css;
+                        document.head.appendChild(style);
 
                         // first load
                         updateBreedList('cat');
 
                         window.onload = function() {
-                            updateBreedList("cat"); // or "dog" if that's your default
+                            updateBreedList("cat");
                         };
-
-                        // dropdown function
-                        function toggleDropdown() {
-                            const dropdown = document.getElementById("dropdown");
-                            dropdown.style.display = (dropdown.style.display === "block") ? "none" : "block";
-                        }
-
+                        
+                        // toggle button
                         function selectAnimal(animal) {
-                            document.querySelector('.custom-select').textContent = animal.charAt(0).toUpperCase() + animal.slice(1);
-                            updateBreedList(animal);
-                            document.getElementById("dropdown").style.display = "none";
+                        updateBreedList(animal);
+
+                        // Update button states
+                        document.getElementById('catBtn').classList.remove('active');
+                        document.getElementById('dogBtn').classList.remove('active');
+                        document.getElementById(animal + 'Btn').classList.add('active');
                         }
 
-                        document.addEventListener("click", function(e) {
-                            const wrapper = document.querySelector(".custom-select-wrapper");
-                            if (!wrapper.contains(e.target)) {
-                            document.getElementById("dropdown").style.display = "none";
-                            }
-                        });                    
+                        // Initial state
+                        window.onload = function () {
+                        selectAnimal("cat");
+                        };                    
                     </script>
                 </div>
             </article>

@@ -33,7 +33,7 @@
                             <p class="sub-heading" id="breedType">Hound Breed</p> <!--breedType-->
                         </div>
                         <div class="image-container">
-                            <img id="breedGallery0" src="image/dog breed/banner/Beagles.png" alt="dog" class="header-dog-image"> <!--breedGallery0-->
+                            <img id="breedGallery0" src="image/dog breed/banner/Beagles.png" alt="dog/cat" class="header-dog-image"> <!--breedGallery0-->
                         </div>
                     </div>
                     <div class="gallery-container">
@@ -69,10 +69,10 @@
                     <!-- General Info -->
                     <div class="gencontainer">
                         <div class="image-section">
-                            <img id="breedGallery7" src="image/dog breed/beagles/beaglesgallery7.png" alt="beagles" class="gen-info-image"> <!--breedGallery7-->
+                            <img id="breedGallery7" src="image/dog breed/beagles/beaglesgallery7.png" alt="dog/cat" class="gen-info-image"> <!--breedGallery7-->
                         </div>
                         <div class="content-section">
-                            <h1 class="title">GENERAL INFO</h1>
+                            <h1 class="title">General Info</h1>
                             <div class="text-content">
                                 <p id="genInfo">The Beagle is a friendly and curious hound known for its strong sense of smell and love of companionship. These dogs are cheerful and gentle, making them excellent family pets. Their sociable nature means they enjoy being around both humans and other dogs.</p>
                                 <!--genInfo-->
@@ -82,7 +82,7 @@
 
                     <!-- Breed Info -->
                     <div class="breed-info">
-                        <h2 class="info-title">Average sizes and life expectancy of the breed.</h2>
+                        <h2 class="title">Average sizes and life expectancy of the breed.</h2>
                         <div class="stats-container">
                             <div class="stat-item">
                                 <div class="stat-icon">📏</div>
@@ -116,13 +116,13 @@
                             </div>
                         </div>
                         <div class="image-section"> <!--breedGallery8-->
-                            <img id="breedGallery8" src="image/dog breed/beagles/beaglesgallery8.png" alt="beagles" class="gen-info-image">
+                            <img id="breedGallery8" src="image/dog breed/beagles/beaglesgallery8.png" alt="dog/cat" class="gen-info-image">
                         </div>
                     </div>
                     
                     <!--caring tips-->
                     <div class="caring-tip-container">
-                        <h1>Caring Tips</h1>
+                        <h class="title">Caring Tips</h1>
                         <!-- Diet -->
                         <div class="trait-section">
                             <div class="trait-header" onclick="toggleSection('diet')">
@@ -178,12 +178,12 @@
                             </div>
                         </div>
                         <div class="image-section"> <!--breedGallery9-->
-                            <img id="breedGallery9" src="image/dog breed/beagles/beaglesgallery9.png" alt="beagles" class="gen-info-image">
+                            <img id="breedGallery9" src="image/dog breed/beagles/beaglesgallery9.png" alt="dog/cat" class="gen-info-image">
                         </div>
                     </div>
                     <div class="gencontainer">
                         <div class="image-section"> <!--breedGallery10-->
-                            <img id="breedGallery10" src="image/dog breed/beagles/beaglesgallery10.png" alt="beagles" class="gen-info-image">
+                            <img id="breedGallery10" src="image/dog breed/beagles/beaglesgallery10.png" alt="dog/cat" class="gen-info-image">
                         </div>
                         <div class="content-section">
                             <h1 class="title">Facts</h1>
@@ -217,7 +217,7 @@
                         document.getElementById('breedHealth').innerHTML = selectedBreed.breedHealth ||"Ewan ko ano to bro"
                         document.getElementById('breedPhysCharact').innerHTML = selectedBreed.breedPhysCharact ||"Ewan ko ano to bro"
                         document.getElementById('breedFacts').innerHTML = selectedBreed.breedFacts ||"Ewan ko ano to bro"
-                        for (let i = 0; i < 10; i++) { 
+                        for (let i = 0; i < 11; i++) { 
                             const key = `breedGallery${i}`;
                             if (selectedBreed[key]) {
                                 const img = document.getElementById(key);
