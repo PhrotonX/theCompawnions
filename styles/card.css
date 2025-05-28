@@ -1,0 +1,102 @@
+.card{
+    background-color: white;
+    box-shadow: var(--box-shadow-level-1);
+    border-radius: var(--border-radius-xxl);
+    padding: 8px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+.secondary-card{
+    background-color: var(--primary-color);
+    /* box-shadow: var(--box-shadow-level-1); */
+    border-radius: var(--border-radius-xxl);
+    padding: 16px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    /* flex-grow: 1; */
+    /* height: 100%; */
+    margin: 8px;
+    overflow-wrap: break-word;
+}
+
+.tertiary-card{
+    background-color: transparent;
+    border-radius: var(--border-radius-xxl);
+    padding: 16px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    margin: 8px;
+    overflow-wrap: break-word;
+}
+
+.card-xs{
+    width: 20%;
+}
+
+.card-s{
+    width: 35%;
+}
+
+.card-m{
+    width: 45%;
+}
+
+.card-s-center{
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+.card-m-center{
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+.card-default{
+    width: 70%;
+}
+
+.image-card{
+    border-radius: var(--border-radius-xxl);
+    margin-top: 24px;
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    margin: 8px;
+}
+
+.image-card img, .secondary-card img{
+    border-radius: var(--border-radius-xl);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-row{
+    display: flex;
+    flex-direction: row;
+    align-items: top;
+    justify-content: center;
+}
+
+.scroll-row{
+    padding: 0%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    text-align: left;
+    justify-content: left;
+}
+
+.scroll-row .secondary-card img{
+    width: 150px;
+    height: 200px;
+}
+
+.marquee-row{
+    /* justify-content: center; */
+    width: 200%;
+}

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Paws and Know - The ComPawnions</title>
+        <link rel="stylesheet" type="text/css" href="../styles/style.css">
+        <script src="../scripts/script.js"></script>
+        <style>
+        </style>
+        <!-- Uncomment this to include dialog boxes or tooltips on the webpage if available. -->
+        <!-- <script src="../scripts/dialog.js"></script> -->
+        <!-- <script src="../scripts/tooltip.js"></script> -->
+
+        <!-- This website requires to be run on http-server, XAMPP, or other servers in order to work. -->
+        <script>
+            loadToolbar('menu-paws-and-know');
+            loadPagePart('footer.html', 'toolbar-bottom');
+
+            // Uncomment this to include dialog boxes on the webpage if available.
+            // loadPagePart('image-dialog.html', 'dialog-box');
+        </script>
+        <style>
+            .card-row{
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                text-align: center;
+                justify-content: center;
+                vertical-align: top;
+            }
+
+            .card-row img{
+                width: 100px;
+                height: 100px;
+                object-fit: cover;
+                margin: auto;
+            }
+
+            .secondary-card.clickable{
+                flex-direction: column;
+            }
+
+            @media screen and (max-width: 900px) {
+                .secondary-card.card-s.card-s-center{
+                    width: auto;
+                    margin-left: 0% !important;
+                    margin-right: 0% !important;
+                }
+                .card-row{
+                    grid-template-columns: repeat(3, 1fr);
+                }
+            }
+            @media screen and (max-width: 700px) {
+                .card-row{
+                    grid-template-columns: repeat(2, 1fr);
+                }
+            }
+            @media screen and (max-width: 380px) {
+                .card-row{
+                    grid-template-columns: repeat(1, 1fr);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        
+        <div id="toolbar"></div>
+
+        <main>
+            <article>
+                <header>
+                    <h1 class="center">Paws and Know</h1>
+                    <div class="secondary-card">
+                        <p class="center">
+                            Browse and discover what makes cats and dogs paw-some!
+                            From their history and habits to care tips and their favorite treats! Explore online
+                            pet communities, uncover how different cultures view them, and debunked common myths.
+                            This part aims to aid you in becoming a more informed and compassionate companion to
+                            your fur-riend.
+                        </p>
+                    </div>
+                </header>
+
+                <!-- <div class="card"> -->
+                    <div class="card-row">
+                        <div 
+                            class="secondary-card clickable"
+                            onclick="nav('general-information.html')"
+                        >
+                            <img 
+                                src="../images/pawsAndKnow/image_General_Information_Button.png"
+                                alt="Logo for Paws and Know General Information"
+                            >
+                            <p>General Information</p>
+                        </div>
+                        <div 
+                            class="secondary-card clickable"
+                            onclick="nav('pawrenting-101.html')"
+                        >
+                            <img 
+                                src="../images/pawsAndKnow/image_pawrenting101.png"
+                                alt="Logo for Paws and Know Pawrenting 101"
+                            >
+                            <p>Pawrenting 101</p>
+                        </div>
+                        <div 
+                            class="secondary-card clickable"
+                            onclick="nav('breeds.html')"
+                        >
+                            <img 
+                                src="../images/pawsAndKnow/image_breeds.png"
+                                alt="Logo for Paws and Know Breeds"
+                            >
+                            <p>Breeds</p>
+                        </div>
+                        <div 
+                            class="secondary-card clickable"
+                            onclick="nav('education.html')"
+                        >
+                            <img 
+                                src="../images/pawsAndKnow/image_Education.png"
+                                alt="Logo for Paws and Know Education"
+                            >
+                            <p>Education</p>
+                        </div>
+                        <div 
+                            class="secondary-card clickable"
+                            onclick="nav('communities.html')"
+                        >
+                            <img 
+                                src="../images/pawsAndKnow/image_Communities.png"
+                                alt="Logo for Paws and Know Communities"
+                            >
+                            <p>Communities</p>
+                        </div>
+                        <div 
+                            class="secondary-card clickable"
+                            onclick="nav('views-test.html')"
+                        >
+                            <img 
+                                src="../images/pawsAndKnow/image_Views.png"
+                                alt="Logo for Paws and Know Views"
+                            >
+                            <p>Views</p>
+                        </div>
+                        <div 
+                            class="secondary-card clickable"
+                            onclick="nav('common-misconceptions-test.html')"
+                        >
+                            <img 
+                                src="../images/pawsAndKnow/image_Common_Misconceptions.png"
+                                alt="Logo for Paws and Know Common Misconceptions"
+                            >
+                            <p>Common Misconceptions</p>
+                        </div>
+                    </div>
+                <!-- </div> -->
+                <div class="image-card card-default bottom-img-default">
+                    <img
+                        src="../images/image_above_footer.png"
+                        alt="A picture of a dog and cat looking suspiciously."
+                    >
+                </div>
+            </article>
+        </main>
+        
+        <!-- Uncomment this to include dialog boxes on the webpage if available. -->
+        <!-- <div id="modal"></div>
+        <div id="dialog-box"></div> -->
+
+        <div id="toolbar-bottom"></div>
+    </body>
+</html> 

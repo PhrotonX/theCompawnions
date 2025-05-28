@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Common Diseases in Cats and Dogs</title>
+    <link rel="stylesheet" type="text/css" href="../styles/style.css">
+    <link rel="stylesheet" href="card.css">
+    <link rel="stylesheet" href="content.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="../scripts/script.js"></script>
+    <script src="../scripts/dialog.js"></script>
+    <script src="../scripts/tooltip.js"></script>
+    
+    <script>
+        loadToolbar('menu-paws-and-know');
+        loadPagePart('footer.html', 'toolbar-bottom');
+        loadPagePart('image-dialog.html', 'dialog-box');
+    </script>
+    <style>
+.center > h1 {
+    border-radius: 30px;
+    background:  #F0F1C5;
+    padding: 16px 0;
+}
+select#disease-selector {
+    background-color: var(--secondary-color);
+    border: none;
+    color: #222;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    align-self: center;
+}
+    select#disease-selector:hover {
+        background-color: var(--primary-color);
+        color: var(--secondary-color);    
+    }
+.custom-select {
+    position: relative;
+    width: 180px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    user-select: none;
+}
+.custom-select .selected {
+    background: #BBD8A3;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    color: #222;
+}
+.custom-select .options {
+    display: none;
+    position: absolute;
+    width: 100%;
+    background: #fff;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    z-index: 1001;
+}
+.custom-select.open .options {
+    display: block;
+}
+.custom-select .option {
+    padding: 8px 12px;
+    cursor: pointer;
+    background: #F0F1C5;
+    color: #222;
+    border-radius: 0;
+    transition: background 0.2s;
+     z-index: 1001;
+}
+.custom-select .option:hover {
+    background: #BBD8A3;
+    color: #222;
+}
+.custom-select .option.selected {
+    font-weight: bold;
+}
+.accordion-item {
+    margin-bottom: 16px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(187,216,163,0.08);
+    transition: box-shadow 0.2s, transform 0.2s;
+    border-left: 6px solid #BBD8A3;
+    background: #fff;
+}
+.accordion-header {
+    background: #BBD8A3;
+    border: none;
+    outline: none;
+    width: 100%;
+    text-align: left;
+    padding: 14px 18px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: background 0.2s;
+}
+.accordion-header:hover, .accordion-item.active .accordion-header {
+    background: #F0F1C5;
+}
+.accordion-body {
+    display: none;
+    padding: 0 18px 16px 54px;
+    background: #fff;
+    border-radius: 0 0 10px 10px;
+}
+.accordion-item.active .accordion-body {
+    display: block;
+}
+.viral { border-left-color: #e57373; }
+.bacterial { border-left-color: #64b5f6; }
+.parasitic { border-left-color: #81c784; }
+.emergency { border-left-color: #ffb300; }
+.badge {
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 12px;
+    font-size: 0.85em;
+    margin-left: 10px;
+    color: #fff;
+}
+.badge.emergency { background: #e57373; }
+.badge.common { background: #64b5f6; }
+.badge.preventable { background: #81c784; }
+.accordion-item, .accordion-header {
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+.accordion-item:hover, .accordion-item.active {
+    box-shadow: 0 4px 24px rgba(187,216,163,0.18);
+    transform: translateY(-2px) scale(1.01);
+}
+#toolbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2000;
+}
+    </style>
+</head>
+<body>
+    <div id="toolbar"></div>
+
+    <main style="margin-top: 64px;">
+        <header class="center">
+            <h1>Common Diseases in Cats and Dogs 🐾</h1>
+        </header>
+
+        <!-- Disease Selector (centered) -->
+<div class="center" style="margin: 48px 0 24px 0; display: flex; justify-content: center; align-items: center;">
+    <label for="custom-disease-selector" style="font-weight:bold;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin-right: 12px;">Select Animal: </label>
+    <div id="custom-disease-selector" class="custom-select">
+        <div class="selected">Show All</div>
+        <div class="options">
+            <div data-value="all" class="option selected">Show All</div>
+            <div data-value="dog" class="option">Dog Diseases</div>
+            <div data-value="cat" class="option">Cat Diseases</div>
+        </div>
+    </div>
+</div>
+
+        <article>
+            <section id="dog-diseases">
+                <div class="center">
+                    <h2>Dog Diseases</h2>
+                </div>
+                <div>
+                    <div class="accordion-item viral emergency">
+                        <button class="accordion-header">
+                            <i class="fa-solid fa-virus"></i> Rabies
+                            <span class="badge emergency">Emergency</span>
+                        </button>
+                        <div class="accordion-body">
+                            <p><strong>Description:</strong> Rabies is a deadly virus that can affect the brain and spinal cord of a dog. This disease is spread by saliva and can be 100% fatal once it starts showing symptoms. The term ‘rabies’ often evokes fear among pet parents because of its deadly nature, and also because rabies can also be spread to other pets and humans.</p>
+                            <p><strong>Symptoms:</strong> Anxiety, Withdrawal from people and other animals, Licking the site of the bite wound, Hypersensitivity to light, sound, and touch, Fever, Change in tone or bark.</p>
+                            <p><strong>Management and Preventive Care:</strong> This disease can be prevented with the help of proper vaccination and by spreading awareness. Many dog parks require proof of rabies vaccination, which is a step in the right direction to keep this fatal disease at bay.</p>
+                            <p><strong>When to see the Vet:</strong> If your dog is bitten or scratched by another animal, they must see a vet immediately. Do not wait for signs or symptoms to present themselves as it will be too late to save your dog.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item viral">
+                        <button class="accordion-header">
+                            <i class="fa-solid fa-biohazard"></i> Canine Distemper
+                            <span class="badge common">Common</span>
+                        </button>
+                        <div class="accordion-body">
+                            <p><strong>Description:</strong> Canine Distemper is the leading cause of infection-based death in dogs. This dangerous virus can be spread by secretions from an infected dog’s nose which can be inhaled by other dogs.</p>
+                            <p><strong>Symptoms:</strong> This disease causes fever, runny eyes, coughing, a snotty nose, dog vomiting, seizures, diarrhea, and more.</p>
+                            <p><strong>Management and Preventive Care:</strong> While there is no cure for this disease, there is an effective vaccine that can help your dog fight this virus. In fact, Distemper vaccines are included in your canine’s ‘core’ vaccines.</p>
+                            <p><strong>When to see the Vet:</strong> If your dog has any of the above signs, immediately contact your veterinarian, who can guide you on next steps.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item viral">
+                        <button class="accordion-header">
+                            <i class="fa-solid fa-shield-virus"></i> Canine Parvovirus
+                            <span class="badge emergency">Emergency</span>
+                        </button>
+                        <div class="accordion-body">
+                            <p><strong>Description:</strong> Canine Parvovirus is one of the most common dog diseases which spreads easily through infected pets, contaminated surfaces, feces, bowls, leashes, clothing, and hands. This virus can survive on floors and surfaces for days to come and does not die easily by normal cleaning solutions and equipment.</p>
+                            <p><strong>Symptoms:</strong> This contagious illness attacks a dog’s gastrointestinal system, causing fever, severe diarrhea, vomiting, and more.</p>
+                            <p><strong>Management and Preventive Care:</strong> Parvo can be prevented by regular vaccine doses that are included in your dog’s ‘core’ vaccines.</p>
+                            <p><strong>When to see the Vet:</strong> If your dog shows any of these signs, immediately contact your veterinarian. Persistent vomiting and diarrhea can quickly cause dehydration, and damage to the intestines and immune system can cause septic shock. This can lead to death, with most deaths occurring within 48 to 72 hours after signs first appear.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item fungal">
+    <button class="accordion-header">
+        <i class="fa-solid fa-bug"></i> Ringworm
+        <span class="badge common">Common</span>
+    </button>
+    <div class="accordion-body">
+        <p><strong>Description:</strong> Ringworm is a fungal infection of the skin that can be spread via direct contact and infected surfaces. Ringworm fungus can also survive in the soil, making it difficult to kill.</p>
+        <p><strong>Symptoms:</strong> This virus causes circular patches of hair loss which can become severely itchy and painful.</p>
+        <p><strong>Management and Preventive Care:</strong> While dogs can recover from this disease without any treatment, it’s best to provide your dog with some kind of treatment that can help subside the pain and itchiness caused to the skin.</p>
+        <p><strong>When to see the Vet:</strong> Any type of skin disease can look like ringworm. If you notice your dog has a crusty lesion or circular area of hair loss with a ring of red skin, or any persistent skin damage that is not resolving, they should be examined by a veterinarian to evaluate them for treatment.</p>
+    </div>
+</div>
+<div class="accordion-item emergency">
+    <button class="accordion-header">
+        <i class="fa-solid fa-stomach"></i> Pancreatitis
+        <span class="badge emergency">Emergency</span>
+    </button>
+    <div class="accordion-body">
+        <p><strong>Description:</strong> Pancreatitis is an inflammatory common dog sickness that causes digestive enzymes to leak into the pancreas.</p>
+        <p><strong>Symptoms:</strong> They lose their appetite, refuses to eat, looks sad, and showing signs of abdominal pain.</p>
+        <p><strong>Management and Preventive Care:</strong> Most cases of pancreatitis are due to unknown causes, so it’s difficult to prevent. However, because diet is linked to the development of pancreatitis, refraining from feeding your dog table scraps and high-fat foods reduces the risk of this condition.</p>
+        <p><strong>When to see the Vet:</strong> Take it to the veterinarian early if they experience the symptoms provided.</p>
+    </div>
+</div>
+<div class="accordion-item viral">
+    <button class="accordion-header">
+        <i class="fa-solid fa-head-side-cough"></i> Kennel Cough
+        <span class="badge common">Common</span>
+    </button>
+    <div class="accordion-body">
+        <p><strong>Description:</strong> Kennel Cough is a type of infectious bronchitis in dogs that is caused by a combination of different viruses and bacteria.</p>
+        <p><strong>Symptoms:</strong> One of the most common symptoms of this disease is a forceful cough that almost sounds like something is lodged in your dog’s throat. This disease can cause severe chest pain that usually resolves within two to three weeks.</p>
+        <p><strong>Management and Preventive Care:</strong> While there is no treatment for this disease as your dog’s body will fight this infection on its own, some antibiotics will definitely help fast-track the process. Preventing kennel cough in dogs includes vaccination and avoiding exposure.</p>
+        <p><strong>When to see the Vet:</strong> Kennel cough in dogs is generally not considered a medical emergency—many cases may resolve without veterinary intervention.</p>
+    </div>
+</div>
+<div class="accordion-item bacterial">
+    <button class="accordion-header">
+        <i class="fa-solid fa-tick"></i> Lyme Disease
+        <span class="badge preventable">Preventable</span>
+    </button>
+    <div class="accordion-body">
+        <p><strong>Description:</strong> Lyme disease is one of the most common canine illnesses spread by ticks.</p>
+        <p><strong>Symptoms:</strong> Causing lameness, weakness, anemia, fatigue, lethargy, organ failure, and even death.</p>
+        <p><strong>Management and Preventive Care:</strong> To make sure that your dog does not contract diseases as such, invest in products that help prevent tick bites and infestations.</p>
+        <p><strong>When to see the Vet:</strong> See your veterinarian if you are unsure or unable to remove the tick from your dog.</p>
+    </div>
+</div>
+<div class="accordion-item bacterial emergency">
+    <button class="accordion-header">
+        <i class="fa-solid fa-droplet"></i> Leptospirosis
+        <span class="badge emergency">Emergency</span>
+    </button>
+    <div class="accordion-body">
+        <p><strong>Description:</strong> This disease is caused by the Leptospira bacteria, which is shed in the urine of infected canines. Your dog can contract this common dog sickness by consuming infected water or by coming in contact with contaminated food and soil.</p>
+        <p><strong>Symptoms:</strong> Vomiting, muscle weakness, fatigue, lethargy, abdominal pain, or in worst cases, kidney failure.</p>
+        <p><strong>Management and Preventive Care:</strong> Leptospirosis is a serious and potentially fatal zoonotic bacterial infection, but thankfully it is preventable. Vaccination is the number one way you can protect your dog.</p>
+        <p><strong>When to see the Vet:</strong> If you suspect that your dog has been exposed to leptospirosis or is exhibiting symptoms of the disease, contact your veterinarian immediately.</p>
+    </div>
+</div>
+<div class="accordion-item parasitic">
+    <button class="accordion-header">
+        <i class="fa-solid fa-bug-slash"></i> Mange
+        <span class="badge common">Common</span>
+    </button>
+    <div class="accordion-body">
+        <p><strong>Description:</strong> Mange is a peculiar dog disease that is caused due to an infestation of tiny mites on a dog’s skin, causing excessive itching and hair loss. A dog infected with Mange will continue to scratch and lick the infected areas and can pass the disease onto other canines via their muzzle.</p>
+        <p><strong>Symptoms:</strong> Persistent itch, skin redness, and patchy hair loss occur with many skin conditions in dogs, including mange.</p>
+        <p><strong>Management and Preventive Care:</strong> This condition can be treated using antiparasitic shampoos, antibiotics, and other products.</p>
+        <p><strong>When to see the Vet:</strong> Even though mange isn’t as common as many other skin conditions, it’s a big concern because it can be highly contagious to both other animals and humans, and seeing a vet right away can help mitigate whether other members of the household develop symptoms as well.</p>
+    </div>
+</div>
+<div class="accordion-item parasitic emergency">
+    <button class="accordion-header">
+        <i class="fa-solid fa-heart-pulse"></i> Heartworm Disease
+        <span class="badge emergency">Emergency</span>
+    </button>
+    <div class="accordion-body">
+        <p><strong>Description:</strong> It is caused by foot-long worms (heartworms) that live in the heart, lungs and associated blood vessels of affected pets, causing severe lung disease, heart failure and damage to other organs in the body. Heartworm disease affects dogs, cats and ferrets, but heartworms also live in other mammal species, including wolves, coyotes, foxes, sea lions and—in rare instances—humans. Because wild species such as foxes and coyotes live in proximity to many urban areas, they are considered important carriers of the disease.</p>
+        <p><strong>Symptoms:</strong> In the early stages of the disease, many dogs show few symptoms or no symptoms at all. The longer the infection persists, the more likely symptoms will develop. Active dogs, dogs heavily infected with heartworms, or those with other health problems often show pronounced clinical signs. Signs of heartworm disease may include a mild persistent cough, reluctance to exercise, fatigue after moderate activity, decreased appetite, and weight loss.</p>
+        <p><strong>Management and Preventive Care:</strong> Can cause breathing problems, lethargy, coughing, heart diseases, and even death.</p>
+        <p><strong>When to see the Vet:</strong> There are few, if any, early signs of disease when a dog or cat is infected with heartworms, so detecting their presence with a heartworm test administered by a veterinarian is important.</p>
+    </div>
+</div>
+                </div>
+            </section>
+
+            <section id="cat-diseases">
+                <div class="center">
+                    <h2>Cat Diseases</h2>
+                </div>
+                <div>
+                    <div class="accordion-item viral emergency">
+                        <button class="accordion-header">
+                            <i class="fa-solid fa-cat"></i> Feline Panleukopenia (Feline Distemper)
+                            <span class="badge emergency">Emergency</span>
+                        </button>
+                        <div class="accordion-body">
+                            <p><strong>Description:</strong> This is a highly contagious and often fatal viral disease caused by the feline parvovirus. It primarily affects kittens and unvaccinated cats, attacking rapidly dividing cells in the body, such as those in the intestines and bone marrow.</p>
+                            <p><strong>Symptoms:</strong> Severe diarrhea, vomiting, dehydration, fever, lethargy, and loss of appetite. Due to the destruction of white blood cells, affected cats are vulnerable to secondary infections.</p>
+                            <p><strong>Management and Preventive Care:</strong> Vaccination is the most effective way to prevent feline panleukopenia. There is no specific cure, so treatment involves supportive care, such as intravenous fluids, nutritional support, and antibiotics for secondary infections, to help the cat's immune system fight the virus.</p>
+                            <p><strong>When to see the Vet:</strong> This is a medical emergency. If you suspect your cat has panleukopenia, seek veterinary care immediately. Early and aggressive treatment is crucial for survival.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item bacterial">
+                        <button class="accordion-header">
+                            <i class="fa-solid fa-flask"></i> Feline Lower Urinary Tract Disease (FLUTD)
+                            <span class="badge common">Common</span>
+                        </button>
+                        <div class="accordion-body">
+                            <p><strong>Description:</strong> FLUTD refers to a group of conditions affecting a cat's bladder and urethra. It can be caused by urinary stones, infections, or inflammation. Stress is often a contributing factor.</p>
+                            <p><strong>Symptoms:</strong> Straining to urinate, frequent urination in small amounts, urinating outside the litter box, bloody urine, and crying out while urinating. A urinary blockage is a life-threatening emergency.</p>
+                            <p><strong>Management and Preventive Care:</strong> Treatment depends on the cause and may include dietary changes, increasing water intake, stress reduction, and medications. Environmental enrichment, such as providing multiple litter boxes and clean water sources, is key.</p>
+                            <p><strong>When to see the Vet:</strong> Contact a vet immediately if you notice any signs, especially if your cat is straining to urinate but producing little to no urine. This could indicate a dangerous blockage.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item viral">
+                        <button class="accordion-header">
+                            <i class="fa-solid fa-shield-cat"></i> Feline Immunodeficiency Virus (FIV)
+                            <span class="badge preventable">Preventable</span>
+                        </button>
+                        <div class="accordion-body">
+                            <p><strong>Description:</strong> Often compared to HIV in humans, FIV is a virus that weakens a cat's immune system, making it susceptible to secondary infections. It is primarily transmitted through deep bite wounds from infected cats.</p>
+                            <p><strong>Symptoms:</strong> Early symptoms can be mild and go unnoticed. As the disease progresses, signs may include fever, weight loss, enlarged lymph nodes, poor coat condition, and chronic infections of the skin, gums, or respiratory tract.</p>
+                            <p><strong>Management and Preventive Care:</strong> There is no cure for FIV. Management focuses on keeping the cat healthy, providing a stress-free indoor environment, and promptly treating secondary infections. Regular vet check-ups are essential. The best prevention is to keep cats indoors to avoid fights.</p>
+                            <p><strong>When to see the Vet:</strong> Any cat that has been in a fight or shows signs of chronic illness should be tested for FIV. While not an immediate emergency, a diagnosis requires long-term management with a vet.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item common">
+                        <button class="accordion-header">
+                            <i class="fa-solid fa-heart-pulse"></i> Hyperthyroidism
+                            <span class="badge common">Common</span>
+                        </button>
+                        <div class="accordion-body">
+                            <p><strong>Description:</strong> This is a common disease in older cats, caused by an overproduction of thyroid hormones from a benign tumor on the thyroid gland. This speeds up the cat's metabolism, affecting nearly every organ.</p>
+                            <p><strong>Symptoms:</strong> Common signs include weight loss despite an increased appetite, increased thirst and urination, hyperactivity, vomiting, and a poor hair coat. If left untreated, it can lead to heart disease and high blood pressure.</p>
+                            <p><strong>Management and Preventive Care:</strong> Treatment options include daily medication to block hormone production, a special prescription diet, radioactive iodine therapy to destroy the abnormal thyroid tissue, or surgery. The goal is to normalize hormone levels.</p>
+                            <p><strong>When to see the Vet:</strong> If you notice these symptoms, especially in a middle-aged or senior cat, schedule a vet visit. Diagnosis is made through a blood test, and treatment can manage the condition effectively.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+                    <!-- Footer Image (centered and responsive) -->
+<div class="image-card card-default bottom-img-default" style="display: flex; justify-content: center; align-items: center; margin: 32px auto; max-width: 700px;">
+    <img
+        src="../images/image_above_footer.png"
+        alt="A picture of a dog and cat looking suspiciously."
+        style="width: 100%; max-width: 600px; height: auto; border-radius: 18px; display: block;"
+    >
+</div>
+        </article>
+    </main>
+
+    <div id="modal"></div>
+    <div id="dialog-box"></div>
+    <div id="toolbar-bottom"></div>
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Custom dropdown logic
+    const customSelect = document.getElementById('custom-disease-selector');
+    const selected = customSelect.querySelector('.selected');
+    const options = customSelect.querySelector('.options');
+    const optionDivs = customSelect.querySelectorAll('.option');
+
+    // Open/close dropdown
+    selected.addEventListener('click', function() {
+        customSelect.classList.toggle('open');
+    });
+
+    // Option click
+    optionDivs.forEach(option => {
+        option.addEventListener('click', function() {
+            // Set selected text
+            selected.textContent = option.textContent;
+            // Remove selected class from all, add to clicked
+            optionDivs.forEach(opt => opt.classList.remove('selected'));
+            option.classList.add('selected');
+            customSelect.classList.remove('open');
+            // Show/hide sections
+            const value = option.getAttribute('data-value');
+            const dogSection = document.getElementById('dog-diseases');
+            const catSection = document.getElementById('cat-diseases');
+            if (value === 'dog') {
+                dogSection.style.display = '';
+                catSection.style.display = 'none';
+            } else if (value === 'cat') {
+                dogSection.style.display = 'none';
+                catSection.style.display = '';
+            } else {
+                dogSection.style.display = '';
+                catSection.style.display = '';
+            }
+        });
+    });
+
+    // Close dropdown if clicked outside
+    document.addEventListener('click', function(e) {
+        if (!customSelect.contains(e.target)) {
+            customSelect.classList.remove('open');
+        }
+    });
+});
+
+document.querySelectorAll('.accordion-header').forEach(btn => {
+    btn.addEventListener('click', function() {
+        const item = this.parentElement;
+        item.classList.toggle('active');
+    });
+});
+</script>
+</body>
+</html>

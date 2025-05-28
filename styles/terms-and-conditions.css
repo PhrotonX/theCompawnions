@@ -1,0 +1,40 @@
+article{
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.terms-box{
+  max-width: 1000px;
+  background-color: #BBD8A3;
+  color: #111;
+  font-family: "Montserrat";
+  padding: 60px 30px;
+  border-radius: var(--border-radius-xl);
+}
+
+.terms-text{
+  padding: 0 20px;
+  height: 400px;
+  overflow-y: auto;
+  font-size: 14px;
+  font-weight: 500;
+  color: #6F826A;
+}
+
+.terms-text::-webkit-scrollbar{
+  width: 2px;
+  background-color: #282828;
+}
+
+.terms-text::-webkit-scrollbar-thumb{
+  background-color: #BF9264;
+}
+
+.terms-text h2{
+  text-transform: uppercase;
+}

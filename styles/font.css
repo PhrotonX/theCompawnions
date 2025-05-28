@@ -1,0 +1,40 @@
+/* Load the icons based on a downloaded font from https://fonts.google.com/icons */
+@font-face {
+    font-family: 'Material Symbols Outlined';
+    font-style: normal;
+    src: url('../font/MaterialSymbolsOutlined[FILL\,GRAD\,opsz\,wght].woff2') format('woff');
+}
+
+/* Load text font */
+@font-face {
+    font-family: 'Poppins';
+    src: url('../font/Poppins/Poppins-Regular.ttf');
+}
+@font-face {
+    font-family: 'Poppins Bold';
+    src: url('../font/Poppins/Poppins-Bold.ttf');
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../font/Montserrat/Montserrat-VariableFont_wght.ttf');
+}
+
+
+/* Style the icons with this class in which a text is treated as an identifier for those
+icons. For example, a <p class="material-icons-outlined">search</p> displays a search icon
+instead of "search" text.*/
+.material-symbols-outlined{
+    font-family: 'Material Symbols Outlined';
+    font-weight: normal;
+    /* font-style: 'normal'; */
+    font-size: 24px;
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+}

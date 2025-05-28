@@ -1,0 +1,13 @@
+#content, article{
+    margin: 24px;
+}
+
+#left-side-content{
+    float: left;
+    width: 15vw;
+}
+
+#right-side-content{
+    float: right;
+    width: 15vw;
+}

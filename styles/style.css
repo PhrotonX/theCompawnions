@@ -1,0 +1,50 @@
+@import url('constants.css');
+
+@import url('font.css');
+@import url('nav.css');
+@import url('fab.css');
+@import url('button.css');
+@import url('content.css');
+@import url('card.css');
+@import url('footer.css');
+@import url('form.css');
+@import url('image.css');
+@import url('dialog.css');
+@import url('tooltip.css');
+
+body{
+    margin: 0px;
+}
+
+p, input{
+    font-family: 'Montserrat';
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Poppins';
+}
+
+h1{
+    font-size:xx-large;
+}
+
+input{
+    font-size: medium;
+}
+
+.heading h1{
+    text-align: center;
+}
+
+.center{
+    text-align: center;
+}
+
+.banner-text h1, .banner-text h1 span {
+    font-size: 48px;
+}
+
+.banner-text h1, .banner-text p{
+    color: #F0F1C5;
+    text-shadow: 4px 4px 4px rgba(0,0,0,0.8);
+}

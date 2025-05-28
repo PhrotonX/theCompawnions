@@ -1,0 +1,51 @@
+.bottom-img{
+    margin-top: 24px;
+    margin-bottom: -110px;
+    margin-left: 37.5%;
+    margin-right: 37.5%;
+}
+
+.bottom-img-default{
+    margin-top: 24px;
+    margin-bottom: -24px;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+
+.img-s{
+    width: 15vw;
+}
+.img-m{
+    width: 20vw;
+}
+.img-l{
+    width: 25vw;
+}
+
+.img-xl{
+    width: 30vw;
+}
+
+.img-xxl{
+    width: 30vw;
+}
+
+
+.img-s-p{
+    width: 15%;
+}
+.img-m-p{
+    width: 25%;
+}
+.img-l-p{
+    width: 35%;
+}
+
+.img-xl-p{
+    width: 50%;
+}
+
+.img-xxl{
+    width: 75%;
+}

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home - The ComPawnions</title>
+        <link rel="stylesheet" type="text/css" href="../styles/style.css">
+        <script src="../scripts/script.js"></script>
+        <style>
+            header{
+                padding-top: 25vh;
+            }
+
+            header button{
+                margin-left: 8px;
+                width: 25%;
+            }
+
+            body{
+                background-image: url('../images/index-cut.png');
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+
+            #website-info{
+                text-align: center;
+            }
+            #index-website-logo{
+                margin-left: 30%;
+                margin-right: 30%;
+            }
+
+            /* Override card styles */
+            .secondary-card img{
+                border-radius: var(--border-radius-xl);
+                width: auto;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            #website-info{
+                /* margin-top: 100px; */
+                margin-top: 10vh;
+            }
+
+            #website-mission-and-vision{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                /* width: 100%; */
+                /* flex-grow: 1; */
+                /* margin: 2.5%; */
+                margin-top: 5%;
+            }
+
+            #website-mission-and-vision .image-card{
+                /* margin: 2.5%; */
+                width: 50%;
+                height: auto;
+                object-fit:cover;
+            }
+
+            #website-mission-and-vision-content{
+                width: 50%;
+            }
+
+            #header-content p, #header-content h1{
+                color: var(--primary-color);
+            }
+
+            .index-paragraph{
+                margin: 24px;
+                margin-top: 5em;
+            }
+
+            @media screen and (max-width: 900px) {
+                header{
+                    padding-top: 20vh;
+                }
+
+                #website-info{
+                    /* margin-top: 100px; */
+                    margin-top: 7vh;
+                }
+            }
+
+            @media screen and (max-width: 700px) {
+                header{
+                    padding-top: 17h;
+                }
+
+                #website-info{
+                    /* margin-top: 100px; */
+                    margin-top: 5vh;
+                }
+            }
+
+            @media screen and (max-width: 600px) {
+                header{
+                    padding-top: 15vh;
+                }
+
+                #website-info{
+                    /* margin-top: 100px; */
+                    margin-top: 3vh;
+                }
+
+                #website-mission-and-vision{
+                    flex-direction: column;
+                }
+
+                #website-mission-and-vision .image-card{
+                    width: 50%;
+                }
+
+                #website-mission-and-vision-content{
+                    width: 100%;
+                }
+            }
+        </style>
+        <!-- Uncomment this to include dialog boxes or tooltips on the webpage if available. -->
+        <script src="../scripts/dialog.js"></script>
+        <!-- <script src="../scripts/tooltip.js"></script> -->
+
+        <!-- This website requires to be run on http-server, XAMPP, or other servers in order to work. -->
+        <script>
+            loadToolbar('menu-index');
+            loadPagePart('footer.html', 'toolbar-bottom');
+
+            // Uncomment this to include dialog boxes on the webpage if available.
+            loadPagePart('image-dialog.html', 'dialog-box');
+        </script>
+    </head>
+    <body>
+        
+        <div id="toolbar"></div>
+
+        <main>
+            <article>
+                <header>
+                    <span id="header-content" class="banner-text">
+                        <div class="tertiary-card">
+                            <h1>More than Pets — Your Companions.</h1>
+                        </div>
+                    </span>
+                    
+                    
+                </header>
+
+
+                <section id="website-info">
+                    
+
+                    <div id="index-website-logo" class="secondary-card card-s">
+                        <img
+                            src="../images/logo-horizontal2.png"
+                            alt="The ComPawnions Logo"
+                        >
+                    </div>
+
+<!-- <div class="secondary-card"> -->
+                        <p class="index-paragraph">Here at The ComPawnions, every paw matters. Whether you’re Team Cat or Team Dog, we’re here to make your journey with your fur-iend even more special!</p>
+                    <!-- </div> -->
+
+                    <span class="card-row">
+                        <div class="tertiary-card card-xs clickable" onclick="nav('paws-and-know.html')">
+                            <img
+                                src="../images/image_paws_and_know_button.png"
+                                alt="Paws and Know Logo"
+                            >
+                            <p>Paws and Know</p>
+                        </div>
+                        <div class="tertiary-card card-xs clickable" onclick="nav('services.html')">
+                            <img
+                                src="../images/image_services_button.png"
+                                alt="Services Logo"
+                            >
+                            <p>Services</p>
+                        </div>
+                        <div class="tertiary-card card-xs clickable"  onclick="nav('gallery.html')">
+                            <img
+                                src="../images/img_gallery_button.png"
+                                alt="Gallery Logo"
+                            >
+                            <p>Gallery</p>
+                        </div>
+                    </span>
+                    
+                </section>
+
+                <section id="website-mission-and-vision">
+                    <span class="image-card image-dialog-opener img-s clickable">
+                        <img
+                            src="../images/img_mission_vision.jpeg"
+                            alt="An image of a dog and a cat under the mission and vision section of landing page"
+                        >
+                    </span>
+                    
+                    <span id="website-mission-and-vision-content">
+                        <div class="secondary-card center">
+                            <h2>Our Mission</h2>
+                            <p>At The ComPawnions, our mission is to empower pet lovers with reliable information and compassionate guidance. We are here to pass tips, advice, relevant information, and everything we've learned from caring for our own dogs and cats. We aim to be more than just a website; we strive to provide a warm, welcoming space where you can learn, connect, and celebrate the joy of companionship with your fur-iend.</p>
+                        </div>
+                        <div class="secondary-card center">
+                            <h2>Our Vision</h2>
+                            <p>At The ComPawnions, our mission is to empower pet lovers with reliable information and compassionate guidance. We are here to pass tips, advice, relevant information, and everything we've learned from caring for our own dogs and cats. We aim to be more than just a website; we strive to provide a warm, welcoming space where you can learn, connect, and celebrate the joy of companionship with your fur-iend.</p>
+                        </div>
+                    </span>
+                </section>
+                <div class="image-card card-default bottom-img-default">
+                    <img
+                        src="../images/image_above_footer.png"
+                        alt="A picture of a dog and cat looking suspiciously."
+                    >
+                </div>
+            </article>
+
+            
+        </main>
+        
+        <!-- Uncomment this to include dialog boxes on the webpage if available. -->
+        <div id="modal"></div>
+        <div id="dialog-box"></div>
+
+        <div id="toolbar-bottom"></div>
+    </body>
+</html> 
