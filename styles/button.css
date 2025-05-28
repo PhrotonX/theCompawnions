@@ -1,0 +1,43 @@
+.clickable{
+    /* background-color: #BCBCBC; */
+    background-color: var(--primary-color);
+    border: none;
+    /* border-radius: 2px; */
+    border-radius: var(--border-radius-xxl);
+    /* box-shadow: var(--box-shadow-level-1); */
+    /* display: flex; */
+    text-decoration: none;
+    
+    color: black;                
+    justify-content: center;
+    transition: 300ms;
+}
+.clickable:hover{
+    transform: translateY(-5px);
+    box-shadow: var(--box-shadow-level-2);
+}
+.clickable:active{
+    transform: translateY(1px);
+    box-shadow: 0 0px 0px rgba(0,0,0,0);
+    filter: brightness(50%);
+}
+
+.clickable-text{
+    padding: 1em 2em;
+}
+
+.clickable-m, a.clickable{
+    padding: 16px 24px;
+    margin-left: 8px;
+}
+
+.page-buttons{
+    display: flex;
+    flex-direction: row;
+}
+
+.page-buttons button{
+    padding: 16px;
+    border-radius: 360px;
+    margin: auto;
+}

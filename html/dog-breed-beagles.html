@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dog Breed Info</title>
+  <link rel="stylesheet" href="dogbreed.css" />
+</head>
+<body>   
+  <!-- Header -->
+  <div class= "profiles">
+   
+  <div class="header-section">
+    <div>
+      <h1 class="main-heading">Everyting You Need to<br> Know About Beagles </h1>
+      <p class="sub-heading">Hound Breed</p>
+    </div>
+    <div class="image-container">
+      <img src="image/dog breed/banner/Beagles.png" alt="dog" class="header-dog-image">
+    </div>
+  </div>
+
+<div class="gallery-container">
+  <!-- Photo Gallery -->
+        <h1 class="gallery-title">gallery</h1>
+        
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="image/dog breed/beagles/beaglesgallery1.png" alt="Gallery Image 1">
+            </div>
+            
+            <div class="gallery-item">
+                <img src="image/dog breed/beagles/beaglesgallery2.png" alt="Gallery Image 2">
+            </div>
+            
+            <div class="gallery-item">
+                <img src="image/dog breed/beagles/beaglesgallery3.png" alt="Gallery Image 3">
+            </div>
+            
+            <div class="gallery-item">
+                <img src="image/dog breed/beagles/beaglesgallery4.png" alt="Gallery Image 4">
+            </div>
+            
+            <div class="gallery-item">
+                <img src="image/dog breed/beagles/beaglesgallery5.png" alt="Gallery Image 5">
+            </div>
+            
+            <div class="gallery-item">
+                <img src="image/dog breed/beagles/beaglesgallery6.png" alt="Gallery Image 6">
+            </div>
+        </div>
+    </div>
+  <!-- General Info -->
+  <div class="gencontainer">
+    <div class="image-section">
+      <img src="image/dog breed/beagles/beaglesgallery7.png" alt="beagles" class="gen-info-image">
+    </div>
+    <div class="content-section">
+      <h1 class="title">GENERAL INFO</h1>
+      <div class="text-content">
+        <p>The Beagle is a friendly and curious hound known for its strong sense of smell and love of companionship. These dogs are cheerful and gentle, making them excellent family pets. Their sociable nature means they enjoy being around both humans and other dogs.</p>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Breed Info -->
+  <div class="breed-info">
+    <h2 class="info-title">Average sizes and life expectancy of the breed.</h2>
+    <div class="stats-container">
+      <div class="stat-item">
+        <div class="stat-icon">📏</div>
+        <div class="stat-content">
+          <h3>Height</h3>
+          <p>13-16 inches</p>
+
+        </div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-icon">⚖️</div>
+        <div class="stat-content">
+          <h3>Weight</h3>
+          <p>30 pounds</p>
+        </div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-icon life-icon">💧</div>
+        <div class="stat-content">
+          <h3>Life Expectancy</h3>
+          <p>12- 15years</p>
+        </div>
+      </div>
+      
+    </div>
+    <p style="margin: auto; margin-top: 20px;">Typically, Beagles stand about 13 to 16 inches (33 to 41 cm) tall and weigh between 20 and 30 pounds (9 to 14 kg). They belong to the hound group and generally live between 12 and 15 years with proper care.</p>
+  </div>
+<div class="gencontainer">
+    
+    <div class="content-section">
+      <h1 class="title">traits</h1>
+      <div class="text-content">
+        <p>Beagles are cheerful, gentle, and social dogs. They have an excellent ability to track scents, which makes them popular in various detection roles. Their love for company means they thrive when they are part of a family or pack.</p>
+
+      </div>
+    </div>
+  <div class="image-section">
+      <img src="image/dog breed/beagles/beaglesgallery8.png" alt="beagles" class="gen-info-image">
+    </div>
+  </div>
+  
+  <!--caring tips-->
+  <div class="caring-tip-container">
+    <h1>Caring Tips</h1>
+
+    <!-- Diet -->
+    <div class="trait-section">
+      <div class="trait-header" onclick="toggleSection('diet')">
+        <h3 class="trait-title">Diet</h3>
+        <div class="expand-btn" id="diet-btn">+</div>
+      </div>
+      <div class="trait-content" id="diet-content">
+        <div class="placeholder-content"> Balanced meals; avoid overfeeding<br>
+        Beagles require balanced meals with portion control to avoid overfeeding and obesity.</div>
+      </div>
+    </div>
+
+    <!-- Grooming -->
+    <div class="trait-section">
+      <div class="trait-header" onclick="toggleSection('grooming')">
+        <h3 class="trait-title">Grooming</h3>
+        <div class="expand-btn" id="grooming-btn">+</div>
+      </div>
+      <div class="trait-content" id="grooming-content">
+        <div class="placeholder-content">Weekly brushing; clean ears.<br>
+        Regular grooming includes weekly brushing and cleaning their long ears to prevent infections.</div>
+      </div>
+    </div>
+
+    <!-- Training -->
+    <div class="trait-section">
+      <div class="trait-header" onclick="toggleSection('training')">
+        <h3 class="trait-title">Training</h3>
+        <div class="expand-btn" id="training-btn">+</div>
+      </div>
+      <div class="trait-content" id="training-content">
+        <div class="placeholder-content"> Food-driven; consistent methods <br>
+          They respond well to consistent, food-driven training methods due to their high motivation for treats.
+        </div>
+      </div>
+    </div>
+
+    <!-- Health -->
+    <div class="trait-section">
+      <div class="trait-header" onclick="toggleSection('health')">
+        <h3 class="trait-title">Health</h3>
+        <div class="expand-btn" id="health-btn">+</div>
+      </div>
+      <div class="trait-content" id="health-content">
+        <div class="placeholder-content">Prone to obesity, ear infections<br>
+             Common health concerns include obesity and ear infections.
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="gencontainer">
+    <div class="content-section">
+      <h1 class="title">Physical Characteristics</h1>
+      <div class="text-content">
+        <p>Beagles require balanced meals with portion control to avoid overfeeding and obesity. Regular grooming includes weekly brushing and cleaning their long ears to prevent infections. They respond well to consistent, food-driven training methods due to their high motivation for treats. Common health concerns include obesity and ear infections.</p>
+      </div>
+    </div>
+         <div class="image-section">
+      <img src="image/dog breed/beagles/beaglesgallery9.png" alt="beagles" class="gen-info-image">
+    </div>
+  </div>
+     <div class="gencontainer">
+      <div class="image-section">
+      <img src="image/dog breed/beagles/beaglesgallery10.png" alt="beagles" class="gen-info-image">
+    </div>
+    <div class="content-section">
+      <h1 class="title">facts</h1>
+      <div class="text-content">
+        <ul>
+          <li>Beagles are known for their distinctive howl-like bark, which they often use to communicate while tracking scents.</li>
+           <li>They are commonly employed at airports and other security locations for detection work due to their exceptional sense of smell.</li>
+            <li>Beagles are very food-motivated, which makes them responsive to training but also prone to overeating if not monitored</li>
+             <li>They are pack-oriented dogs, thriving in environments where they can be part of a social group, whether with humans or other dogs</li>
+              <li>The famous cartoon character Snoopy is a Beagle, which has helped popularize the breed worldwide.</li>
+        </ul>
+      </div>
+    </div>   
+  </div>
+</div>
+</div>
+
+  <script src="breed.js"></script>
+</body>
+</html>

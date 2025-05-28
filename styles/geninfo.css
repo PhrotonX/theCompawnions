@@ -1,0 +1,58 @@
+/* #behavior-image-div{
+    width: 1000vw;
+} */
+
+.geninfo-img-medium{
+    width: 1000px;
+}
+
+.geninfo-img-large{
+    width: 1400px;
+}
+
+#section-cat-behavior, #section-dog-behavior{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+}
+
+#section-cat-behavior img, #section-dog-behavior img{
+    width: 30vw;
+}
+
+@media screen and (max-width: 700px){
+    .geninfo-img-medium{
+        width: 1400px;
+    }
+
+    .geninfo-img-large{
+        width: 2400px;
+    }
+
+    #section-cat-behavior, #section-dog-behavior{
+        flex-direction: column;
+    }
+
+    #section-cat-behavior img, #section-dog-behavior img{
+        width: 100% !important;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .card-row{
+        flex-direction: column;
+        align-items: top;
+        justify-content: center;
+    }
+
+    .geninfo-img-medium, .geninfo-img-large, #behavior-image-div{
+        width: auto;
+    }
+
+    .card-row.scroll-row{
+        display: flex;
+        flex-direction: row;
+        align-items: top;
+        justify-content: left;
+    }
+}

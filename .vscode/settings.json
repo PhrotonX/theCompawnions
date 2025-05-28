@@ -1,0 +1,25 @@
+{
+    "cSpell.words": [
+        "Animalia",
+        "Archaea",
+        "Childs",
+        "Chordata",
+        "Eukarya",
+        "Pawnions",
+        "Pawrenting",
+        "Pawtection",
+        "Ragdoll",
+        "Scottishfold",
+        "Shorthair",
+        "Sphynx",
+        "XAMPP"
+    ],
+    "cSpell.customDictionaries": {
+        "custom-dictionary-workspace": {
+            "name": "custom-dictionary-workspace",
+            "path": "${workspaceFolder:theCompawnions}/.cspell/custom-dictionary-workspace.txt",
+            "addWords": true,
+            "scope": "workspace"
+        }
+    }
+}

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Breeds - The ComPawnions</title>
+        <link rel="stylesheet" type="text/css" href="../styles/style.css">
+        <script src="../scripts/script.js"></script>
+        <!-- Uncomment this to include dialog boxes or tooltips on the webpage if available. -->
+        <!-- <script src="../scripts/dialog.js"></script> -->
+        <!-- <script src="../scripts/tooltip.js"></script> -->
+
+        <!-- This website requires to be run on http-server, XAMPP, or other servers in order to work. -->
+        <script>
+            loadToolbar('menu-paws-and-know');
+            loadPagePart('footer.html', 'toolbar-bottom');
+
+            // Uncomment this to include dialog boxes on the webpage if available.
+            // loadPagePart('image-dialog.html', 'dialog-box');
+        </script>
+        <style>
+            #breeds-page-title {
+                width: 100%;
+                text-align: center;
+                font-size: 300%;
+                color: #ffffff;
+                text-shadow: 3px 3px 5px rgba(43, 43, 43, 0.856);
+                font-family: Arial, Helvetica, sans-serif;
+                background-image: url('../images/index.jpg');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                border-radius: 20px;
+                overflow: hidden;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+
+            #breedList {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+                gap: 20px;
+                padding: 20px;
+                margin-top: 20px;            
+            }
+
+            .breed-card {
+                flex: 1 1 1%;
+                width: 100%;
+                min-width: 255px;
+                height: 320px;
+                min-height: 280px;
+                border: 1px solid #eff2c7;
+                border-radius: 20px;
+                overflow: hidden;
+                text-align: center;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                cursor: pointer;
+                background-color: #eff2c7;
+                background-size: cover;
+                background-position: center;
+                font-family: Arial, Helvetica, sans-serif;
+                font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                transform: var(--transform, translateY(20px));
+                opacity: 0;
+                transform: translateY(20px); /* initial position */
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                position: relative;
+                z-index: 1;
+            }
+
+            .breed-card.animate {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            .breed-card.animate:hover {
+                transform: translateY(0) scale(1.05);
+                box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+                z-index: 10;
+            }
+
+            .breed-card img {
+                width: 300px;
+                max-width: 100%;
+                height: 90%;
+                object-fit: cover;
+                margin-bottom: 0px;
+                border-radius: 20px;
+            }
+
+            .breed-card-name {
+                padding: 0px;
+                font-weight: bold;
+            }
+            
+            @media screen and (max-width: 768px) {
+                .breed-card,
+                .breed-card-name,
+                .breed-card img {
+                    flex: 1 1 100%;
+                    text-align: center;
+                }
+            }
+
+            #breed-toggle-container {
+            text-align: center;
+            margin-bottom: 20px;
+            }
+
+            .toggle-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 10px;
+            }
+
+            .toggle-buttons button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: 2px solid var(--secondary-color);
+            border-radius: 10px;
+            background-color: white;
+            cursor: pointer;
+            transition: background-color 0.5s;
+            }
+
+            .toggle-buttons button.active {
+            background-color: var(--secondary-color);
+            color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="toolbar" style="z-index: 1000;"></div>
+        <main>
+            <article>
+                <div id="content">
+                    <div id="breeds-page-title">
+                        <h1>Breeds</h1>
+                    </div>   
+                        <div id="breed-toggle-container">
+                            <h3>⬇ Select Animal Breed ⬇</h3>
+                            <div class="toggle-buttons">
+                                <button id="catBtn" onclick="selectAnimal('cat')">Cat</button>
+                                <button id="dogBtn" onclick="selectAnimal('dog')">Dog</button>
+                            </div>
+                        </div>
+                        <div id="breedList"></div> <!-- Make sure this exists -->
+
+                    <h3>Breeds:</h3>
+                    <div id="breedList"></div>
+                    <script>
+                        //This is a Database of list of the breeds
+                        const animals = {
+                            cat: {
+                                "Maine Coon": {
+                                    img: "../images/gallery/cat_profile/mainecoon.jpg"
+                                },
+                                "Siamese": {
+                                    img: "../images/gallery/cat_profile/siamese.jpg"
+                                },
+                                "Persian": {
+                                    img: "../images/gallery/cat_profile/persian.jpg"
+                                },
+                                "Bengal": {
+                                    img: "../images/gallery/cat_profile/bengal.jpg"
+                                },
+                                "Ragdoll": {
+                                    img: "../images/gallery/cat_profile/ragdoll.jpg"
+                                },
+                                "Sphynx": {
+                                    img: "../images/gallery/cat_profile/sphynx.jpg"
+                                },
+                                "Scottish Fold": {
+                                    img: "../images/gallery/cat_profile/scottishfold.jpg"
+                                },
+                                "British Shorthair": {
+                                    img: "../images/gallery/cat_profile/britishshorthair.jpg"
+                                },
+                                "Abyssinian": {
+                                    img: "../images/gallery/cat_profile/abyssianian.jpg"
+                                },
+                                "Russian Blue": {
+                                    img: "../images/gallery/cat_profile/russianblue.jpg"
+                                },
+                            },
+                            dog: {
+                                "Beagle": {
+                                    img: "../images/gallery/dog_profile/profile_beagles.png"
+                                },
+                                "Rottweiler": {
+                                    img: "../images/gallery/dog_profile/profile_rottweiler.png"
+                                },
+                                "Yorkshire Terrier": {
+                                    img: "../images/gallery/dog_profile/profile_yorkshire_terrier.png"
+                                },
+                                "Dachshund": {
+                                    img: "../images/gallery/dog_profile/profile_dachshund.png"
+                                },
+                                "Shih Tzu": {
+                                    img: "../images/gallery/dog_profile/profile_shih_tzu.png"
+                                },
+                                "Siberian Husky": {
+                                    img: "../images/gallery/dog_profile/profile_siberian_husky.png"
+                                },
+                                "Chihuahua": {
+                                    img: "../images/gallery/dog_profile/profile_chihuahua.png"
+                                },
+                                "Great Dane": {
+                                    img: "../images/gallery/dog_profile/profile_great_dane.png"
+                                },
+                                "Pomeranian": {
+                                    img: "../images/gallery/dog_profile/profile_pomeranian.png"
+                                },
+                                "Poodle": {
+                                    img: "../images/gallery/dog_profile/profile_poodle.png"
+                                },
+                            }
+                        };
+
+                        // Update breed list based on selected animal
+                            function updateBreedList(animal) {
+                                const breedListEl = document.getElementById("breedList");
+                                breedListEl.innerHTML = '';
+
+                                const breeds = Object.keys(animals[animal]);
+
+                                breeds.forEach((breed, index) => {
+                                    const card = document.createElement('div');
+                                    card.className = 'breed-card';
+                                    card.onclick = () => {
+                                        window.location.href = `dog-cat-breeds-information.html?animal=${animal}&breed=${encodeURIComponent(breed)}`;
+                                    };
+
+                                    card.innerHTML = `
+                                        <img src="${animals[animal][breed].img}" alt="${breed}">
+                                        <div class="breed-card-name">${breed}</div>
+                                    `;
+                                    breedListEl.appendChild(card);
+                                    setTimeout(() => {
+                                        card.classList.add('animate');
+                                    }, index * 100);
+                                });
+                            }
+
+                            // Toggle animal type
+                            function selectAnimal(animal) {
+                                updateBreedList(animal);
+
+                                document.getElementById('catBtn').classList.remove('active');
+                                document.getElementById('dogBtn').classList.remove('active');
+                                document.getElementById(animal + 'Btn').classList.add('active');
+                            }
+
+                            // Load initial list
+                            window.onload = () => {
+                                selectAnimal("cat");
+                            };          
+                    </script>
+                </div>
+            </article>
+        </main>
+        
+        <!-- Uncomment this to include dialog boxes on the webpage if available. -->
+        <!-- <div id="modal"></div>
+        <div id="dialog-box"></div> -->
+
+        <div id="toolbar-bottom"></div>
+    </body>
+</html> 

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Search - The ComPawnions</title>
+        <link rel="stylesheet" type="text/css" href="../styles/style.css">
+        <link rel="stylesheet" type="text/css" href="../styles/link-list.css">
+        <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_back,arrow_forward" /> -->
+        <script src="../scripts/script.js"></script>
+        <script src="../scripts/query.js"></script>
+        <script src="../scripts/item-list.js"></script>
+        <script src="../scripts/search.js"></script>
+
+        <!-- This website requires to be run on XAMPP or other servers in order to work. -->
+        <script>
+            loadToolbar('menu-search');
+            loadPagePart('footer.html', 'toolbar-bottom');
+        </script>
+    </head>
+    <body>
+        
+        <div id="toolbar"></div>
+
+        <main>
+            <article>
+                <div class="center">
+                    <h1 id="search-heading">Results for </h1>
+                </div>
+
+                <!-- <div class="card" id="search-card"> -->
+                    <div id="search-results" class="link-list">
+                        <!-- <div class="link-list-item">
+                            <p class="title"></p>
+                            <p class="description"></p>
+                        </div> -->
+                    </div>
+
+                    <span class="page-buttons">
+                        <button class="clickable" onclick="search.prevPage('#')">
+                            <span class="material-symbols-outlined">
+                                arrow_back
+                            </span>
+                        </button>
+                        <p id="gallery-page-info"></p>
+                        <button class="clickable" onclick="search.nextPage('#')">
+                            <span class="material-symbols-outlined">
+                                arrow_forward
+                            </span>
+                        </button>
+                    </span>
+                    
+                    
+                <!-- </div> -->
+                <div class="image-card card-default bottom-img-default">
+                    <img
+                        src="../images/image_above_footer.png"
+                        alt="A picture of a dog and cat looking suspiciously."
+                    >
+                </div>
+            </article>
+            
+            
+        </main>
+
+        <div id="toolbar-bottom"></div>
+    </body>
+</html>

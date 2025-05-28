@@ -1,0 +1,460 @@
+{
+    "item": [
+        {
+            "breed": "Beagle",
+            "type": "Dog",
+            "title": "Image of a Beagle",
+            "link": null,
+            "copyright": null,
+            "image": {
+                "src": "../images/pawsAndKnow/breeds/DOG/beagle.jpg",
+                "alt": "This is an image of a Beagle."
+            },
+            "gender": "Male",
+            "age": 3
+        },
+        {
+            "breed": "Dachshund",
+            "type": "Dog",
+            "title": "Image of a Dachshund",
+            "link": null,
+            "copyright": null,
+            "image": {
+                "src": "../images/pawsAndKnow/breeds/DOG/dachshund.jpg",
+                "alt": "This is an image of a Dachshund."
+            },
+            "gender": "Female",
+            "age": 4
+        },
+        {
+            "breed": "Chihuahua",
+            "type": "Dog",
+            "title": "Image of a Chihuahua",
+            "link": null,
+            "copyright": null,
+            "image": {
+                "src": "../images/pawsAndKnow/breeds/DOG/chihuahua.jpg",
+                "alt": "This is an image of a Great Dane."
+            },
+            "gender": "Male",
+            "age": 7
+        },
+        {
+            "breed": "Great Dane",
+            "type": "Dog",
+            "title": "Image of a Great Dane",
+            "link": null,
+            "copyright": null,
+            "image": {
+                "src": "../images/pawsAndKnow/breeds/DOG/greatdane.jpg",
+                "alt": "This is an image of a Great Dane."
+            },
+            "gender": "Male",
+            "age": 7
+        },
+        {
+            "breed": "Pomeranian",
+            "type": "Dog",
+            "title": "Image of a Pomeranian",
+            "link": null,
+            "copyright": null,
+            "image": {
+                "src": "../images/pawsAndKnow/breeds/DOG/pomeranian.jpg",
+                "alt": "This is an image of a Pomeranian."
+            },
+            "gender": "Male",
+            "age": 2
+        },
+        {
+            "breed": "Poodle",
+            "type": "Dog",
+            "title": "Image of a Poodle",
+            "link": null,
+            "copyright": null,
+            "image": {
+                "src": "../images/pawsAndKnow/breeds/DOG/poodle.jpg",
+                "alt": "This is an image of a Poodle."
+            },
+            "gender": "Female",
+            "age": 3
+        },
+        {
+            "breed": "Shih Tzu",
+            "type": "Dog",
+            "title": "Image of a Shih Tzu",
+            "link": null,
+            "copyright": null,
+            "image": {
+                "src": "../images/pawsAndKnow/breeds/DOG/shihtzu.jpg",
+                "alt": "This is an image of a Shih Tzu."
+            },
+            "gender": "Female",
+            "age": 1
+        },
+        {
+            "breed": "Rottweiler",
+            "type": "Dog",
+            "title": "Image of a Rottweiler",
+            "link": null,
+            "copyright": null,
+            "image": {
+                "src": "../images/pawsAndKnow/breeds/DOG/rottweiler.jpg",
+                "alt": "This is an image of a Rottweiler."
+            },
+            "gender": "Male",
+            "age": 5
+        },
+        {
+            "breed": "Yorkshire Terrier",
+            "type": "Dog",
+            "title": "Image of a Yorkshire Terrier",
+            "link": null,
+            "copyright": null,
+            "image": {
+                "src": "../images/pawsAndKnow/breeds/DOG/yorkshireterrier.jpg",
+                "alt": "This is an image of a Yorkshire Terrier."
+            },
+            "gender": "Female",
+            "age": 2
+        },
+        {
+            "breed": "Bengal",
+            "type": "Cat",
+            "title": "Image of a Bengal Cat",
+            "link": null,
+            "copyright": null,
+            "image": {
+                "src": "../images/pawsAndKnow/breeds/CAT/bengal.jpg",
+                "alt": "This is an image of a Bengal Cat."
+            },
+            "gender": "Female",
+            "age": 3
+        },
+        {
+            "breed": "Maine Coon",
+            "type": "Cat",
+            "title": "Image of a Maine Coon",
+            "link": null,
+            "copyright": null,
+            "image": {
+                "src": "../images/pawsAndKnow/breeds/CAT/mainecoon.jpg",
+                "alt": "This is an image of a Maine Coon."
+            },
+            "gender": "Male",
+            "age": 3
+        },
+        {
+            "breed": "Persian Cat",
+            "type": "Cat",
+            "title": "Image of a Persian Cat",
+            "link": null,
+            "copyright": null,
+            "image": {
+                "src": "../images/pawsAndKnow/breeds/CAT/persian.jpg",
+                "alt": "This is an image of a Persian Cat."
+            },
+            "gender": "Male",
+            "age": 4
+        },
+        {
+            "breed": "Ragdoll",
+            "type": "Cat",
+            "title": "Image of a Ragdoll",
+            "link": null,
+            "copyright": null,
+            "image": {
+                "src": "../images/pawsAndKnow/breeds/CAT/ragdoll.jpg",
+                "alt": "This is an image of a Persian Cat."
+            },
+            "gender": "Female",
+            "age": 5
+        },
+        {
+            "breed": "Siamese Cat",
+            "type": "Cat",
+            "title": "Image of a Siamese Cat",
+            "link": null,
+            "copyright": null,
+            "image": {
+                "src": "../images/pawsAndKnow/breeds/CAT/siamese.jpg",
+                "alt": "This is an image of a Siamese."
+            },
+            "gender": "Male",
+            "age": 6
+        },
+        {
+            "breed": "Sphynx",
+            "type": "Cat",
+            "title": "Image of a Sphynx",
+            "link": null,
+            "copyright": null,
+            "image": {
+                "src": "../images/pawsAndKnow/breeds/CAT/sphynx.jpg",
+                "alt": "This is an image of a Sphynx."
+            },
+            "gender": "Male",
+            "age": 3
+        },
+        {
+            "breed": "Abyssinian",
+            "type": "Cat",
+            "title": "Image of an Abyssinian",
+            "link": null,
+            "copyright": null,
+            "image": {
+                "src": "../images/pawsAndKnow/general_information/imgCatGenInfoAbyssinian.jpg",
+                "alt": "This is an image of an Abyssinian."
+            },
+            "gender": "Male",
+            "age": 4
+        },
+        {
+            "breed": "Bengal Cat",
+            "type": "Cat",
+            "title": "Image of a Bengal Cat",
+            "link": null,
+            "copyright": null,
+            "image": {
+                "src": "../images/pawsAndKnow/general_information/imgCatGenInfoBengal.jpg",
+                "alt": "This is an image of a Bengal Cat."
+            },
+            "gender": "Female",
+            "age": 4
+        },
+        {
+            "breed": "British Shorthair",
+            "type": "Cat",
+            "title": "Image of a British Shorthair Cat",
+            "link": null,
+            "copyright": null,
+            "image": {
+                "src": "../images/pawsAndKnow/general_information/imgCatGenInfoBritShortHair.jpg",
+                "alt": "This is an image of a British Shorthair Cat."
+            },
+            "gender": "Female",
+            "age": 2
+        },
+        {
+            "breed": "Maine Coon",
+            "type": "Cat",
+            "title": "Image of a Maine Coon",
+            "link": null,
+            "copyright": null,
+            "image": {
+                "src": "../images/pawsAndKnow/general_information/imgCatGenInfoMaineCoon.jpg",
+                "alt": "This is an image of a Maine Coon."
+            },
+            "gender": "Female",
+            "age": 2
+        },
+        {
+            "breed": "Norwegian Forest",
+            "type": "Cat",
+            "title": "Image of a Norwegian Forest Cat",
+            "link": null,
+            "copyright": null,
+            "image": {
+                "src": "../images/pawsAndKnow/general_information/imgCatGenInfoNorwegianForest.jpg",
+                "alt": "This is an image of a Norwegian Forest Cat."
+            },
+            "gender": "Male",
+            "age": 10
+        },
+        {
+            "breed": "Persian Cat",
+            "type": "Cat",
+            "title": "Image of a Persian Cat",
+            "link": null,
+            "copyright": null,
+            "image": {
+                "src": "../images/pawsAndKnow/general_information/imgCatGenInfoPersian.jpg",
+                "alt": "This is an image of a Persian Cat."
+            },
+            "gender": "Female",
+            "age": 7
+        },
+        {
+            "breed": "Ragdoll",
+            "type": "Cat",
+            "title": "Image of a Ragdoll",
+            "link": null,
+            "copyright": null,
+            "image": {
+                "src": "../images/pawsAndKnow/general_information/imgCatGenInfoRagdoll.jpg",
+                "alt": "This is an image of a Ragdoll."
+            },
+            "gender": "Female",
+            "age": 12
+        },
+        {
+            "breed": "Scottish Fold",
+            "type": "Cat",
+            "title": "Image of a Scottish Fold",
+            "link": null,
+            "copyright": null,
+            "image": {
+                "src": "../images/pawsAndKnow/general_information/imgCatGenInfoScottishFold.jpg",
+                "alt": "This is an image of a Scottish Fold."
+            },
+            "gender": "Male",
+            "age": 11
+        },
+        {
+            "breed": "Siamese Cat",
+            "type": "Cat",
+            "title": "Image of a Siamese Cat",
+            "link": null,
+            "copyright": null,
+            "image": {
+                "src": "../images/pawsAndKnow/general_information/imgCatGenInfoSiamese.jpg",
+                "alt": "This is an image of a Siamese Cat."
+            },
+            "gender": "Male",
+            "age": 10
+        },
+        {
+            "breed": "Sphynx",
+            "type": "Cat",
+            "title": "Image of a Sphynx",
+            "link": null,
+            "copyright": null,
+            "image": {
+                "src": "../images/pawsAndKnow/general_information/imgCatGenInfoSphynx.jpg",
+                "alt": "This is an image of a Sphynx."
+            },
+            "gender": "Male",
+            "age": 9
+        },
+        {
+            "breed": "Beagle",
+            "type": "Dog",
+            "title": "Image of a Beagle",
+            "link": null,
+            "copyright": null,
+            "image": {
+                "src": "../images/pawsAndKnow/general_information/imgDogGenInfoBeagle.jpg",
+                "alt": "This is an image of a Beagle."
+            },
+            "gender": "Male",
+            "age": 9
+        },
+        {
+            "breed": "Bichon Frise",
+            "type": "Dog",
+            "title": "Image of a Bichon Frise",
+            "link": null,
+            "copyright": null,
+            "image": {
+                "src": "../images/pawsAndKnow/general_information/imgDogGenInfoBichonFrise.jpg",
+                "alt": "This is an image of a Bichon Frise."
+            },
+            "gender": "Male",
+            "age": 8
+        },
+        {
+            "breed": "Dachshund",
+            "type": "Dog",
+            "title": "Image of a Dachshund",
+            "link": null,
+            "copyright": null,
+            "image": {
+                "src": "../images/pawsAndKnow/general_information/imgDogGenInfoDachshund.jpg",
+                "alt": "This is an image of a Dachshund."
+            },
+            "gender": "Male",
+            "age": 7
+        },
+        {
+            "breed": "Bulldog",
+            "type": "Dog",
+            "title": "Image of a Bulldog",
+            "link": null,
+            "copyright": null,
+            "image": {
+                "src": "../images/pawsAndKnow/general_information/imgDogGenInfoFrenchBulldog.jpg",
+                "alt": "This is an image of a Bulldog."
+            },
+            "gender": "Male",
+            "age": 6
+        },
+        {
+            "breed": "German Shepherd",
+            "type": "Dog",
+            "title": "Image of a German Shepherd",
+            "link": null,
+            "copyright": null,
+            "image": {
+                "src": "../images/pawsAndKnow/general_information/imgDogGenInfoGermanShepherd.jpg",
+                "alt": "This is an image of a German Shepherd."
+            },
+            "gender": "Male",
+            "age": 5
+        },
+        {
+            "breed": "Golden Retriever",
+            "type": "Dog",
+            "title": "Image of a Golden Retriever",
+            "link": null,
+            "copyright": null,
+            "image": {
+                "src": "../images/pawsAndKnow/general_information/imgDogGenInfoGoldenRetriever.jpg",
+                "alt": "This is an image of a Golden Retriever."
+            },
+            "gender": "Male",
+            "age": 4
+        },
+        {
+            "breed": "Labrador Retriever",
+            "type": "Dog",
+            "title": "Image of a Labrador Retriever",
+            "link": null,
+            "copyright": null,
+            "image": {
+                "src": "../images/pawsAndKnow/general_information/imgDogGenInfoLabradorRetriever.jpg",
+                "alt": "This is an image of a Labrador Retriever."
+            },
+            "gender": "Female",
+            "age": 3
+        },
+        {
+            "breed": "Poodle",
+            "type": "Dog",
+            "title": "Image of a Poodle",
+            "link": null,
+            "copyright": null,
+            "image": {
+                "src": "../images/pawsAndKnow/general_information/imgDogGenInfoPoodle.jpg",
+                "alt": "This is an image of a Poodle."
+            },
+            "gender": "Female",
+            "age": 6
+        },
+        {
+            "breed": "Rottweiler",
+            "type": "Dog",
+            "title": "Image of a Rottweiler",
+            "link": null,
+            "copyright": null,
+            "image": {
+                "src": "../images/pawsAndKnow/general_information/imgDogGenInfoRottweiler.jpg",
+                "alt": "This is an image of a Rottweiler."
+            },
+            "gender": "Male",
+            "age": 6
+        },
+        {
+            "breed": "Yorkie",
+            "type": "Dog",
+            "title": "Image of a Yorkie",
+            "link": null,
+            "copyright": null,
+            "image": {
+                "src": "../images/pawsAndKnow/general_information/imgDogGenInfoYorkie.jpg",
+                "alt": "This is an image of a Yorkie."
+            },
+            "gender": "Male",
+            "age": 7
+        }
+    ]
+    
+}

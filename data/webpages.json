@@ -1,0 +1,122 @@
+{
+    "item": [
+        {
+            "webpage": "Dogs - General Information",
+            "link": "general-information-dogs.html",
+            "tags": [
+                {
+                    "tag": "dog"
+                },
+                {
+                    "tag": "general info"
+                }
+            ],
+            "thumbnail": null
+        },
+        {
+            "webpage": "Cats - General Information",
+            "link": "general-information-cats.html",
+            "tags": [
+                {
+                    "tag": "cat"
+                },
+                {
+                    "tag": "general info"
+                }
+            ],
+            "thumbnail": null
+        },
+        {
+            "webpage": "Foods and Treats - Pawrenting - Paws and Know",
+            "link": "Foods_and_Treats.html",
+            "tags": [
+                {
+                    "tag": "cat"
+                },
+                {
+                    "tag": "general info"
+                }
+            ],
+            "thumbnail": null
+        },
+        {
+            "webpage": "About",
+            "link": "about.html",
+            "tags": null,
+            "thumbnail": null
+        },
+        {
+            "webpage": "Contact Us",
+            "link": "contact-us.html",
+            "tags": null,
+            "thumbnail": null
+        },
+        {
+            "webpage": "Services",
+            "link": "services.html",
+            "tags": null,
+            "thumbnail": null
+        },
+        {
+            "webpage": "Gallery",
+            "link": "gallery.html",
+            "tags": null,
+            "thumbnail": null
+        },
+        {
+            "webpage": "Adopt a ComPawnion",
+            "link": "gallery.html",
+            "tags": null,
+            "thumbnail": null
+        },
+        {
+            "webpage": "Communities",
+            "link": "communities.html",
+            "tags": null,
+            "thumbnail": null
+        },
+        {
+            "webpage": "Diseases - Pawrenting - Paws and Know",
+            "link": "diseases_temp.html",
+            "tags": null,
+            "thumbnail": null
+        },
+        {
+            "webpage": "Breeds",
+            "link": "breeds.html",
+            "tags": null,
+            "thumbnail": null
+        },
+        {
+            "webpage": "Common Misconceptions - Paws and Knows",
+            "link": "common-misconceptions.html",
+            "tags": null,
+            "thumbnail": null
+        },
+        {
+            "webpage": "Views towards animals based on different cultures in Cats - Paws and Knows",
+            "link": "views-test.html",
+            "tags": null,
+            "thumbnail": null
+        },
+        {
+            "webpage": "Animal Pawtection Desk - Services",
+            "link": "animal-pawtection-desk.html",
+            "tags": null,
+            "thumbnail": null
+        },
+        {
+            "webpage": "Adopt a ComPawnion - Services",
+            "link": "adopt-a-compawnion-desk.html",
+            "tags": null,
+            "thumbnail": null
+        },
+        {
+            "webpage": "Privacy Policy",
+            "link": "privacy-policy.html",
+            "tags": null,
+            "thumbnail": null
+        }
+    ]
+    
+}
